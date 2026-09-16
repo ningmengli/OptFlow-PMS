@@ -1,0 +1,309 @@
+<nav-bar></nav-bar>
+<!-- addSaleRecordCtrl -->
+<div class="admin-list sale-record assist-check_list">
+  <div class="row mb">
+    <div class="col-sm-2">
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="起始日期"
+          uib-datepicker-popup
+          current-text="今天"
+          clear-text="清除"
+          close-text="关闭"
+          ng-model="data.firstVisitFrom"
+          ng-click="open1()"
+          ng-change="clearPage()"
+          is-open="popup1.opened"
+          datepicker-options="dateOptions"
+          ng-required="true"
+        />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open1()">
+            <span class="iconfont icon-rili"></span>
+          </button>
+        </span>
+      </p>
+    </div>
+    <div class="col-sm-2">
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="终止日期"
+          uib-datepicker-popup
+          current-text="今天"
+          ng-model="rightTime"
+          is-open="popup2.opened"
+          ng-change="clearPage()"
+          datepicker-options="dateOptions"
+          ng-click="open2()"
+          ng-required="true"
+          clear-text="清除"
+          close-text="关闭"
+        />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open2()">
+            <span class="iconfont icon-rili"></span>
+          </button>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="row report-content mb">
+    <div class="col-sm-3 pr">
+      <div
+        throttleinput
+        class="form-control"
+        fun="clearPage()"
+        model="data.keyword"
+        placeholder="请输入用户名或手机号"
+      ></div>
+    </div>
+    <div class="col-sm-3 pr">
+      <div
+        throttleinput
+        class="form-control"
+        fun="clearPage()"
+        model="data.productKeyword"
+        placeholder="请输入商品名或条形码"
+      ></div>
+    </div>
+    <div class="col-sm-4 lh">
+      <label for="member" class="cursor-pointer">
+        <input
+          type="checkbox"
+          ng-model="hasPoint"
+          id="member"
+          ng-true-value="2"
+          ng-false-value="1"
+          ng-change="clearPage()"
+        />包含未开单的病历
+      </label>
+    </div>
+    <div class="col-sm-2">
+      <div class="clearfix text-align_right pr">
+        <div class="fr">
+          <span class="btn btn-primary" ng-click="choseUser.open()"
+            >销售开单</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb">
+    <div class="col-sm-4">
+      <ul class="flex btn-group" style="width: 100%" style="margin: 0">
+        <li
+          style="width: 60px"
+          class="btn btn-white"
+          ng-class="{'check-list_tab':deliveryStatus==4}"
+          ng-click="setTab(4)"
+        >
+          全部
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="setTab(1)"
+          ng-class="{'check-list_tab': deliveryStatus==1}"
+        >
+          <span
+            style="font-size: 12px; color: #de6262"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          未收费
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="setTab(2)"
+          ng-class="{'check-list_tab': deliveryStatus==2}"
+        >
+          <span
+            style="font-size: 12px; color: #41b2a6"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          已收费
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="setTab(3)"
+          ng-class="{'check-list_tab': deliveryStatus==3}"
+        >
+          <span
+            style="font-size: 12px; color: #2c95c1"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          已退费
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-default overflow-x">
+    <div class="table-responsive" style="min-width: 1200px">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 150px; border-right: 1px solid #e9e9e9">用户</th>
+            <th style="width: 90px; border-right: 1px solid #e9e9e9">联系人</th>
+            <th style="border-right: 1px solid #e9e9e9">
+              接诊{{corpInfo.employeeTitle}}/时间
+            </th>
+            <th style="border-right: 1px solid #e9e9e9">品牌/类目</th>
+            <th style="width: 320px; border-right: 1px solid #e9e9e9">
+              商品信息
+            </th>
+            <th style="width: 150px; border-right: 1px solid #e9e9e9">规格</th>
+            <th style="width: 100px; border-right: 1px solid #e9e9e9">数量</th>
+            <th style="border-right: 1px solid #e9e9e9">折后金额</th>
+            <th style="border-right: 1px solid #e9e9e9">合计</th>
+            <th style="width: 55px">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in selectOrderListFactory.items">
+            <td>
+              <div class="clearfix">
+                <img
+                  ng-src="{{item.patient.avatar}}"
+                  class="fl"
+                  style="width: 50px; height: 50px"
+                />
+                <div
+                  class="fl"
+                  style="width: 70px; text-align: left; margin-left: 5px"
+                >
+                  <p class="ellipsis">{{item.patient.patientName}}</p>
+                  <p>
+                    <span class="mr5" ng-show="item.patient.patientGender"
+                      >{{item.patient.patientGender| gender }}</span
+                    >
+                    <span ng-show="item.patient.patientBirthday"
+                      >{{item.patient.patientBirthday| howoldFilter }}</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </td>
+            <td style="padding: 0">
+              <div>{{item.customer.customerName}}</div>
+              <p>
+                <!-- <i
+                  class="pr"
+                  style="top: 3px"
+                  ng-show="item.customer.linkMobile"
+                  >*******</i
+                > -->
+                {{item.customer.linkMobile | hidePhone}}
+              </p>
+            </td>
+            <td>
+              <p>{{item.medicalRecord.doctorName}}</p>
+              {{item.medicalRecord.firstVisit| date:'yyyy-MM-dd'}}
+            </td>
+            <td style="padding: 0">
+              <div
+                class="sale-record_productlist"
+                style="padding: 10px; height: 70px"
+                ng-repeat="iten in item.medicalProductVoList"
+              >
+                {{iten.brand.brandName}}
+                <div>{{iten.category.categoryName}}</div>
+              </div>
+            </td>
+            <td style="padding: 0">
+              <div
+                class="sale-record_productlist"
+                style="padding: 10px; height: 70px"
+                ng-repeat="iten in item.medicalProductVoList"
+              >
+                <div class="clearfix" style="font-size: 12px">
+                  <div class="fl">{{iten.product.productName}}</div>
+                  <div class="fr"></div>
+                </div>
+                <div class="clearfix" style="font-size: 12px">
+                  <p class="fl">{{iten.product.factory}}</p>
+                  <p class="fr">
+                    <span ng-show="iten.productSku.marketPrice">¥</span
+                    >{{iten.productSku.marketPrice}}
+                    <span ng-show="iten.productSku.unitName"
+                      >/{{iten.productSku.unitName}}</span
+                    >
+                  </p>
+                </div>
+                <div class="clearfix" style="font-size: 12px">
+                  <!-- <span class="fl" ng-show="iten.product.productCode">产品编码:{{iten.product.productCode}}</span> -->
+                  <span ng-show="iten.productSku.skuCode" class="fr"
+                    >条形码:{{iten.productSku.skuCode}}</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td style="padding: 0">
+              <div
+                class="sale-record_productlist"
+                style="padding: 10px; height: 70px"
+                ng-repeat="iten in item.medicalProductVoList"
+              >
+                <div ng-show="iten.productSku.model1!=='无'">
+                  <span
+                    >{{iten.product.model1Name}}：{{iten.productSku.model1}}</span
+                  >
+                </div>
+                <div ng-show="iten.productSku.model2!=='无'">
+                  <span
+                    >{{iten.product.model2Name}}：{{iten.productSku.model2}}</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td style="padding: 0">
+              <div
+                style="height: 70px"
+                class="sale-record_productlist"
+                ng-repeat="iten in item.medicalProductVoList"
+              >
+                <div
+                  class="df_column"
+                  style="height: 100%"
+                  ng-show="iten.medicalProduct.useCount"
+                >
+                  <span>{{iten.medicalProduct.useCount}}</span>
+                  <span
+                    class="font12 weight400 color_d9534f"
+                    ng-if="iten.medicalProduct.refundCount>0"
+                    >已退{{iten.medicalProduct.refundCount}}</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td style="padding: 0">
+              <div
+                class="sale-record_productlist df_center"
+                style="height: 70px"
+                ng-repeat="iten in item.medicalProductVoList"
+              >
+                {{iten.medicalProduct.rateFee}}
+                <!-- <div class="material-bill_repeat">
+                  {{iten.medicalProduct | refundAndPayStatus}}
+                </div> -->
+              </div>
+            </td>
+            <td>{{item.medicalProductRateFee}}</td>
+            <td style="border-right: none">
+              <a
+                ng-click="goRecord(item.medicalRecord.id,item.medicalRecord.medicalRecordType,item.patient.id)"
+              >
+                <span ng-show="item.medicalProductVoList.length">查看</span>
+                <span ng-hide="item.medicalProductVoList.length">开单</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="secondpagination"></div>
+</div>
+<div chose-user ng-if="choseUser.show" options="choseUser"></div>
+<div set-modal modal="setCompanyModal"></div>

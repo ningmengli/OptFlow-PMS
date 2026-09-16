@@ -1,0 +1,344 @@
+<nav-bar> </nav-bar>
+<!-- deliveryListCtrl -->
+<div class="member-input assist-check_list" ng-click="hideBrandlist()">
+  <div class="mb" style="border-bottom: 1px solid #dedede; padding: 10px 20px">
+    <div class="clearfix">
+      <div class="fl">
+        <span
+          class="mr25"
+          style="font-size: 20px; color: #333; font-weight: bold"
+          >{{companyName}}</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="my-member">
+    <div class="content-panel mb" style="padding: 0 15px 0">
+      <ul class="clearfix">
+        <li
+          class="fl cursor-pointer"
+          ui-sref-active="active"
+          ui-sref="deliveryList"
+        >
+          销售记录
+        </li>
+        <li
+          ui-sref="machineOrderList"
+          class="fl cursor-pointer"
+          ui-sref-active="active"
+        >
+          加工记录<span class="red">({{getAdminList.count}}) </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content container-fluid">
+      <div class="row mb">
+        <div class="col-sm-2">
+          <p class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="起始日期"
+              uib-datepicker-popup
+              current-text="今天"
+              clear-text="清除"
+              close-text="关闭"
+              ng-model="obj.startTime"
+              ng-click="open1()"
+              ng-change="search()"
+              is-open="popup1.opened"
+              datepicker-options="dateOptions"
+              ng-required="true"
+            />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" ng-click="open1()">
+                <span class="iconfont icon-rili"></span>
+              </button>
+            </span>
+          </p>
+        </div>
+
+        <div class="col-sm-2">
+          <p class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="终止日期"
+              uib-datepicker-popup
+              current-text="今天"
+              ng-model="rightTimer"
+              is-open="popup2.opened"
+              ng-change="search()"
+              datepicker-options="dateOptions"
+              ng-click="open2()"
+              ng-required="true"
+              clear-text="清除"
+              close-text="关闭"
+            />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" ng-click="open2()">
+                <span class="iconfont icon-rili"></span>
+              </button>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="row mb">
+        <div class="col-sm-4">
+          <!-- <input type="text" ng-model="obj.keyword" placeholder="请输入姓名、手机或档案号"
+                        class="form-control" ng-change="search()"> -->
+          <div
+            throttleinput
+            class="form-control"
+            fun="search()"
+            model="obj.keyword"
+            placeholder="请输入姓名、手机或档案号"
+          ></div>
+        </div>
+
+        <div class="col-sm-4">
+          <!-- <input type="text" class="form-control" ng-change="search()" ng-model="obj.productKeyword"
+                        placeholder="商品名称或条形码"> -->
+          <div
+            throttleinput
+            class="form-control"
+            fun="search()"
+            model="obj.productKeyword"
+            placeholder="商品名称或条形码"
+          ></div>
+        </div>
+        <div class="col-sm-4">
+          <!-- <input type="text" class="form-control" ng-change="search()" ng-model="obj.batchNoKeyword"
+                        placeholder="批号"> -->
+          <div
+            throttleinput
+            class="form-control"
+            fun="search()"
+            model="obj.batchNoKeyword"
+            placeholder="批号"
+          ></div>
+        </div>
+      </div>
+      <div class="row mb">
+        <div class="col-md-6 col-lg-4">
+          <ul class="flex btn-group" style="width: 100%" style="margin: 0">
+            <li
+              style="width: 60px"
+              class="btn btn-white"
+              ng-class="{'check-list_tab':deliveryStatus==null}"
+              ng-click="setTab(null)"
+            >
+              全部
+            </li>
+            <li
+              class="btn btn-white flex-item"
+              ng-click="setTab(1)"
+              ng-class="{'check-list_tab': deliveryStatus==1}"
+            >
+              <span
+                style="font-size: 12px; color: #de6262"
+                class="iconfont icon-iconfontcircle"
+              ></span>
+              待发货{{checkCountFactory.object.waitingDeliveryCount}}人
+            </li>
+            <li
+              class="btn btn-white flex-item"
+              ng-click="setTab(2)"
+              ng-class="{'check-list_tab': deliveryStatus==2}"
+            >
+              <span
+                style="font-size: 12px; color: #41b2a6"
+                class="iconfont icon-iconfontcircle"
+              ></span>
+              加工中{{checkCountFactory.object.sendToMachineCenterCount}}人
+            </li>
+            <li
+              class="btn btn-white flex-item"
+              ng-click="setTab(3)"
+              ng-class="{'check-list_tab': deliveryStatus==3}"
+            >
+              <span
+                style="font-size: 12px; color: #2c95c1"
+                class="iconfont icon-iconfontcircle"
+              ></span>
+              已发货{{checkCountFactory.object.deliveryedCount}}人
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-4">
+          <ul class="flex btn-group" style="margin: 0">
+            <li
+              class="btn btn-white flex-item"
+              ng-click="setFee(0)"
+              ng-class="{'check-list_tab':obj.refundStatus==0}"
+            >
+              <span
+                style="font-size: 12px; color: #2c95c1"
+                class="iconfont icon-iconfontcircle"
+              ></span>
+              已收费
+            </li>
+            <li
+              class="btn flex-item btn-white"
+              ng-click="setFee(1)"
+              ng-class="{'check-list_tab':obj.refundStatus==1}"
+            >
+              <span
+                style="font-size: 12px; color: #de6262"
+                class="iconfont icon-iconfontcircle"
+              ></span>
+              已退费
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="people-list row" style="padding: 0">
+        <div
+          class="col-md-6 col-lg-4 mb"
+          ng-repeat="item in memberFactory.items"
+        >
+          <div
+            class="people-head"
+            ng-class="{'waiting-status':item.deliveryStatus==2,'examined-status':item.deliveryStatus==1}"
+            style="min-height: 160px"
+          >
+            <div class="row">
+              <div class="col-sm-4">
+                <img ng-src="{{item.patient.avatar}}" />
+              </div>
+              <div class="col-sm-8">
+                <p class="ellipsis font-size18">
+                  {{item.patient.patientName}}<span
+                    ng-show="item.patient.patientGender||item.patient.patientBirthday"
+                    class="mr5"
+                    >({{item.patient.patientGender | gender}}
+                    {{item.patient.patientBirthday | howoldFilter}})</span
+                  >
+                </p>
+                <p class="font12" style="white-space: nowrap">
+                  {{item.medicalRecord.medicalRecordType | medicalRecordType}}
+                  ({{item.medicalRecord.medicalCode}})
+                </p>
+                <p class="font12 ellipsis">产品：{{ item.productNames }}</p>
+
+                <p class="font12">
+                  <span>{{item.deliveryStatus | deliveryStatus}}</span>
+
+                  <span ng-show="item.waitingSeconds">
+                    / 等候{{item.waitingSeconds | waitingTime}}</span
+                  >
+                </p>
+                <p class="font12">接诊：{{item.medicalRecord.doctorName}}</p>
+                <p class="font12 ellipsis">
+                  联系人：{{item.customer.customerName}}
+                </p>
+                <p class="font12">
+                  手机号：
+                  <!-- <i class="pr" style="top:3px"
+                                        ng-show="item.customer.linkMobile">*******</i> -->
+                  {{item.customer.linkMobile | hidePhone}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people-body cursor-pointer">
+            <ul class="flex">
+              <li
+                ng-if="item.waitingDeliveryList.length"
+                class="text-align_center flex-item cursor-pointer"
+                ui-sref="deliveryInput({cashflowId:item.cashflow.id})"
+              >
+                待发货<span class="red"
+                  >({{item.waitingDeliveryList.length}})</span
+                >
+              </li>
+              <li
+                ng-if="item.deliveryedList.length&&item.waitingDeliveryList.length"
+                ui-sref="deliveryInputRecord({cashflowId:item.cashflow.id})"
+                class="text-align_center flex-item cursor-pointer border"
+              >
+                已发货<span class="red">({{item.deliveryedList.length}})</span>
+              </li>
+              <li
+                ng-if="item.deliveryedList.length&&!item.waitingDeliveryList.length"
+                ui-sref="deliveryInputRecord({cashflowId:item.cashflow.id})"
+                class="text-align_center flex-item cursor-pointer"
+              >
+                已发货<span class="red">({{item.deliveryedList.length}})</span>
+              </li>
+              <li
+                ui-sref="deliveryProcessing({cashflowId:item.cashflow.id})"
+                ng-show="item.sendToMachineCenterList.length"
+                class="text-align_center flex-item border cursor-pointer"
+              >
+                加工中<span class="red"
+                  >({{item.sendToMachineCenterList.length}})</span
+                >
+              </li>
+              <li
+                ng-if="item.deliveryedList.length"
+                class="text-align_center flex-item border cursor-pointer"
+                ng-click="printFahuoqingdan.print(item.cashflow.id)"
+              >
+                打印发货清单
+              </li>
+            </ul>
+          </div>
+          <div
+            class="update-patient container-fluid update-patient"
+            ng-show="medicalRecordId ===item.medicalRecord.id"
+            style="left: 300px; right: 300px"
+          >
+            <div class="row panel-default">
+              <div class="panel-heading">
+                <h3>检查确认</h3>
+              </div>
+
+              <div class="panel-body product-overflowy table-responsive">
+                <h5>是否确定对以下检查项目进行检查？</h5>
+                <div ng-repeat="iten in item.waitingExamineList">
+                  <label class="margin10"
+                    ><input
+                      type="checkbox"
+                      ng-model="medicalExamineIdArray[$index]"
+                      ng-true-value="{{iten.medicalExamine.id}}"
+                      ng-false-value="null"
+                    />{{iten.medicalExamine.examineName}} </label
+                  >（<span class="material-bill_repeat"
+                    >{{iten.medicalExamine.payedStatus | payedStatus}}</span
+                  >）
+                </div>
+              </div>
+              <div class="panel-footer">
+                <button
+                  class="btn btn-primary"
+                  ng-click="savePatient(item.patient.id,item.medicalRecord.id)"
+                >
+                  确定
+                </button>
+
+                <button class="btn btn-default" ng-click="hidePatient()">
+                  取消
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Pagination"></div>
+    </div>
+  </div>
+</div>
+<div
+  ng-if="printFahuoqingdan.show"
+  print-fahuoqingdan
+  setid="'ele1'"
+  options="printFahuoqingdan"
+></div>
+<div class="screen-modal" ng-show="modifyAdmin" ng-click="hidePatient()"></div>
+
+<div set-modal modal="setCompanyModal"></div>

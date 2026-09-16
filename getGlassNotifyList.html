@@ -1,0 +1,151 @@
+<nav-bar> </nav-bar>
+<!-- getGlassNotifyListCtrl -->
+<!-- <div class="col-sm-2">
+    <ul class="nav nav-list" style="padding-left:20px;">
+        <li><a ui-sref="getGlassNotifyList" ui-sref-active="adminpatient-sidebar">病历列表</a></li>
+
+    </ul>
+
+</div> -->
+
+<div class="col-sm-12 member-input getglass-notify">
+  <div class="row mb">
+    <div class="col-sm-1 lh" style="white-space: nowrap">查找档案：</div>
+    <div class="col-sm-3">
+      <!-- <input type="text" ng-model="keyword" placeholder="请输入姓名、手机号或档案编号" class="form-control"
+                ng-change="searchGetGlassNotifyList()">  -->
+      <div
+        throttleinput
+        class="form-control"
+        fun="searchGetGlassNotifyList()"
+        model="keyword"
+        placeholder="请输入姓名、手机号或档案编号"
+      ></div>
+    </div>
+    <!-- <div class="col-sm-2 lh text-align_right">首诊日期：</div> -->
+
+    <div class="col-sm-2">
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          uib-datepicker-popup
+          clear-text="清除"
+          close-text="关闭"
+          current-text="今天"
+          ng-model="firstVisitFrom"
+          ng-click="open1()"
+          ng-change="searchGetGlassNotifyList()"
+          placeholder="起始日期"
+          is-open="popup1.opened"
+          datepicker-options="dateOptions"
+          ng-required="true"
+        />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open1()">
+            <span class="iconfont icon-rili"></span>
+          </button>
+        </span>
+      </p>
+    </div>
+    <!-- <span class="fl date-line"></span> -->
+    <div class="col-sm-2">
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="终止日期"
+          uib-datepicker-popup
+          clear-text="清除"
+          close-text="关闭"
+          current-text="今天"
+          ng-model="rightTimer"
+          ng-click="open2()"
+          ng-change="searchGetGlassNotifyList()"
+          is-open="popup2.opened"
+          datepicker-options="dateOptions"
+          ng-required="true"
+        />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open2()">
+            <span class="iconfont icon-rili"></span>
+          </button>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="panel panel-default" ng-repeat="item in getGlassNotifyList.items">
+    <div class="panel-heading">
+      病历编号（{{item.medicalRecord.medicalCode}}）
+    </div>
+    <!--<div class="panel-body">
+
+        </div>-->
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>
+            首诊日期：{{item.medicalRecord.firstVisit |date:'yyyy-MM-dd'}}
+          </td>
+          <td>姓名：{{item.patient.patientName}}</td>
+          <td>性别：{{item.patient.patientGender | gender}}</td>
+          <td>年龄：{{item.patient.patientBirthday | howoldFilter}}</td>
+        </tr>
+        <tr>
+          <td>联系人：{{item.customer.customerName}}</td>
+          <td>手机号：{{item.customer.linkMobile}}</td>
+          <td>
+            <div
+              ng-show="item.receiveSmsLog?true:false"
+              ng-mouseenter="smsContent=true"
+              ng-mouseleave="smsContent=false"
+              style="position: relative"
+            >
+              短信通知已发送
+              <div
+                class="popover bottom"
+                ng-show="smsContent"
+                style="display: block; left: -40%; top: 100%"
+              >
+                <div class="arrow"></div>
+                <h3 class="popover-title">
+                  发送时间：{{item.receiveSmsLog.gmtCreate | date:'yyyy-MM-dd'}}
+                </h3>
+                <div class="popover-content">
+                  <p>{{item.receiveSmsLog.smsContent}}</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <p>
+              <a
+                ng-click="sendmsg(item.medicalRecord.id,$index)"
+                class="btn btn-success btn-sm"
+                style="margin-right: 5px"
+                type="button"
+                >发送取镜通知</a
+              >
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="Pagination">
+    <!-- 这里显示分页 -->
+  </div>
+</div>
+
+<div set-modal modal="setCompanyModal"></div>
+<div
+  chose-table-line
+  option="choseTable"
+  ng-if="choseTable.show"
+  cb="choseTable.back()"
+></div>

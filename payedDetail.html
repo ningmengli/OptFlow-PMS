@@ -1,0 +1,678 @@
+<nav-bar> </nav-bar>
+<!-- payedDetailCtrl -->
+<div class="my-member wait-pay_detail container-fluid">
+  <div class="myrecord-recept row">
+    <div class="col-sm-2 clearfix">
+      <button class="btn fl btn-default" ng-click="back()">
+        <span class="iconfont icon-icon"></span>返回
+      </button>
+    </div>
+  </div>
+</div>
+<div class="contentpanel" style="background: #eee; padding-top: 20px">
+  <div class="panel-default" style="background: #fff">
+    <div class="panel-heading" style="background: #fff; padding: 15px">
+      <div class="panel-title">
+        收费信息（流水单号：{{getCashflowObjectFactory.object.cashflow.tradeNo}}）
+      </div>
+    </div>
+    <div class="panel-body bg-white wait-change_detail">
+      <div class="patient-info">
+        <div class="row">
+          <div class="col-sm-2">
+            <img
+              ng-src="{{getCashflowObjectFactory.object.patient.avatar}}"
+              class="thumbnail img-responsive"
+            />
+          </div>
+          <div class="col-sm-10">
+            <h5>
+              {{getCashflowObjectFactory.object.patient.patientName}}
+              （档案号：{{getCashflowObjectFactory.object.medicalRecord.medicalCode}}）
+            </h5>
+            <ul class="row">
+              <li class="col-sm-6">
+                性别：{{getCashflowObjectFactory.object.patient.patientGender |
+                gender}}
+              </li>
+              <li class="col-sm-6">
+                年龄：{{getCashflowObjectFactory.object.patient.patientBirthday
+                | howoldFilter}}
+              </li>
+            </ul>
+
+            <ul class="row">
+              <li class="col-sm-12">
+                身份证号：{{getCashflowObjectFactory.object.patient.idCard}}
+              </li>
+            </ul>
+            <ul class="row">
+              <li class="col-sm-6">
+                联系人：{{getCashflowObjectFactory.object.customer.customerName}}
+              </li>
+              <li class="col-sm-6">
+                手机号：
+
+                <!--  <i
+                  class="pr"
+                  style="top: 3px"
+                  ng-show="getCashflowObjectFactory.object.customer.linkMobile"
+                  >*******</i> -->
+                {{getCashflowObjectFactory.object.customer.linkMobile |
+                hidePhone}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h5>收费项目</h5>
+        <table border="1" width="100%" frame="border" rules="all">
+          <thead>
+            <tr>
+              <th>收费名称</th>
+              <th>规格</th>
+              <th style="width: 5%">单位</th>
+              <th>单价(￥)</th>
+              <th>数量</th>
+              <th style="width: 110px">折扣</th>
+              <th style="width: 110px">折后金额(￥)</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              ng-repeat="item in getCashflowObjectFactory.object.medicalProductVoList"
+            >
+              <td>{{item.medicalProduct.productName}}</td>
+              <td>
+                <div class="white-space_nowrap">
+                  <div>
+                    <span ng-if="item.product.modelType"
+                      >{{item.product.model1Name}}:{{item.medicalProduct.model1}}</span
+                    >
+                  </div>
+                  <div ng-if="item.product.modelType==2">
+                    <span
+                      >{{item.product.model2Name}}:{{item.medicalProduct.model2}}</span
+                    >
+                  </div>
+                </div>
+              </td>
+              <td>{{item.medicalProduct.unitName}}</td>
+              <td>{{item.medicalProduct.marketPrice}}</td>
+              <td>{{item.medicalProduct.useCount}}</td>
+              <td>{{item.medicalProduct.memberRate}}%</td>
+
+              <td>{{item.medicalProduct.rateFee}}</td>
+              <td>{{item.medicalProduct.remark}}</td>
+            </tr>
+            <tr
+              ng-repeat="item in getCashflowObjectFactory.object.medicalProductVoListOfModel"
+            >
+              <td>{{item.medicalProduct.productName}}</td>
+              <td>
+                <div class="white-space_nowrap">
+                  <div ng-repeat="iten in item.medicalProductModelList">
+                    {{iten.modelName}}:{{iten.modelValue}}
+                  </div>
+                </div>
+              </td>
+              <td>{{item.medicalProduct.unitName}}</td>
+              <td>{{item.medicalProduct.marketPrice}}</td>
+              <td>{{item.medicalProduct.useCount}}</td>
+              <td>{{item.medicalProduct.memberRate}}%</td>
+
+              <td>{{item.medicalProduct.rateFee}}</td>
+              <td>{{item.medicalProduct.remark}}</td>
+            </tr>
+            <tr
+              ng-repeat="item in getCashflowObjectFactory.object.medicalExamineVoList"
+            >
+              <td>{{item.medicalExamine.examineName}}</td>
+              <td></td>
+              <td>{{item.medicalExamine.unitName}}</td>
+              <td>{{item.medicalExamine.marketPrice}}</td>
+              <td>{{item.medicalExamine.useCount}}</td>
+              <td>{{item.medicalExamine.memberRate}}%</td>
+              <td>{{item.medicalExamine.rateFee}}</td>
+              <td>{{item.medicalExamine.remark}}</td>
+            </tr>
+
+            <tr
+              ng-repeat="item in getCashflowObjectFactory.object.registrationFeeVoList"
+            >
+              <td>{{item.medicalExamine.examineName}}</td>
+              <td>挂号费</td>
+              <td>{{item.medicalExamine.unitName}}</td>
+              <td>{{item.medicalExamine.marketPrice}}</td>
+              <td>{{item.medicalExamine.useCount}}</td>
+              <td>{{item.medicalExamine.memberRate}}%</td>
+              <td>{{item.medicalExamine.rateFee}}</td>
+              <td>{{item.medicalExamine.remark}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="clearfix">
+          <div class="fl" style="width: 25%">
+            <div style="margin: 10px 0">
+              销售费用：¥
+              {{getCashflowObjectFactory.object.medicalProductRateFee}}
+            </div>
+            <div style="margin: 10px 0">
+              检查费用：¥
+              {{getCashflowObjectFactory.object.medicalExamineRateFee}}
+            </div>
+
+            <div>
+              挂号费用：¥
+              {{getCashflowObjectFactory.object.registrationRateFee}}
+            </div>
+          </div>
+          <div class="fl" style="width: 50%">
+            <div style="margin: 10px 0">
+              定制费用：¥
+              {{getCashflowObjectFactory.object.medicalProductModelRateFee}}
+            </div>
+          </div>
+          <div class="fr">
+            <div class="clearfix admin-record_totalfee">
+              <span class="fr fee"
+                >¥ {{getCashflowObjectFactory.object.totalFee}}</span
+              >
+              <span class="fr totalfee">费用合计：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.substractFee"
+            >
+              <span class="fr fee"
+                >¥ {{getCashflowObjectFactory.object.substractFee}}</span
+              >
+              <span class="fr totalfee">折扣金额：</span>
+            </div>
+            <div class="clearfix admin-record_totalfee">
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.totalPayment}}</span
+              >
+              <span class="fr totalfee">应收费用：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.substractFee"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.substractFee}}</span
+              >
+              <span class="fr totalfee">减免支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromMedical"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromMedical}}</span
+              >
+              <span class="fr totalfee">医保支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromCredit"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromCredit}}</span
+              >
+              <span class="fr totalfee">挂账金额：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromCommercial"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromCommercial}}</span
+              >
+              <span class="fr totalfee">商保支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromWallet"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromWallet}}</span
+              >
+              <span class="fr totalfee">余额支付：</span>
+            </div>
+
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPoint"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPoint}}</span
+              >
+              <span class="fr totalfee">积分支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel1"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel1}}</span
+              >
+              <span class="fr totalfee">{{otherPay.channelName1}}支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel2"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel2}}</span
+              >
+              <span class="fr totalfee">{{otherPay.channelName2}}支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel3"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel3}}</span
+              >
+              <span class="fr totalfee">{{otherPay.channelName3}}支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel4"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel4}}</span
+              >
+              <span class="fr totalfee">{{otherPay.channelName4}}支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel5"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel5}}</span
+              >
+              <span class="fr totalfee">{{otherPay.channelName5}}支付：</span>
+            </div>
+
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromCash"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromCash}}</span
+              >
+              <span class="fr totalfee">现金支付：</span>
+            </div>
+
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromBankcard"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromBankcard}}</span
+              >
+              <span class="fr totalfee">银行卡支付：</span>
+            </div>
+
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromWechat"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromWechat}}</span
+              >
+              <span class="fr totalfee">微信记账支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromAlipay"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromAlipay}}</span
+              >
+              <span class="fr totalfee">支付宝记账支付：</span>
+            </div>
+
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromWechatScan"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromWechatScan}}</span
+              >
+              <span class="fr totalfee">微信扫码支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromAlipayScan"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromAlipayScan}}</span
+              >
+              <span class="fr totalfee">支付宝扫码支付：</span>
+            </div>
+            <div
+              class="clearfix admin-record_totalfee"
+              ng-show="getCashflowObjectFactory.object.cashflow.receivedFromPos"
+            >
+              <span class="fr fee"
+                >¥
+                {{getCashflowObjectFactory.object.cashflow.receivedFromPos}}</span
+              >
+              <span class="fr totalfee">POS机支付：</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ele1" style="display: none">
+  <div class="print-title clearfix">
+    <div class="fl width33">
+      <img ng-src="{{companyFactory.object.logo}}" />
+    </div>
+
+    <div class="fr width33 trade-number text-align_right">
+      <div>流水单号</div>
+      <div>{{getCashflowObjectFactory.object.cashflow.tradeNo}}</div>
+    </div>
+
+    <div class="fr width33 company-name text-align_center">
+      <div>
+        <span>{{companyFactory.object.corporationName}}</span>
+      </div>
+      <div>收费清单</div>
+    </div>
+  </div>
+  <div class="clearfix print-patient">
+    <div class="fl width25">
+      <div>姓名</div>
+      <span>{{getCashflowObjectFactory.object.patient.patientName}}</span>
+    </div>
+    <div class="fl width25">
+      <div>性别</div>
+      <span
+        >{{getCashflowObjectFactory.object.patient.patientGender |
+        gender}}</span
+      >
+    </div>
+    <div class="fl width25">
+      <div>年龄</div>
+      <span
+        >{{getCashflowObjectFactory.object.patient.patientBirthday |
+        howoldFilter}}</span
+      >
+    </div>
+    <div class="fl width25">
+      <div>档案号</div>
+      <span>{{getCashflowObjectFactory.object.medicalRecord.medicalCode}}</span>
+    </div>
+  </div>
+  <div class="clearfix print-patient">
+    <div class="fl width25">
+      <div>联系人</div>
+      <span>{{getCashflowObjectFactory.object.customer.customerName}}</span>
+    </div>
+
+    <div class="fl width25">
+      <div>手机号</div>
+      <span>
+        <!-- <i
+          class="pr"
+          style="top: 3px"
+          ng-show="getCashflowObjectFactory.object.customer.linkMobile"
+          >*******</i> -->
+        {{getCashflowObjectFactory.object.customer.linkMobile | hidePhone}}
+      </span>
+    </div>
+
+    <div class="fl width33">
+      <div>收费时间</div>
+      <span
+        >{{getCashflowObjectFactory.object.cashflow.payTime | date:'yyyy-MM-dd
+        HH:mm'}}</span
+      >
+    </div>
+  </div>
+
+  <table border="1" width="100%" frame="border" rules="all">
+    <thead>
+      <tr>
+        <th>收费名称</th>
+        <th>规格</th>
+        <th>单位</th>
+        <th>单价(￥)</th>
+        <th>数量</th>
+        <th>折扣</th>
+        <th>折后金额(￥)</th>
+        <th>备注</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        ng-repeat="item in getCashflowObjectFactory.object.medicalProductVoList"
+      >
+        <td>{{item.medicalProduct.productName}}</td>
+        <td>
+          <div class="white-space_nowrap">
+            <div ng-if="item.product.modelType">
+              <span
+                >{{item.product.model1Name}}:{{item.medicalProduct.model1 |
+                printModel}}</span
+              >
+            </div>
+            <div ng-if="item.product.modelType==2">
+              <span
+                >{{item.product.model2Name}}:{{item.medicalProduct.model2 |
+                printModel}}</span
+              >
+            </div>
+          </div>
+        </td>
+        <td>{{item.medicalProduct.unitName}}</td>
+        <td>{{item.medicalProduct.marketPrice}}</td>
+        <td>{{item.medicalProduct.useCount}}</td>
+        <td>{{item.medicalProduct.memberRate}}%</td>
+
+        <td>{{item.medicalProduct.rateFee}}</td>
+        <td>{{item.medicalProduct.remark}}</td>
+      </tr>
+      <tr
+        style="vertical-align: top"
+        ng-repeat="item in getCashflowObjectFactory.object.medicalProductVoListOfModel"
+      >
+        <td>{{item.medicalProduct.productName}}</td>
+        <td style="text-align: left">
+          <div class="white-space_nowrap">
+            <div ng-repeat="iten in item.medicalProductModelList">
+              {{iten.modelName}}:{{iten.modelValue}}
+            </div>
+          </div>
+        </td>
+        <td>{{item.medicalProduct.unitName}}</td>
+        <td>{{item.medicalProduct.marketPrice}}</td>
+        <td>{{item.medicalProduct.useCount}}</td>
+        <td>{{item.medicalProduct.memberRate}}%</td>
+
+        <td>{{item.medicalProduct.rateFee}}</td>
+        <td>{{item.medicalProduct.remark}}</td>
+      </tr>
+      <tr
+        ng-repeat="item in getCashflowObjectFactory.object.medicalExamineVoList"
+      >
+        <td>{{item.medicalExamine.examineName}}</td>
+        <td></td>
+        <td>{{item.medicalExamine.unitName}}</td>
+        <td>{{item.medicalExamine.marketPrice}}</td>
+        <td>{{item.medicalExamine.useCount}}</td>
+        <td>{{item.medicalExamine.memberRate}}%</td>
+        <td>{{item.medicalExamine.rateFee}}</td>
+        <td>{{item.medicalExamine.remark}}</td>
+      </tr>
+
+      <tr
+        ng-repeat="item in getCashflowObjectFactory.object.registrationFeeVoList"
+      >
+        <td>{{item.medicalExamine.examineName}}</td>
+        <td>挂号费</td>
+        <td>{{item.medicalExamine.unitName}}</td>
+        <td>{{item.medicalExamine.marketPrice}}</td>
+        <td>{{item.medicalExamine.useCount}}</td>
+        <td>{{item.medicalExamine.memberRate}}%</td>
+        <td>{{item.medicalExamine.rateFee}}</td>
+        <td>{{item.medicalExamine.remark}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="clearfix" style="margin-top: 20px">
+    <div class="fl width25">
+      销售费用：¥ {{getCashflowObjectFactory.object.medicalProductRateFee}}
+    </div>
+    <div class="fl width25">
+      定制费用：¥ {{getCashflowObjectFactory.object.medicalProductModelRateFee}}
+    </div>
+    <div class="fl width25">
+      检查费用：¥ {{getCashflowObjectFactory.object.medicalExamineRateFee}}
+    </div>
+
+    <div class="fl width25">
+      挂号费用：¥ {{getCashflowObjectFactory.object.registrationRateFee}}
+    </div>
+  </div>
+  <div
+    class="clearfix print-totalfee"
+    style="border-bottom: 2px solid #000; padding-bottom: 10px"
+  >
+    <div class="fl width25">
+      费用合计：¥ {{getCashflowObjectFactory.object.totalFee}}
+    </div>
+
+    <div
+      ng-if="getCashflowObjectFactory.object.substractFee"
+      class="fl width25"
+    >
+      折扣金额：¥ {{getCashflowObjectFactory.object.substractFee}}
+    </div>
+    <div class="fl width25">
+      应收费用：¥ {{getCashflowObjectFactory.object.cashflow.totalPayment}}
+    </div>
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.substractFee"
+      class="fl width25"
+    >
+      减免支付：¥ {{getCashflowObjectFactory.object.cashflow.substractFee}}
+    </div>
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromMedical"
+      class="fl width25"
+    >
+      医保支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromMedical}}
+    </div>
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromCredit"
+      class="fl width25"
+    >
+      挂账金额：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromCredit}}
+    </div>
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromCommercial"
+      class="fl width25"
+    >
+      商保支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromCommercial}}
+    </div>
+
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromWallet"
+      class="fl width25"
+    >
+      余额支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromWallet}}
+    </div>
+
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPoint"
+      class="fl width25"
+    >
+      积分支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromPoint}}
+    </div>
+    <div
+      class="fl width25"
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromCash"
+    >
+      现金支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromCash}}
+    </div>
+    <div
+      class="fl width25"
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromBankcard"
+    >
+      银行卡支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromBankcard}}
+    </div>
+    <div
+      class="fl width25"
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromWechat"
+    >
+      微信记账支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromWechat}}
+    </div>
+    <div
+      class="fl width25"
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromAlipay"
+    >
+      支付宝记账支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromAlipay}}
+    </div>
+    <div
+      ng-if="getCashflowObjectFactory.object.cashflow.receivedFromWechatScan"
+    >
+      微信扫码支付：¥
+      {{getCashflowObjectFactory.object.cashflow.receivedFromWechatScan}}
+    </div>
+  </div>
+  <div class="flex" style="margin-top: 10px">
+    <div class="flex-item">
+      <span>{{getCashflowObjectFactory.object.company.companyName}}</span>
+    </div>
+
+    <div class="flex-item">
+      <span>{{getCashflowObjectFactory.object.company.phone}}</span>
+    </div>
+
+    <div class="flex-item">
+      收款人
+      <span>{{getCashflowObjectFactory.object.cashflow.casherName}}</span>
+    </div>
+    <div class="flex-item">
+      接诊{{corpInfo.employeeTitle}}
+      <span>{{getCashflowObjectFactory.object.medicalRecord.doctorName}}</span>
+    </div>
+  </div>
+</div>

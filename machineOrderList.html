@@ -1,0 +1,357 @@
+<nav-bar> </nav-bar>
+<!-- machineOrderListCtrl -->
+<div class="mb" style="border-bottom: 1px solid #dedede; padding: 10px 20px">
+  <div class="clearfix">
+    <div class="fl">
+      <span class="mr25" style="font-size: 20px; color: #333; font-weight: bold"
+        >{{companyName}}</span
+      >
+    </div>
+  </div>
+</div>
+
+<div class="my-member">
+  <div class="content-panel" style="padding: 0 15px">
+    <ul class="clearfix">
+      <li
+        class="fl cursor-pointer"
+        ui-sref-active="active"
+        ui-sref="deliveryList"
+      >
+        销售记录
+      </li>
+      <li
+        ui-sref="machineOrderList"
+        class="fl cursor-pointer"
+        ui-sref-active="active"
+      >
+        加工记录<span class="red">({{getAdminList.count}}) </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="admin-list" style="padding: 15px">
+  <div class="row mb">
+    <div class="col-sm-2">
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="起始日期"
+          uib-datepicker-popup
+          current-text="今天"
+          clear-text="清除"
+          close-text="关闭"
+          ng-model="obj.startTime"
+          ng-click="open1()"
+          ng-change="searchAdminList()"
+          is-open="popup1.opened"
+          datepicker-options="dateOptions"
+          ng-required="true"
+        />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open1()">
+            <span class="iconfont icon-rili"></span>
+          </button>
+        </span>
+      </p>
+    </div>
+
+    <div class="col-sm-2">
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="终止日期"
+          uib-datepicker-popup
+          current-text="今天"
+          ng-model="rightTime"
+          is-open="popup2.opened"
+          ng-change="searchAdminList()"
+          datepicker-options="dateOptions"
+          ng-click="open2()"
+          ng-required="true"
+          clear-text="清除"
+          close-text="关闭"
+        />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open2()">
+            <span class="iconfont icon-rili"></span>
+          </button>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="row mb">
+    <div class="col-sm-4">
+      <!-- <input type="text" ng-model="obj.keyword" placeholder="请输入姓名、手机或档案号" class="form-control"
+        ng-change="searchAdminList()" /> -->
+      <div
+        throttleinput
+        class="form-control"
+        fun="searchAdminList()"
+        model="obj.keyword"
+        placeholder="请输入姓名、手机或档案号"
+      ></div>
+    </div>
+
+    <div class="col-sm-4">
+      <!-- <input type="text" class="form-control" ng-change="searchAdminList()" ng-model="obj.productKeyword"
+        placeholder="商品名称或条形码" /> -->
+      <div
+        throttleinput
+        class="form-control"
+        fun="searchAdminList()"
+        model="obj.productKeyword"
+        placeholder="商品名称或条形码"
+      ></div>
+    </div>
+  </div>
+  <div class="row pr mb" style="z-index: 99">
+    <div class="col-sm-4 assist-check_list">
+      <ul class="flex btn-group" style="width: 100%">
+        <li
+          style="width: 100px"
+          class="btn btn-white flex-item"
+          ng-class="{'check-list_tab':tab==1}"
+          ng-click="setTab(1)"
+        >
+          全部
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="setTab(2)"
+          ng-class="{'check-list_tab':tab==2}"
+        >
+          <span
+            style="font-size: 12px; color: #de6262"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          待受理
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="setTab(3)"
+          ng-class="{'check-list_tab':tab==3}"
+        >
+          <span
+            style="font-size: 12px; color: #41b2a6"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          制作中
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="setTab(4)"
+          ng-class="{'check-list_tab':tab==4}"
+        >
+          <span
+            style="font-size: 12px; color: #2c95c1"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          已完成
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <select
+        class="form-control"
+        ng-change="searchAdminList()"
+        ng-model="obj.machineCenterId"
+      >
+        <option ng-value="null">全部加工中心</option>
+
+        <option ng-value="{{modelName.id}}" ng-repeat="modelName in centerArr">
+          {{modelName.name}}
+        </option>
+      </select>
+    </div>
+    <div class="col-sm-4 assist-check_list">
+      <ul class="btn-group flex" style="margin: 0">
+        <li
+          class="btn btn-white flex-item"
+          ng-class="{'check-list_tab':obj.receiveStatus==null}"
+          ng-click="changeReceiveStatus(null)"
+        >
+          全部
+        </li>
+        <li
+          class="btn btn-white flex-item"
+          ng-click="changeReceiveStatus(0)"
+          ng-class="{'check-list_tab':obj.receiveStatus==0}"
+        >
+          <span
+            style="font-size: 12px; color: #de6262"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          未签收
+        </li>
+
+        <li
+          class="btn btn-white flex-item"
+          ng-click="changeReceiveStatus(1)"
+          ng-class="{'check-list_tab':obj.receiveStatus==1}"
+        >
+          <span
+            style="font-size: 12px; color: #2c95c1"
+            class="iconfont icon-iconfontcircle"
+          ></span>
+          已签收
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pr" style="top: -50px">
+    <div class="overflow-x" style="padding-top: 50px">
+      <div class="panel panel-default" style="min-width: 1200px">
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 76px">姓名</th>
+                <th style="width: 100px">档案号</th>
+                <th style="width: 76px">接诊人</th>
+                <th>加工中心</th>
+                <th>提交人</th>
+                <th>提交时间</th>
+                <th>产品名称</th>
+                <th>规格</th>
+                <th>数量</th>
+                <th>预计取镜日期</th>
+                <th style="width: 76px">加工状态</th>
+                <th style="width: 100px">
+                  签收状态
+                  <span
+                    class="iconfont icon-gantanhao_icon pr"
+                    ng-mouseenter="sms=true"
+                    ng-mouseleave="sms=false"
+                  >
+                    <div
+                      class="popover top"
+                      ng-show="sms"
+                      style="
+                        display: block;
+                        left: -116px;
+                        top: -63px;
+                        width: 246px;
+                      "
+                      ;
+                    >
+                      <div class="arrow"></div>
+
+                      <div class="popover-content">
+                        <p>签收是指镜片加工完成，店员签收</p>
+                        <p>发货是指顾客把货提走</p>
+                      </div>
+                    </div>
+                  </span>
+                </th>
+                <th style="width: 76px">发货状态</th>
+                <th style="width: 76px">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-hide="getAdminList.items.length">
+                <td colspan="14">暂无数据</td>
+              </tr>
+              <tr ng-repeat="item in getAdminList.items">
+                <td>{{item.patient.patientName}}</td>
+                <td class="break_all">{{item.medicalRecord.medicalCode}}</td>
+                <td>{{item.medicalRecord.doctorName}}</td>
+                <td>{{item.machineCenter.name}}</td>
+                <td>{{item.sendAdmin.nickname}}</td>
+                <td>
+                  {{item.machineCenterOrder.gmtCreate | date:'yyyy-MM-dd'}}
+                </td>
+                <td>{{item.medicalProduct.productName}}</td>
+                <td>
+                  <div ng-if="item.product.modelType">
+                    <span
+                      >{{item.product.model1Name}}:{{item.medicalProduct.model1|
+                      printModel}}</span
+                    >
+                  </div>
+                  <div ng-if="item.product.modelType==2">
+                    <span
+                      >{{item.product.model2Name}}:{{item.medicalProduct.model2|
+                      printModel}}</span
+                    >
+                  </div>
+                </td>
+                <td>
+                  {{item.medicalProduct.useCount}}{{item.medicalProduct.unitName}}<br />
+                  <span
+                    class="font12 weight400 color_d9534f"
+                    ng-if="item.medicalProduct.refundCount>0"
+                    >已退{{item.medicalProduct.refundCount}}</span
+                  >
+                </td>
+                <td>
+                  <span ng-show="item.machineCenterOrder.acceptStatus==1"
+                    >{{item.machineCenterOrder.planDeliveryTime |
+                    date:'yyyy-MM-dd'}}</span
+                  >
+                </td>
+                <td>
+                  <span
+                    ng-show="item.machineCenterOrder.acceptStatus==0&&item.machineCenterOrder.status==0"
+                    >待受理</span
+                  >
+                  <span
+                    ng-show="item.machineCenterOrder.acceptStatus==1&&item.machineCenterOrder.status==0"
+                    >制作中</span
+                  >
+                  <span
+                    ng-show="item.machineCenterOrder.acceptStatus==1&&item.machineCenterOrder.status==1"
+                    >制作中</span
+                  >
+                  <span
+                    ng-show="item.machineCenterOrder.acceptStatus==1&&item.machineCenterOrder.status==2"
+                    >已完成</span
+                  >
+                </td>
+                <td>
+                  <div
+                    ng-show="item.machineCenterOrder.acceptStatus==1&&item.machineCenterOrder.status==2"
+                  >
+                    <span ng-show="item.machineCenterOrder.receiveStatus==1"
+                      >已签收</span
+                    >
+                    <span ng-show="item.machineCenterOrder.receiveStatus==0"
+                      >未签收</span
+                    >
+                  </div>
+                </td>
+                <td>
+                  <span
+                    ng-show="item.medicalProductDelivery.deliveryStatus==1&&item.machineCenterOrder.receiveStatus==1"
+                    >已发货</span
+                  >
+                </td>
+                <td>
+                  <span
+                    ng-click="receiveOrder(item.machineCenterOrder.id,$index)"
+                    class="btn btn-primary"
+                    ng-show="item.machineCenterOrder.status==2&&item.machineCenterOrder.receiveStatus==0"
+                    >签收</span
+                  >
+                  <span
+                    ng-click="deliveryReceiveOrder(item.machineCenterOrder.id,$index)"
+                    class="btn btn-primary"
+                    ng-show="item.medicalProductDelivery.deliveryStatus==0&&item.machineCenterOrder.receiveStatus==1"
+                    >发货</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="first-pagination">
+      <!-- 这里显示分页 -->
+    </div>
+  </div>
+</div>

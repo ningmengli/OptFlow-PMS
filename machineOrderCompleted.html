@@ -1,0 +1,159 @@
+<nav-bar> </nav-bar>
+<!-- machineOrderBrokenCtrl -->
+<div class="my-member wait-pay_detail container-fluid">
+  <div class="myrecord-recept row">
+    <div class="col-sm-2 clearfix">
+      <button class="btn fl btn-default" ng-click="goBack()">
+        <span class="iconfont icon-icon"></span>返回
+      </button>
+    </div>
+  </div>
+</div>
+<div class="contentpanel" style="background: #eee; padding-top: 20px">
+  <div
+    order-brokeninfo
+    method="getStockObjectFactory.result.object.methodGlassRecord"
+    tab="3"
+    cashflow-id="{{cashflowId}}"
+  ></div>
+  <div class="my-member assist-checking container-fluid">
+    <div class="row">
+      <div class="col-sm-12 bg-white">
+        <div class="content-panel">
+          <ul class="clearfix">
+            <li class="fl cursor-pointer assist-checked" style="height: 52px">
+              库存
+            </li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 20px; margin-top: 10px">
+          <div class="table-responsive margin10" style="margin-bottom: -2px">
+            <table style="border: 1px solid #e7e7e7">
+              <thead>
+                <tr>
+                  <th>品牌/类目/生产厂家</th>
+
+                  <th colspan="2">商品基本信息</th>
+                  <th>规格</th>
+                  <th>下单数量</th>
+
+                  <th colspan="3">
+                    <div class="flex">
+                      <div class="flex-item">批号</div>
+                      <div class="flex-item">生产日期</div>
+                      <div class="flex-item">有效期</div>
+                      <div class="flex-item">唯一标识码</div>
+
+                      <div style="width: 80px">领料数量</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr
+                  ng-repeat="item in   getStockObjectFactory.result.object.machineCenterOrderVoList"
+                  ng-init="outerIndex = $index"
+                >
+                  <td style="border: none">
+                    <div ng-if="item.showProduct">
+                      {{item.brand.brandName}}
+                      <div>{{item.category.categoryName}}</div>
+                      <div>{{item.product.factory}}</div>
+                    </div>
+                  </td>
+
+                  <td colspan="2" style="border: none">
+                    <div ng-if="item.showProduct">
+                      <div class="clearfix">
+                        <p
+                          style="width: 50%; text-align: left"
+                          class="fl ellipsis"
+                        >
+                          {{item.medicalProduct.productName}}
+                        </p>
+                        <p style="font-size: 12px; opacity: 0.8" class="fr">
+                          ¥{{item.medicalProduct.marketPrice}}/{{item.medicalProduct.unitName}}
+                        </p>
+                      </div>
+                      <div
+                        class="clearfix"
+                        style="font-size: 12px; opacity: 0.8"
+                      >
+                        <span ng-show="item.medicalProduct.skuCode" class="fr"
+                          >条形码：{{item.medicalProduct.skuCode}}</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td style="border: none">
+                    <div>
+                      <div style="text-align: left" class="">
+                        <div ng-show="item.product.productType==2">
+                          <div ng-repeat="itea in iten.modelList">
+                            {{itea.modelName}}:{{itea.modelValue}}
+                          </div>
+                        </div>
+                        <div ng-show="item.product.productType!=2">
+                          <div ng-show="item.product.modelType">
+                            <span
+                              >{{item.product.model1Name}}:{{item.medicalProduct.model1|
+                              printModel}}</span
+                            >
+                          </div>
+                          <div ng-show="item.product.modelType==2">
+                            <span
+                              >{{item.product.model2Name}}:{{item.medicalProduct.model2|
+                              printModel}}</span
+                            >
+                          </div>
+                        </div>
+
+                        <div ng-repeat="iten in item.medicalProductModelList">
+                          {{iten.modelName}}:{{iten.modelValue}}
+                        </div>
+                        <div>备注:{{item.medicalProduct.remark}}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="border: none">
+                    {{item.medicalProduct.useCount}}<br />
+                    <span
+                      class="font12 weight400 color_d9534f"
+                      ng-if="item.medicalProduct.refundCount>0"
+                      >已退{{item.medicalProduct.refundCount}}</span
+                    >
+                  </td>
+                  <td colspan="3" style="border: none">
+                    <div ng-repeat="iten in item.medicalProductStockVoList">
+                      <div class="flex">
+                        <div class="flex-item">{{iten.stockInSku.batchNo}}</div>
+                        <div class="flex-item">
+                          {{iten.stockInSku.productionDate|date:'yyyy-MM-dd'}}
+                        </div>
+                        <div class="clearfix flex-item">
+                          <p>
+                            {{iten.stockInSku.expiresDate | date:'yyyy-MM-dd'}}
+                          </p>
+                        </div>
+
+                        <div class="flex-item break_all">
+                          {{iten.stockInSku.uniqueCode}}
+                        </div>
+                        <div></div>
+
+                        <div style="width: 80px">
+                          {{iten.medicalProductStock.deliveryCount}}
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

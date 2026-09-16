@@ -1,0 +1,466 @@
+<nav-bar>
+  <!-- payedListCtrl -->
+</nav-bar>
+<div class="my-member height100 wait-chargelist">
+  <div class="content-panel" style="padding: 0 15px 0">
+    <div charge-header></div>
+  </div>
+  <div class="tab-content container-fluid" ng-click="hideMember()">
+    <div class="row mb mt15">
+      <div class="col-md-2 col-lg-1 medical-recordlist-time">已收费列表：</div>
+      <div class="col-md-4 col-lg-3">
+        <!-- <input type="text" ng-change="search()" class="form-control"
+                    placeholder="请输入姓名、手机号或档案号" ng-model="obj.keyword"> -->
+        <div
+          throttleinput
+          class="form-control"
+          fun="search()"
+          model="obj.keyword"
+          placeholder="请输入姓名、手机号或档案号"
+        ></div>
+      </div>
+      <div class="col-md-3 col-lg-2">
+        <p class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="起始日期"
+            uib-datepicker-popup
+            current-text="今天"
+            clear-text="清除"
+            close-text="关闭"
+            ng-model="obj.startTime"
+            ng-click="open1()"
+            ng-change="search()"
+            is-open="popup1.opened"
+            datepicker-options="dateOptions"
+            ng-required="true"
+          />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()">
+              <span class="iconfont icon-rili"></span>
+            </button>
+          </span>
+        </p>
+      </div>
+      <!-- <span class="fl my-medical_dateline"></span> -->
+
+      <div class="col-md-3 col-lg-2">
+        <p class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="终止日期"
+            uib-datepicker-popup
+            current-text="今天"
+            ng-model="rightTimer"
+            is-open="popup2.opened"
+            ng-change="search()"
+            datepicker-options="dateOptions"
+            ng-click="open2()"
+            ng-required="true"
+            clear-text="清除"
+            close-text="关闭"
+          />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()">
+              <span class="iconfont icon-rili"></span>
+            </button>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="people-list row" style="padding: 0">
+      <div
+        class="col-sm-12 min-height160 col-md-6 col-lg-4 mb"
+        ng-repeat="item in memberFactory.items"
+      >
+        <div class="people-head" style="min-height: 145px; background: #4185c1">
+          <div class="row">
+            <div class="col-sm-4">
+              <img ng-src="{{item.patient.avatar}}" />
+            </div>
+            <div class="col-sm-8">
+              <p class="ellipsis font-size18">
+                {{item.patient.patientName}}<span
+                  ng-show="item.patient.patientGender || item.patient.patientBirthday"
+                  class="mr5"
+                  >({{item.patient.patientGender | gender}}
+                  {{item.patient.patientBirthday | howoldFilter}})</span
+                >
+              </p>
+
+              <p class="font12">
+                收费时间：{{item.cashflow.payTime | date:'yyyy-MM-dd HH:mm'}}
+              </p>
+
+              <p class="font12 ellipsis">
+                接诊：{{item.medicalRecord.doctorName}}
+              </p>
+              <p class="font12 ellipsis">
+                联系人：{{item.customer.customerName}}
+              </p>
+              <p class="font12 ellipsis">
+                手机号：
+                <!--  <i class="pr" style="top:3px"
+                                    ng-show="item.customer.linkMobile">*******</i> -->
+                {{item.customer.linkMobile | hidePhone}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="people-body">
+          <ul class="row" style="text-align: center; margin: 0">
+            <li
+              class="col-sm-6 pr cursor-pointer"
+              ui-sref="payedDetail({cashflowId:item.cashflow.id})"
+            >
+              已收费： ¥{{item.cashflow.totalPayment}}
+            </li>
+            <li
+              class="col-sm-3 pr cursor-pointer"
+              ng-click="showPrint(item.cashflow.id,$event)"
+              style="border-left: 1px solid #e7eaec"
+            >
+              打印
+              <div
+                class="popover"
+                ng-show="printId==item.cashflow.id"
+                style="
+                  display: block;
+                  left: -2%;
+                  top: 80%;
+                  padding: 5px 0px;
+                  z-index: 99;
+                "
+              >
+                <div class="popover-content" style="width: 162px; padding: 0">
+                    <p
+                    class="print-hover color_666 p510"
+                    ng-click="printShoufei.print(item.cashflow.id)"
+                  >
+                    <span class="iconfont icon-print"></span> 打印收费单
+                  </p>
+                  <p
+                    class="print-hover color_666 p510"
+                    ng-click="printList(item.cashflow.id)"
+                  >
+                    <span class="iconfont icon-print1"></span> 打印小票
+                  </p>
+                  <p
+                    ng-click="printPeijing.print(item.cashflow.id,item.medicalRecord.id,false)"
+                    class="print-hover color_666 p510"
+                  >
+                    <span class="iconfont icon-print"></span> 打印配镜单
+                  </p>
+                  <p
+                    ng-click="printPeijing.print(item.cashflow.id,item.medicalRecord.id,true)"
+                    class="print-hover color_666 p510"
+                  >
+                    <span class="iconfont icon-print"></span> 打印配镜单-医械版
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              class="col-sm-3 pr cursor-pointer"
+              ng-click="back(item.cashflow.id)"
+              style="border-left: 1px solid #e7eaec"
+            >
+              退费
+            </li>
+            <!-- <li class="col-sm-4 pr cursor-pointer font-size18" print-list style="border-left: 1px solid #e7eaec;">
+
+                        </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="Pagination"></div>
+  </div>
+</div>
+<div
+  ng-if="printShoufei.show"
+  print-shoufeidan
+  setid="'ele1'"
+  options="printShoufei"
+></div>
+<div
+  ng-if="printPeijing.show"
+  print-peijingdan
+  setid="'ele2'"
+  options="printPeijing"
+></div>
+
+<div id="ele3" class="printEle" style="display: none">
+  <div class="print-title">
+    <div class="text-align_center">
+      <span>{{companyFactory.object.corporationName}}</span>
+    </div>
+  </div>
+  <div class="print-patient">
+    <div>流水单号：{{getCashflowObjectFactory.object.cashflow.tradeNo}}</div>
+  </div>
+  <div class="print-patient">
+    姓名：{{getCashflowObjectFactory.object.patient.patientName}}
+    <span
+      ng-if="getCashflowObjectFactory.object.patient.patientGender || getCashflowObjectFactory.object.patient.patientBirthday"
+      class="mr5"
+      >({{getCashflowObjectFactory.object.patient.patientGender | gender}}
+      {{getCashflowObjectFactory.object.patient.patientBirthday |
+      howoldFilter}})</span
+    >
+  </div>
+  <div class="print-patient">
+    时间：{{getCashflowObjectFactory.object.cashflow.payTime | date:'yyyy-MM-dd
+    HH:mm'}}
+  </div>
+  <div
+    class="print-patient"
+    ng-if="getCashflowObjectFactory.object.school&&getCashflowObjectFactory.object.school.schoolName"
+  >
+    学校：{{getCashflowObjectFactory.object.school.schoolName}}
+  </div>
+  <div
+    class="print-patient"
+    ng-if="getCashflowObjectFactory.object.schoolClass&&getCashflowObjectFactory.object.schoolClass.className"
+  >
+    班级：{{getCashflowObjectFactory.object.schoolClass.className}}
+  </div>
+
+  <div
+    class="flex mb10"
+    style="border-bottom: 1px solid #000; font-weight: bold"
+  >
+    <div class="flex-item">品名</div>
+    <div class="flex-item">单价</div>
+    <div class="flex-item">数量</div>
+    <div class="flex-item">费用</div>
+  </div>
+
+  <div
+    class="pr mb10"
+    ng-repeat="item in getCashflowObjectFactory.object.medicalProductVoList"
+  >
+    <div class="flex">
+      <div class="flex-item">
+        <div>{{item.medicalProduct.productName}}</div>
+        <div class="font13 white-space_nowrap">
+          <div ng-if="item.product.modelType">
+            <span
+              >{{item.product.model1Name}}:{{item.medicalProduct.model1|
+              printModel}}</span
+            >
+          </div>
+          <div ng-if="item.product.modelType==2">
+            <span
+              >{{item.product.model2Name}}:{{item.medicalProduct.model2|
+              printModel}}</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-item">{{item.medicalProduct.marketPrice}}</div>
+
+      <div class="flex-item">
+        {{item.medicalProduct.useCount}}{{item.medicalProduct.unitName}}
+      </div>
+
+      <div class="flex-item">{{item.medicalProduct.rateFee}}</div>
+    </div>
+
+    <div
+      class="font13"
+      ng-if='item.medicalProduct.remark!==""&&item.medicalProduct.remark!==null'
+    >
+      备注：{{item.medicalProduct.remark}}
+    </div>
+  </div>
+
+  <div
+    class="pr mb10"
+    ng-repeat="item in getCashflowObjectFactory.object.medicalProductVoListOfModel"
+  >
+    <div class="flex">
+      <div class="flex-item">
+        <div>{{item.medicalProduct.productName}}</div>
+        <div class="font13 white-space_nowrap">
+          <div class="white-space_nowrap">
+            <div ng-repeat="iten in item.medicalProductModelList">
+              {{iten.modelName}}:{{iten.modelValue}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-item">{{item.medicalProduct.marketPrice}}</div>
+
+      <div class="flex-item">
+        {{item.medicalProduct.useCount}}{{item.medicalProduct.unitName}}
+      </div>
+
+      <div class="flex-item">{{item.medicalProduct.rateFee}}</div>
+    </div>
+
+    <div
+      class="font13"
+      ng-if='item.medicalProduct.remark!==""&&item.medicalProduct.remark!==null'
+    >
+      备注：{{item.medicalProduct.remark}}
+    </div>
+  </div>
+  <div
+    class="pr mb10"
+    ng-repeat="item in getCashflowObjectFactory.object.medicalExamineVoList"
+  >
+    <div class="flex">
+      <div class="flex-item">{{item.medicalExamine.examineName}}</div>
+
+      <div class="flex-item">{{item.medicalExamine.marketPrice}}</div>
+
+      <div class="flex-item">
+        {{item.medicalExamine.useCount}}{{item.medicalExamine.unitName}}
+      </div>
+
+      <div class="flex-item">{{item.medicalExamine.rateFee}}</div>
+    </div>
+    <div
+      class="font13"
+      ng-if='item.medicalExamine.remark!==""&&item.medicalExamine.remark!==null'
+    >
+      备注：{{item.medicalExamine.remark}}
+    </div>
+  </div>
+
+  <div
+    class="pr mb10"
+    ng-repeat="item in getCashflowObjectFactory.object.registrationFeeVoList"
+  >
+    <div class="flex">
+      <div class="flex-item">{{item.medicalExamine.examineName}}</div>
+
+      <div class="flex-item">{{item.medicalExamine.marketPrice}}</div>
+
+      <div class="flex-item">
+        {{item.medicalExamine.useCount}}{{item.medicalExamine.unitName}}
+      </div>
+
+      <div class="flex-item">{{item.medicalExamine.rateFee}}</div>
+    </div>
+
+    <div
+      class="font13"
+      ng-if='item.medicalExamine.remark!==""&&item.medicalExamine.remark!==null'
+    >
+      备注：{{item.medicalExamine.remark}}
+    </div>
+  </div>
+  <div>
+    销售费用：¥ {{getCashflowObjectFactory.object.medicalProductRateFee}}
+  </div>
+  <div>
+    定制费用：¥ {{getCashflowObjectFactory.object.medicalProductModelRateFee}}
+  </div>
+  <div>
+    检查费用：¥ {{getCashflowObjectFactory.object.medicalExamineRateFee}}
+  </div>
+
+  <div>挂号费用：¥ {{getCashflowObjectFactory.object.registrationRateFee}}</div>
+  <div>
+    应收费用：¥ {{getCashflowObjectFactory.object.cashflow.totalPayment}}
+  </div>
+
+  <div ng-if="getCashflowObjectFactory.object.cashflow.substractFee">
+    减免支付：¥ {{getCashflowObjectFactory.object.cashflow.substractFee}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromMedical">
+    医保支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromMedical}}
+  </div>
+
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromCredit">
+    挂账金额：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromCredit}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromCommercial">
+    商保支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromCommercial}}
+  </div>
+
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromWallet">
+    余额支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromWallet}}
+  </div>
+
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPoint">
+    积分支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromPoint}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel1">
+    {{otherPay.channelName1}}支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel1}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel2">
+    {{otherPay.channelName2}}支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel2}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel3">
+    {{otherPay.channelName3}}支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel3}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel4">
+    {{otherPay.channelName4}}支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel4}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPayChannel5">
+    {{otherPay.channelName5}}支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromPayChannel5}}
+  </div>
+
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromCash">
+    现金支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromCash}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromBankcard">
+    银行卡支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromBankcard}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromWechat">
+    微信记账支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromWechat}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromAlipay">
+    支付宝记账支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromAlipay}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromWechatScan">
+    微信扫码支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromWechatScan}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromAlipayScan">
+    支付宝扫码支付：¥
+    {{getCashflowObjectFactory.object.cashflow.receivedFromAlipayScan}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.receivedFromPos">
+    POS机支付：¥ {{getCashflowObjectFactory.object.cashflow.receivedFromPos}}
+  </div>
+  <div ng-if="getCashflowObjectFactory.object.cashflow.customerWalletBalance">
+    会员卡余额：¥
+    {{getCashflowObjectFactory.object.cashflow.customerWalletBalance}}
+  </div>
+
+  <div style="border-top: 2px solid #000; padding-top: 10px; margin-top: 10px">
+    <div>
+      {{corpInfo.companyTitle}}
+      <span>{{company.companyName}}</span>
+    </div>
+    <div style="margin: 10px 0">电话 <span>{{company.phone}}</span></div>
+
+    <div style="margin: 10px 0">
+      收款 {{getCashflowObjectFactory.object.cashflow.casherName}}
+    </div>
+    <div>
+      接诊
+      <span>{{getCashflowObjectFactory.object.medicalRecord.doctorName}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="screen-modal" ng-show="modifyAdmin" ng-click="hidePatient()"></div>
+<div set-modal modal="setCompanyModal"></div>

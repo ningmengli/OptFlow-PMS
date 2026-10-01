@@ -1,0 +1,561 @@
+{
+  "orphanControllers": 77,
+  "foundInBundle": 77,
+  "notFoundInBundle": [],
+  "newUnregisteredEndpoints": 3,
+  "newEndpointList": [
+    "/config/selectUartDeviceLogVoList.json",
+    "/config/updateUartDeviceType.json",
+    "/doct/saveEmployeeAvatar.json"
+  ],
+  "perController": {
+    "InspectListCtrl": {
+      "templates": [
+        "views/inspectAdmin/inspectList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addDepartmentCtrl": {
+      "templates": [
+        "views/hospital/addDepartment.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addHospitalCtrl": {
+      "templates": [
+        "views/hospital/addHospital.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addInspectCtrl": {
+      "templates": [
+        "views/inspectAdmin/addInspect.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addNewCtrl": {
+      "templates": [
+        "views/newsAdmin/addNew.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addPromotionCtrl": {
+      "templates": [
+        "views/memberManage/addPromotion.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addPurchaseRequestCtrl": {
+      "templates": [
+        "views/materialAdmin/addPurchaseRequest.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addRecommendCtrl": {
+      "templates": [
+        "views/memberManage/addRecommend.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "addScreenPromotionCtrl": {
+      "templates": [
+        "views/screenAdmin/addScreenPromotion.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "adminBillCtrl": {
+      "templates": [
+        "views/materialAdmin/adminBill.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "adminBillOneDetialCtrl": {
+      "templates": [
+        "views/materialAdmin/adminBillOneDetial.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "adminCtrl": {
+      "templates": [
+        "views/home/admin.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "adminModifyCtrl": {
+      "templates": [
+        "views/adminManage/adminModify.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "bookDetailCtrl": {
+      "templates": [
+        "views/bookManage/bookDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "bookSettingsCtrl": {
+      "templates": [
+        "views/bookManage/bookSettings.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "chargeListCtrl": {
+      "templates": [
+        "views/memberManage/chargeList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "cloudPrinterConfigCtrl": {
+      "templates": [
+        "views/screenAdmin/cloudPrinterConfig.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": [
+        "/config/updateUartDeviceType.json"
+      ]
+    },
+    "completeStockLossCtrl": {
+      "templates": [
+        "views/machineCenter/completeStockLoss.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "couponHistoryCtrl": {
+      "templates": [
+        "views/couponAdmin/couponHistory.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "deliveryDeleteCtrl": {
+      "templates": [
+        "views/materialAdmin/deliveryDelete.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "deliveryInputCtrl": {
+      "templates": [
+        "views/chargeAdmin/deliveryInput.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "deliveryInputRecordCtrl": {
+      "templates": [
+        "views/chargeAdmin/deliveryInputRecord.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "deliveryModifyCustomerCtrl": {
+      "templates": [
+        "views/materialAdmin/deliveryModifyCustomer.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "deliveryProcessingCtrl": {
+      "templates": [
+        "views/chargeAdmin/deliveryProcessing.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "encryptUserCtrl": {
+      "templates": [
+        "views/adminManage/encryptUser.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "grouponDetailCtrl": {
+      "templates": [
+        "views/grouponAdmin/grouponDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "grouponListCtrl": {
+      "templates": [
+        "views/grouponAdmin/grouponList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "grouponOrderCtrl": {
+      "templates": [
+        "views/grouponAdmin/grouponOrder.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "homePageCtrl": {
+      "templates": [
+        "views/home/homePage.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "inventoryDetailCtrl": {
+      "templates": [
+        "views/materialAdmin/inventoryDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "inventoryModifyCtrl": {
+      "templates": [
+        "views/materialAdmin/inventoryModify.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "inventoryProductModifyCtrl": {
+      "templates": [
+        "views/materialAdmin/inventoryProductDetail.html",
+        "views/materialAdmin/inventoryProductModify.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "materialImportRecordCtrl": {
+      "templates": [
+        "views/materialAdmin/materialImportRecord.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "materialInventoryCtrl": {
+      "templates": [
+        "views/materialAdmin/materialInventory.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "materialOutportRecordCtrl": {
+      "templates": [
+        "views/materialAdmin/materialOutportRecord.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "materialPurchaseBackGoodsCtrl": {
+      "templates": [
+        "views/materialAdmin/materialPurchaseBackGoods.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "materialPurchaseBackOneCtrl": {
+      "templates": [
+        "views/materialAdmin/materialPurchaseBackOne.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "materialPurchaseReturnCtrl": {
+      "templates": [
+        "views/materialAdmin/materialPurchaseReturn.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "memberAdminCtrl": {
+      "templates": [
+        "views/adminManage/memberAdmin.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "memberCardCtrl": {
+      "templates": [
+        "views/memberManage/memberCard.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "memberPointCtrl": {
+      "templates": [
+        "views/memberManage/memberPoint.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "memberTagCtrl": {
+      "templates": [
+        "views/memberManage/memberTag.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "modifyInspectCtrl": {
+      "templates": [
+        "views/inspectAdmin/modifyInspect.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "modifyMateCheckCtrl": {
+      "templates": [
+        "views/screenAdmin/modifyMateCheck.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "modifyNewCtrl": {
+      "templates": [
+        "views/newsAdmin/modifyNew.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "modifyPromotionCtrl": {
+      "templates": [
+        "views/memberManage/modifyPromotion.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "modifyRecommendCtrl": {
+      "templates": [
+        "views/memberManage/modifyRecommend.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "modifyScreenPromotionCtrl": {
+      "templates": [
+        "views/screenAdmin/modifyScreenPromotion.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "myCouponCtrl": {
+      "templates": [
+        "views/memberManage/myCoupon.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "myMedicalHistoryCtrl": {
+      "templates": [
+        "views/myMember/myMedicalHistory.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "myMedicalRecordListCtrl": {
+      "templates": [
+        "views/myMember/myMedicalRecordList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "newsListCtrl": {
+      "templates": [
+        "views/newsAdmin/newsList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "optometryLogListCtrl": {
+      "templates": [
+        "views/optometryList/optometryLogList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": [
+        "/config/selectUartDeviceLogVoList.json"
+      ]
+    },
+    "orderDetailCtrl": {
+      "templates": [
+        "views/memberManage/orderDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "orderManageCtrl": {
+      "templates": [
+        "views/orderManage/orderManage.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "patientListCtrl": {
+      "templates": [
+        "views/memberManage/patientList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "payBackDetailCtrl": {
+      "templates": [
+        "views/chargeAdmin/payBackDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "payedDetailCtrl": {
+      "templates": [
+        "views/chargeAdmin/payedDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "productOrderCtrl": {
+      "templates": [
+        "views/memberManage/productOrder.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "purchaseDetailCtrl": {
+      "templates": [
+        "views/materialAdmin/purchaseDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "purchaseRecieptCtrl": {
+      "templates": [
+        "views/materialAdmin/purchaseReciept.html",
+        "views/materialAdmin/purchaseRecieptDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "purchaseRequestCheckCtrl": {
+      "templates": [
+        "views/materialAdmin/purchaseRequestCheck.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "purchaseRequestCheckDetailCtrl": {
+      "templates": [
+        "views/materialAdmin/purchaseRequestCheckDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "purchaseRequestModifyCtrl": {
+      "templates": [
+        "views/materialAdmin/purchaseRequestDetail.html",
+        "views/materialAdmin/purchaseRequestModify.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "recommendCustomerCtrl": {
+      "templates": [
+        "views/memberManage/recommendCustomer.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "schoolListCtrl": {
+      "templates": [
+        "views/screenAdmin/schoolList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "schoolMateCheckListCtrl": {
+      "templates": [
+        "views/screenAdmin/schoolMateCheckList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "secKillProductListCtrl": {
+      "templates": [
+        "views/memberManage/secKillProductList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "secKillPromotionListCtrl": {
+      "templates": [
+        "views/memberManage/secKillPromotionList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "selectOrderListCtrl": {
+      "templates": [
+        "views/memberManage/selectOrderList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "stockChangeCheckCtrl": {
+      "templates": [
+        "views/materialAdmin/stockChangeCheck.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "stockChangeDetailCtrl": {
+      "templates": [
+        "views/materialAdmin/stockChangeDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "stockLossDetailCtrl": {
+      "templates": [
+        "views/machineCenter/stockLossDetail.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "stockProductChangeCheckCtrl": {
+      "templates": [
+        "views/materialAdmin/stockProductChangeCheck.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "targetCouponListCtrl": {
+      "templates": [
+        "views/targetMarket/targetCouponList.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    },
+    "updateAdminHospitalCtrl": {
+      "templates": [
+        "views/hospital/updateHospital.adminHospital.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": [
+        "/doct/saveEmployeeAvatar.json"
+      ]
+    },
+    "updateDepartmentCtrl": {
+      "templates": [
+        "views/hospital/updateDepartment.html"
+      ],
+      "occurrences": 1,
+      "newEndpoints": []
+    }
+  }
+}

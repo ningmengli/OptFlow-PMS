@@ -1,0 +1,1274 @@
+{
+ "target": "视光之家 6.9",
+ "observedAt": "2026-09-30",
+ "arrayEnums": {
+  "status :: 0=正常|1=停用": {
+   "name": "status",
+   "items": [
+    [
+     "0",
+     "正常"
+    ],
+    [
+     "1",
+     "停用"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 32
+  },
+  "appStatus :: 0=开启|1=停用": {
+   "name": "appStatus",
+   "items": [
+    [
+     "0",
+     "开启"
+    ],
+    [
+     "1",
+     "停用"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "gender :: null=请选择|1=男|2=女": {
+   "name": "gender",
+   "items": [
+    [
+     "null",
+     "请选择"
+    ],
+    [
+     "1",
+     "男"
+    ],
+    [
+     "2",
+     "女"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "sex :: 1=男|2=女": {
+   "name": "sex",
+   "items": [
+    [
+     "1",
+     "男"
+    ],
+    [
+     "2",
+     "女"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 10
+  },
+  "status :: null=全部|0=未使用|1=已使用|2=已作废": {
+   "name": "status",
+   "items": [
+    [
+     "null",
+     "全部"
+    ],
+    [
+     "0",
+     "未使用"
+    ],
+    [
+     "1",
+     "已使用"
+    ],
+    [
+     "2",
+     "已作废"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 3
+  },
+  "modelNames :: 颜色=颜色|度数=度数|材质=材质|重量=重量|尺码=尺码|规格=规格|型号=型号|设计=设计|容量=容量|疗程=疗程|近视度数=近视度数|散光度数=散光度数|轴位=轴位|功能=功能": {
+   "name": "modelNames",
+   "items": [
+    [
+     "颜色",
+     "颜色"
+    ],
+    [
+     "度数",
+     "度数"
+    ],
+    [
+     "材质",
+     "材质"
+    ],
+    [
+     "重量",
+     "重量"
+    ],
+    [
+     "尺码",
+     "尺码"
+    ],
+    [
+     "规格",
+     "规格"
+    ],
+    [
+     "型号",
+     "型号"
+    ],
+    [
+     "设计",
+     "设计"
+    ],
+    [
+     "容量",
+     "容量"
+    ],
+    [
+     "疗程",
+     "疗程"
+    ],
+    [
+     "近视度数",
+     "近视度数"
+    ],
+    [
+     "散光度数",
+     "散光度数"
+    ],
+    [
+     "轴位",
+     "轴位"
+    ],
+    [
+     "功能",
+     "功能"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 7
+  },
+  "status :: 0=启用|1=停用": {
+   "name": "status",
+   "items": [
+    [
+     "0",
+     "启用"
+    ],
+    [
+     "1",
+     "停用"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "storehouseArr :: null=请选择仓库": {
+   "name": "storehouseArr",
+   "items": [
+    [
+     "null",
+     "请选择仓库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 9
+  },
+  "outType :: 1=科室出库|2=退货出库|3=报损出库|99=其它出库": {
+   "name": "outType",
+   "items": [
+    [
+     "1",
+     "科室出库"
+    ],
+    [
+     "2",
+     "退货出库"
+    ],
+    [
+     "3",
+     "报损出库"
+    ],
+    [
+     "99",
+     "其它出库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 6
+  },
+  "storehouseArr :: 0=请选择要盘点的仓库": {
+   "name": "storehouseArr",
+   "items": [
+    [
+     "0",
+     "请选择要盘点的仓库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "storehouseArr :: null=全部仓库": {
+   "name": "storehouseArr",
+   "items": [
+    [
+     "null",
+     "全部仓库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 5
+  },
+  "inType :: 1=采购入库|99=其他入库": {
+   "name": "inType",
+   "items": [
+    [
+     "1",
+     "采购入库"
+    ],
+    [
+     "99",
+     "其他入库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "outType :: 1=科室出库|2=退货出库|3=报损出库|4=订货出库|5=调拨出库|6=采购退货|10=批量出库|99=其它出库": {
+   "name": "outType",
+   "items": [
+    [
+     "1",
+     "科室出库"
+    ],
+    [
+     "2",
+     "退货出库"
+    ],
+    [
+     "3",
+     "报损出库"
+    ],
+    [
+     "4",
+     "订货出库"
+    ],
+    [
+     "5",
+     "调拨出库"
+    ],
+    [
+     "6",
+     "采购退货"
+    ],
+    [
+     "10",
+     "批量出库"
+    ],
+    [
+     "99",
+     "其它出库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "inType :: 1=采购入库|2=退货入库|5=调拨入库|10=批量入库|99=其他入库": {
+   "name": "inType",
+   "items": [
+    [
+     "1",
+     "采购入库"
+    ],
+    [
+     "2",
+     "退货入库"
+    ],
+    [
+     "5",
+     "调拨入库"
+    ],
+    [
+     "10",
+     "批量入库"
+    ],
+    [
+     "99",
+     "其他入库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "storehouseOutArr :: null=请选择调出仓": {
+   "name": "storehouseOutArr",
+   "items": [
+    [
+     "null",
+     "请选择调出仓"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "storehouseInArr :: null=请选择调入仓": {
+   "name": "storehouseInArr",
+   "items": [
+    [
+     "null",
+     "请选择调入仓"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "statusArr :: 0=未发货|1=待收货|2=已收货": {
+   "name": "statusArr",
+   "items": [
+    [
+     "0",
+     "未发货"
+    ],
+    [
+     "1",
+     "待收货"
+    ],
+    [
+     "2",
+     "已收货"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "typeArr :: 1=到店自提|2=快递发货": {
+   "name": "typeArr",
+   "items": [
+    [
+     "1",
+     "到店自提"
+    ],
+    [
+     "2",
+     "快递发货"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "expressCompany :: 1=顺丰速运|14=百世快递|2=中通快递|3=申通快递|4=圆通速递|5=韵达速递|6=邮政快递包裹|7=EMS|8=天天快递|9=京东快递|10=优速快递|11=德邦快递|12=宅急送|13=其他": {
+   "name": "expressCompany",
+   "items": [
+    [
+     "1",
+     "顺丰速运"
+    ],
+    [
+     "14",
+     "百世快递"
+    ],
+    [
+     "2",
+     "中通快递"
+    ],
+    [
+     "3",
+     "申通快递"
+    ],
+    [
+     "4",
+     "圆通速递"
+    ],
+    [
+     "5",
+     "韵达速递"
+    ],
+    [
+     "6",
+     "邮政快递包裹"
+    ],
+    [
+     "7",
+     "EMS"
+    ],
+    [
+     "8",
+     "天天快递"
+    ],
+    [
+     "9",
+     "京东快递"
+    ],
+    [
+     "10",
+     "优速快递"
+    ],
+    [
+     "11",
+     "德邦快递"
+    ],
+    [
+     "12",
+     "宅急送"
+    ],
+    [
+     "13",
+     "其他"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "typeArr2 :: 1=采集器|2=蓝牙": {
+   "name": "typeArr2",
+   "items": [
+    [
+     "1",
+     "采集器"
+    ],
+    [
+     "2",
+     "蓝牙"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "status :: 0=现金|1=微信支付|2=支付宝支付|3=银行卡": {
+   "name": "status",
+   "items": [
+    [
+     "0",
+     "现金"
+    ],
+    [
+     "1",
+     "微信支付"
+    ],
+    [
+     "2",
+     "支付宝支付"
+    ],
+    [
+     "3",
+     "银行卡"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 3
+  },
+  "status :: null=全部|1=不满意|3=满意|5=非常满意": {
+   "name": "status",
+   "items": [
+    [
+     "null",
+     "全部"
+    ],
+    [
+     "1",
+     "不满意"
+    ],
+    [
+     "3",
+     "满意"
+    ],
+    [
+     "5",
+     "非常满意"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "gender :: 1=男|2=女": {
+   "name": "gender",
+   "items": [
+    [
+     "1",
+     "男"
+    ],
+    [
+     "2",
+     "女"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "status :: 0=关闭|1=打开": {
+   "name": "status",
+   "items": [
+    [
+     "0",
+     "关闭"
+    ],
+    [
+     "1",
+     "打开"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "discounts :: 0=否|1=是": {
+   "name": "discounts",
+   "items": [
+    [
+     "0",
+     "否"
+    ],
+    [
+     "1",
+     "是"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 4
+  },
+  "discounts :: 1=是|0=否": {
+   "name": "discounts",
+   "items": [
+    [
+     "1",
+     "是"
+    ],
+    [
+     "0",
+     "否"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 5
+  },
+  "modelNames :: 颜色=颜色|度数=度数|材质=材质|重量=重量|尺码=尺码|规格=规格|型号=型号|设计=设计|容量=容量|疗程=疗程|球镜=球镜|柱镜=柱镜|轴位=轴位|功能=功能": {
+   "name": "modelNames",
+   "items": [
+    [
+     "颜色",
+     "颜色"
+    ],
+    [
+     "度数",
+     "度数"
+    ],
+    [
+     "材质",
+     "材质"
+    ],
+    [
+     "重量",
+     "重量"
+    ],
+    [
+     "尺码",
+     "尺码"
+    ],
+    [
+     "规格",
+     "规格"
+    ],
+    [
+     "型号",
+     "型号"
+    ],
+    [
+     "设计",
+     "设计"
+    ],
+    [
+     "容量",
+     "容量"
+    ],
+    [
+     "疗程",
+     "疗程"
+    ],
+    [
+     "球镜",
+     "球镜"
+    ],
+    [
+     "柱镜",
+     "柱镜"
+    ],
+    [
+     "轴位",
+     "轴位"
+    ],
+    [
+     "功能",
+     "功能"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "allowList :: 0=允许|1=不允许": {
+   "name": "allowList",
+   "items": [
+    [
+     "0",
+     "允许"
+    ],
+    [
+     "1",
+     "不允许"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "status :: 0=开启|1=关闭": {
+   "name": "status",
+   "items": [
+    [
+     "0",
+     "开启"
+    ],
+    [
+     "1",
+     "关闭"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "status :: null=全部状态|0=正常|1=停用": {
+   "name": "status",
+   "items": [
+    [
+     "null",
+     "全部状态"
+    ],
+    [
+     "0",
+     "正常"
+    ],
+    [
+     "1",
+     "停用"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 3
+  },
+  "statusArr :: 0=正常|1=停用": {
+   "name": "statusArr",
+   "items": [
+    [
+     "0",
+     "正常"
+    ],
+    [
+     "1",
+     "停用"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 2
+  },
+  "status :: null=全部|1=错误|0=正确": {
+   "name": "status",
+   "items": [
+    [
+     "null",
+     "全部"
+    ],
+    [
+     "1",
+     "错误"
+    ],
+    [
+     "0",
+     "正确"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "status2 :: 1=采集器|2=蓝牙": {
+   "name": "status2",
+   "items": [
+    [
+     "1",
+     "采集器"
+    ],
+    [
+     "2",
+     "蓝牙"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "useStatus :: 0=不测视力|1=要测视力": {
+   "name": "useStatus",
+   "items": [
+    [
+     "0",
+     "不测视力"
+    ],
+    [
+     "1",
+     "要测视力"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "useOptStatus :: 0=不测屈光|1=要测屈光": {
+   "name": "useOptStatus",
+   "items": [
+    [
+     "0",
+     "不测屈光"
+    ],
+    [
+     "1",
+     "要测屈光"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "status :: 0=打开|1=关闭": {
+   "name": "status",
+   "items": [
+    [
+     "0",
+     "打开"
+    ],
+    [
+     "1",
+     "关闭"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "distances :: 3=3米|5=5米": {
+   "name": "distances",
+   "items": [
+    [
+     "3",
+     "3米"
+    ],
+    [
+     "5",
+     "5米"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "visionTypes :: 1=仅测裸眼视力|2=仅测戴镜视力|3=先测裸眼后测戴镜": {
+   "name": "visionTypes",
+   "items": [
+    [
+     "1",
+     "仅测裸眼视力"
+    ],
+    [
+     "2",
+     "仅测戴镜视力"
+    ],
+    [
+     "3",
+     "先测裸眼后测戴镜"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "sexList :: 1=男|2=女": {
+   "name": "sexList",
+   "items": [
+    [
+     "1",
+     "男"
+    ],
+    [
+     "2",
+     "女"
+    ]
+   ],
+   "bundle": "main.js",
+   "occurrences": 1
+  },
+  "unitNames :: 副=副|片=片|袋=袋|支=支|粒=粒|瓶=瓶|mg=mg|g=g|ml=ml|l=l|ug=ug|IU=IU|U=U|包=包|盒=盒|枚=枚|丸=丸|喷=喷|颗=颗|滴=滴|件=件|条=条|万单位=万单位|万U=万U|个=个|台=台|套=套": {
+   "name": "unitNames",
+   "items": [
+    [
+     "副",
+     "副"
+    ],
+    [
+     "片",
+     "片"
+    ],
+    [
+     "袋",
+     "袋"
+    ],
+    [
+     "支",
+     "支"
+    ],
+    [
+     "粒",
+     "粒"
+    ],
+    [
+     "瓶",
+     "瓶"
+    ],
+    [
+     "mg",
+     "mg"
+    ],
+    [
+     "g",
+     "g"
+    ],
+    [
+     "ml",
+     "ml"
+    ],
+    [
+     "l",
+     "l"
+    ],
+    [
+     "ug",
+     "ug"
+    ],
+    [
+     "IU",
+     "IU"
+    ],
+    [
+     "U",
+     "U"
+    ],
+    [
+     "包",
+     "包"
+    ],
+    [
+     "盒",
+     "盒"
+    ],
+    [
+     "枚",
+     "枚"
+    ],
+    [
+     "丸",
+     "丸"
+    ],
+    [
+     "喷",
+     "喷"
+    ],
+    [
+     "颗",
+     "颗"
+    ],
+    [
+     "滴",
+     "滴"
+    ],
+    [
+     "件",
+     "件"
+    ],
+    [
+     "条",
+     "条"
+    ],
+    [
+     "万单位",
+     "万单位"
+    ],
+    [
+     "万U",
+     "万U"
+    ],
+    [
+     "个",
+     "个"
+    ],
+    [
+     "台",
+     "台"
+    ],
+    [
+     "套",
+     "套"
+    ]
+   ],
+   "bundle": "main.js",
+   "occurrences": 1
+  }
+ },
+ "mapEnums": {
+  "shenHeMsg :: 0=未审核|1=已审核": {
+   "name": "shenHeMsg",
+   "items": [
+    [
+     "0",
+     "未审核"
+    ],
+    [
+     "1",
+     "已审核"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "chuKuMsg :: 0=未出库|1=已出库": {
+   "name": "chuKuMsg",
+   "items": [
+    [
+     "0",
+     "未出库"
+    ],
+    [
+     "1",
+     "已出库"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "contentInfo :: 0=确认是否已完成加工？|1=确定要取消此订单吗？|2=确认顾客是否取走眼镜？|3=确认是否已经制作完成？": {
+   "name": "contentInfo",
+   "items": [
+    [
+     "0",
+     "确认是否已完成加工？"
+    ],
+    [
+     "1",
+     "确定要取消此订单吗？"
+    ],
+    [
+     "2",
+     "确认顾客是否取走眼镜？"
+    ],
+    [
+     "3",
+     "确认是否已经制作完成？"
+    ]
+   ],
+   "bundle": "controller.js",
+   "occurrences": 1
+  },
+  "payType :: 11=微信|12=支付宝|13=POS机": {
+   "name": "payType",
+   "items": [
+    [
+     "11",
+     "微信"
+    ],
+    [
+     "12",
+     "支付宝"
+    ],
+    [
+     "13",
+     "POS机"
+    ]
+   ],
+   "bundle": "property.js",
+   "occurrences": 1
+  },
+  "map :: 1=验光仪|2=体重秤|3=肺活量|4=血压计|5=生物测量仪|6=焦度计": {
+   "name": "map",
+   "items": [
+    [
+     "1",
+     "验光仪"
+    ],
+    [
+     "2",
+     "体重秤"
+    ],
+    [
+     "3",
+     "肺活量"
+    ],
+    [
+     "4",
+     "血压计"
+    ],
+    [
+     "5",
+     "生物测量仪"
+    ],
+    [
+     "6",
+     "焦度计"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "payType :: 3=对公转账|11=微信|15=兑换码": {
+   "name": "payType",
+   "items": [
+    [
+     "3",
+     "对公转账"
+    ],
+    [
+     "11",
+     "微信"
+    ],
+    [
+     "15",
+     "兑换码"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "remind :: 0=人工随访|1=自动随访": {
+   "name": "remind",
+   "items": [
+    [
+     "0",
+     "人工随访"
+    ],
+    [
+     "1",
+     "自动随访"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "remind :: 0=计划执行|1=执行|2=取消": {
+   "name": "remind",
+   "items": [
+    [
+     "0",
+     "计划执行"
+    ],
+    [
+     "1",
+     "执行"
+    ],
+    [
+     "2",
+     "取消"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "log :: 0=待测试|1=测试中|2=已完成|3=图片异常": {
+   "name": "log",
+   "items": [
+    [
+     "0",
+     "待测试"
+    ],
+    [
+     "1",
+     "测试中"
+    ],
+    [
+     "2",
+     "已完成"
+    ],
+    [
+     "3",
+     "图片异常"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "map :: 0=待发送|1=发送中|2=检查结束|3=成功|4=失败|5=已取消": {
+   "name": "map",
+   "items": [
+    [
+     "0",
+     "待发送"
+    ],
+    [
+     "1",
+     "发送中"
+    ],
+    [
+     "2",
+     "检查结束"
+    ],
+    [
+     "3",
+     "成功"
+    ],
+    [
+     "4",
+     "失败"
+    ],
+    [
+     "5",
+     "已取消"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "map :: 0=不发送|1=发送": {
+   "name": "map",
+   "items": [
+    [
+     "0",
+     "不发送"
+    ],
+    [
+     "1",
+     "发送"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "startStatus :: 0=未开始|1=已开始": {
+   "name": "startStatus",
+   "items": [
+    [
+     "0",
+     "未开始"
+    ],
+    [
+     "1",
+     "已开始"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "endStatus :: 0=未结束|1=成功|2=失败": {
+   "name": "endStatus",
+   "items": [
+    [
+     "0",
+     "未结束"
+    ],
+    [
+     "1",
+     "成功"
+    ],
+    [
+     "2",
+     "失败"
+    ]
+   ],
+   "bundle": "factory.js",
+   "occurrences": 1
+  },
+  "statement :: 0=支付|1=退款": {
+   "name": "statement",
+   "items": [
+    [
+     "0",
+     "支付"
+    ],
+    [
+     "1",
+     "退款"
+    ]
+   ],
+   "bundle": "directive.js",
+   "occurrences": 1
+  },
+  "coinPay :: 3=对公转账|11=微信支付|14=金币抵扣|15=兑换码抵扣": {
+   "name": "coinPay",
+   "items": [
+    [
+     "3",
+     "对公转账"
+    ],
+    [
+     "11",
+     "微信支付"
+    ],
+    [
+     "14",
+     "金币抵扣"
+    ],
+    [
+     "15",
+     "兑换码抵扣"
+    ]
+   ],
+   "bundle": "main.js",
+   "occurrences": 1
+  },
+  "seasson :: 1=春季|2=暑假|3=秋季|4=寒假": {
+   "name": "seasson",
+   "items": [
+    [
+     "1",
+     "春季"
+    ],
+    [
+     "2",
+     "暑假"
+    ],
+    [
+     "3",
+     "秋季"
+    ],
+    [
+     "4",
+     "寒假"
+    ]
+   ],
+   "bundle": "main.js",
+   "occurrences": 1
+  },
+  "shared :: 0=个人使用|1=共享使用": {
+   "name": "shared",
+   "items": [
+    [
+     "0",
+     "个人使用"
+    ],
+    [
+     "1",
+     "共享使用"
+    ]
+   ],
+   "bundle": "main.js",
+   "occurrences": 1
+  },
+  "follow_up_channel_type2 :: 1=电话|2=微信|99=其他": {
+   "name": "follow_up_channel_type2",
+   "items": [
+    [
+     "1",
+     "电话"
+    ],
+    [
+     "2",
+     "微信"
+    ],
+    [
+     "99",
+     "其他"
+    ]
+   ],
+   "bundle": "main.js",
+   "occurrences": 1
+  }
+ }
+}

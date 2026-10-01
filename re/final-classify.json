@@ -1,0 +1,2031 @@
+{
+  "generatedBy": "re/final-classify.py",
+  "197_终局定性": {
+    "F1_微信授权回调页": {
+      "count": 2,
+      "items": [
+        {
+          "state": "wechatAuthSuccess",
+          "url": "/wechatAuthSuccess",
+          "template": "views/authAdmin/wechatAuthSuccess.html",
+          "controller": "wechatAuthSuccessCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "wechatAuthFailed",
+          "url": "/wechatAuthFailed",
+          "template": "views/authAdmin/wechatAuthFailed.html",
+          "controller": "wechatAuthFailedCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F2_介绍/说明/测试落地页": {
+      "count": 3,
+      "items": [
+        {
+          "state": "coinRuleIntroduce",
+          "url": "/coinRuleIntroduce",
+          "template": "views/authAdmin/coinRuleIntroduce.html",
+          "controller": "coinRuleIntroduceCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "aioIntroduce",
+          "url": "/aioIntroduce",
+          "template": "views/authAdmin/aioIntroduce.html",
+          "controller": "aioIntroduceCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "testPage",
+          "url": "/testPage",
+          "template": "views/home/testPage.html",
+          "controller": "testPageCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F3_大屏/喊叫器/工作台(免登录工作区)": {
+      "count": 8,
+      "items": [
+        {
+          "state": "bigScreen",
+          "url": "/bigScreen",
+          "template": "views/clinic/bigScreen.html",
+          "controller": "bigScreenCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "consultingScreen",
+          "url": "/consultingScreen",
+          "template": "views/clinic/consultingScreen.html",
+          "controller": "consultingScreenCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminCall",
+          "url": "/adminCall",
+          "template": "views/clinic/adminCall.html",
+          "controller": "adminCallCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "doctorWorkbench",
+          "url": "/doctorWorkbench",
+          "template": "views/clinic/doctorWorkbench.html",
+          "controller": "doctorWorkbenchCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "checkCall",
+          "url": "/checkCall",
+          "template": "views/clinic/checkCall.html",
+          "controller": "checkCallCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "workBeach",
+          "url": "/workBeach",
+          "template": "views/home/workBeach.html",
+          "controller": "workBeachCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "pos",
+          "url": "/pos",
+          "template": "views/screenAdmin/pos.html",
+          "controller": "posCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "projectionScreen",
+          "url": "/projectionScreen",
+          "template": "views/screenAdmin/projectionScreen.html",
+          "controller": "projectionScreenCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F4_硬件对接(蓝牙/检测仪/云打印/投屏配置)": {
+      "count": 4,
+      "items": [
+        {
+          "state": "screenUrlConfig",
+          "url": "/screenUrlConfig",
+          "template": "views/screenAdmin/screenUrlConfig.html",
+          "controller": "screenUrlConfigCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "detectionLog",
+          "url": "/detectionLog",
+          "template": "views/customize/detectionLog.html",
+          "controller": "detectionLogCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "blueToothTransfer",
+          "url": "/blueToothTransfer",
+          "template": "views/customize/blueToothTransfer.html",
+          "controller": "blueToothTransferCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "cloudPrinterList",
+          "url": "/cloudPrinterList",
+          "template": "views/screenAdmin/cloudPrinterList.html",
+          "controller": "cloudPrinterListCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F5_报表 Tab 子页(已在 R6 Tab 机制内)": {
+      "count": 44,
+      "items": [
+        {
+          "state": "report.reportMedicalRate.successRate",
+          "url": "/successRate",
+          "template": "views/reportMedical/successRate.html",
+          "controller": "successRateCtrl",
+          "parent": "report.reportMedicalRate",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportMedicalRate.satisfyRate",
+          "url": "/satisfyRate",
+          "template": "views/reportMedical/satisfyRate.html",
+          "controller": "satisfyRateCtrl",
+          "parent": "report.reportMedicalRate",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportMedicalRate.satisfyDetailRate",
+          "url": "/satisfyDetailRate",
+          "template": "views/reportMedical/satisfyDetailRate.html",
+          "controller": "satisfyDetailRateCtrl",
+          "parent": "report.reportMedicalRate",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportMedicalRate.customerChannelRate",
+          "url": "/customerChannelRate",
+          "template": "views/reportMedical/customerChannelRate.html",
+          "controller": "customerChannelRateCtrl",
+          "parent": "report.reportMedicalRate",
+          "isList": false,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportSale.saleList",
+          "url": "/saleList",
+          "template": "views/reportMedical/saleList.html",
+          "controller": "saleListCtrl",
+          "parent": "report.reportSale",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportSale.machineProcessList",
+          "url": "/machineProcessList",
+          "template": "views/reportMedical/machineProcessList.html",
+          "controller": "machineProcessListCtrl",
+          "parent": "report.reportSale",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportMaterial.receiptRecord",
+          "url": "/receiptRecord",
+          "template": "views/reportMedical/receiptRecord.html",
+          "controller": "receiptRecordCtrl",
+          "parent": "report.reportMaterial",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportMaterial.deliveryRecordPort",
+          "url": "/deliveryRecordPort",
+          "template": "views/reportMedical/deliveryRecordPort.html",
+          "controller": "deliveryRecordPortCtrl",
+          "parent": "report.reportMaterial",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportMaterial.jxcRecord",
+          "url": "/jxcRecord",
+          "template": "views/reportMedical/jxcRecord.html",
+          "controller": "jxcRecordCtrl",
+          "parent": "report.reportMaterial",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportSale.saleRecord",
+          "url": "/saleRecord",
+          "template": "views/reportMedical/saleRecord.html",
+          "controller": "saleRecordCtrl",
+          "parent": "report.reportSale",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportSale.backGoodRecord",
+          "url": "/backGoodRecord",
+          "template": "views/reportMedical/backGoodRecord.html",
+          "controller": "backGoodRecordCtrl",
+          "parent": "report.reportSale",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.feeDay",
+          "url": "/feeDay",
+          "template": "views/reportMedical/feeDay.html",
+          "controller": "feeDayCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportOperateAll.feeCashier",
+          "url": "/feeCashier",
+          "template": "views/reportMedical/feeCashier.html",
+          "controller": "feeCashierCtrl",
+          "parent": "report.reportOperateAll",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.refundFee",
+          "url": "/refundFee",
+          "template": "views/reportMedical/refundFee.html",
+          "controller": "refundFeeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.feeMonth",
+          "url": "/feeMonth",
+          "template": "views/reportMedical/feeMonth.html",
+          "controller": "feeMonthCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.feeRecharge",
+          "url": "/feeRecharge",
+          "template": "views/reportMedical/feeRecharge.html",
+          "controller": "feeRechargeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.timeCardRecharge",
+          "url": "/timeCardRecharge",
+          "template": "views/reportMedical/timeCardRecharge.html",
+          "controller": "timeCardRechargeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportFee.unPayRecharge",
+          "url": "/unPayRecharge",
+          "template": "views/reportMedical/unPayRecharge.html",
+          "controller": "unPayRechargeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.unPayCharge",
+          "url": "/unPayCharge",
+          "template": "views/reportMedical/unPayCharge.html",
+          "controller": "unPayChargeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.pointsListReCharge",
+          "url": "/pointsListReCharge",
+          "template": "views/reportMedical/pointsListReCharge.html",
+          "controller": "pointsListReChargeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.pointsListCharge",
+          "url": "/pointsListCharge",
+          "template": "views/reportMedical/pointsListCharge.html",
+          "controller": "pointsListChargeCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.feeBankCard",
+          "url": "/feeBankCard",
+          "template": "views/reportMedical/feeBankCard.html",
+          "controller": "feeBankCardCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportFee.timecardBlance",
+          "url": "/timecardBlance",
+          "template": "views/reportMedical/timecardBlance.html",
+          "controller": "timecardBlanceCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportFee.timecardPerformance",
+          "url": "/timecardPerformance",
+          "template": "views/reportMedical/timecardPerformance.html",
+          "controller": "timecardPerformanceCtrl",
+          "parent": "report.reportFee",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportOperateAll.reportOperate",
+          "url": "/reportOperate",
+          "template": "views/reportMedical/reportOperate.html",
+          "controller": "reportOperateCtrl",
+          "parent": "report.reportOperateAll",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportOperateAll.hospitalReport",
+          "url": "/hospitalReport",
+          "template": "views/reportMedical/hospitalReport.html",
+          "controller": "hospitalReportCtrl",
+          "parent": "report.reportOperateAll",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.reportOperateAll.singleHospitalProfit",
+          "url": "/singleHospitalProfit",
+          "template": "views/reportMedical/singleHospitalProfit.html",
+          "controller": "singleHospitalProfitCtrl",
+          "parent": "report.reportOperateAll",
+          "isList": true,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "report.analysis.conversionFunnel",
+          "url": "/conversionFunnel",
+          "template": "views/customer/conversionFunnel.html",
+          "controller": "conversionFunnelCtrl",
+          "parent": "report.analysis",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.analysis.followUpAnalysis",
+          "url": "/followUpAnalysis",
+          "template": "views/customer/followUpAnalysis.html",
+          "controller": "followUpAnalysisCtrl",
+          "parent": "report.analysis",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.analysis.rfmModel",
+          "url": "/rfmModel",
+          "template": "views/customer/rfmModel.html",
+          "controller": "rfmModelCtrl",
+          "parent": "report.analysis",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.analysis.profileAnalysis",
+          "url": "/profileAnalysis",
+          "template": "views/customer/profileAnalysis.html",
+          "controller": "profileAnalysisCtrl",
+          "parent": "report.analysis",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportMedicalRate",
+          "url": "/reportMedicalRate",
+          "template": "views/reportMedical/reportMedicalRate.html",
+          "controller": "reportMedicalRateCtrl",
+          "parent": "report",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportSale",
+          "url": "/reportSale",
+          "template": "views/reportMedical/reportSale.html",
+          "controller": "reportSaleCtrl",
+          "parent": "report",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "materialStatistic.myReceiptRecord",
+          "url": "/myReceiptRecord",
+          "template": "views/reportMedical/myReceiptRecord.html",
+          "controller": "myReceiptRecordCtrl",
+          "parent": "materialStatistic",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "materialStatistic.myDeliveryRecord",
+          "url": "/myDeliveryRecord",
+          "template": "views/reportMedical/myDeliveryRecord.html",
+          "controller": "myDeliveryRecordCtrl",
+          "parent": "materialStatistic",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "materialStatistic.myJxcRecord",
+          "url": "/myJxcRecord",
+          "template": "views/reportMedical/myJxcRecord.html",
+          "controller": "myJxcRecordCtrl",
+          "parent": "materialStatistic",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportMaterial",
+          "url": "/reportMaterial",
+          "template": "views/reportMedical/reportMaterial.html",
+          "controller": "reportSaleCtrl",
+          "parent": "report",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportFee",
+          "url": "/reportFee",
+          "template": "views/reportMedical/reportFee.html",
+          "controller": "reportFeeCtrl",
+          "parent": "report",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.reportOperateAll",
+          "url": "/reportOperateAll",
+          "template": "views/reportMedical/reportOperateAll.html",
+          "controller": "reportOperateAllCtrl",
+          "parent": "report",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report.analysis",
+          "url": "/analysis",
+          "template": "views/customer/analysis.html",
+          "controller": "analysisCtrl",
+          "parent": "report",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "report",
+          "url": "/report",
+          "template": "views/reportMedical/report.html",
+          "controller": "reportCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "medicalStatistic",
+          "url": "/medicalStatistic",
+          "template": "views/reportMedical/medicalStatistic.html",
+          "controller": "reportMedicalRateCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "materialStatistic",
+          "url": "/materialStatistic",
+          "template": "views/reportMedical/materialStatistic.html",
+          "controller": "reportSaleCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "feeStatistic",
+          "url": "/feeStatistic",
+          "template": "views/reportMedical/feeStatistic.html",
+          "controller": "reportFeeCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F6_系统设置二级界面(R6 硬编码 36 项内)": {
+      "count": 63,
+      "items": [
+        {
+          "state": "systemSetting.company",
+          "url": "/company",
+          "template": "views/home/company.html",
+          "controller": "companyCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.openPlate",
+          "url": "/openPlate",
+          "template": "views/systemSetting/openPlate.html",
+          "controller": "openPlateCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.memberCharge",
+          "url": "/memberCharge",
+          "template": "views/systemSetting/memberCharge.html",
+          "controller": "memberChargeCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.messageAdmin",
+          "url": "/messageAdmin",
+          "template": "views/systemSetting/messageAdmin.html",
+          "controller": "messageAdminCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.phoneAdmin",
+          "url": "/phoneAdmin",
+          "template": "views/systemSetting/phoneAdmin.html",
+          "controller": "phoneAdminCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.printConfig",
+          "url": "/printConfig",
+          "template": "views/systemSetting/printConfig.html",
+          "controller": "printConfigCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.materialImport",
+          "url": "/materialImport",
+          "template": "views/systemSetting/materialImport.html",
+          "controller": "materialImportCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addMaterial",
+          "url": "/addMaterial",
+          "template": "views/systemSetting/addMaterial.html",
+          "controller": "addMaterialCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.batchMaterial",
+          "url": "/batchMaterial",
+          "template": "views/systemSetting/batchMaterial.html",
+          "controller": "batchMaterialCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.materialModify",
+          "url": "/materialModify?productId&productSkuId",
+          "template": "views/systemSetting/materialModify.html",
+          "controller": "materialModifyCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.materialCertificate",
+          "url": "/materialCertificate?productId&productSkuId",
+          "template": "views/systemSetting/materialCertificate.html",
+          "controller": "materialCertificateCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.customerMaterialCertificate",
+          "url": "/customerMaterialCertificate?productId&productSkuId",
+          "template": "views/systemSetting/customerMaterialCertificate.html",
+          "controller": "materialCertificateCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.firstApproval",
+          "url": "/firstApproval?productId&productSkuId&supplierId&type",
+          "template": "views/systemSetting/firstApproval.html",
+          "controller": "firstApprovalCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.supplierList",
+          "url": "/supplierList",
+          "template": "views/systemSetting/supplierList.html",
+          "controller": "supplierListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.groupeditList",
+          "url": "/groupeditList",
+          "template": "views/systemSetting/groupeditList.html",
+          "controller": "groupeditListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.customerCharge",
+          "url": "/customerCharge",
+          "template": "views/systemSetting/customerCharge.html",
+          "controller": "customerChargeCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addCustomerCharge",
+          "url": "/addCustomerCharge",
+          "template": "views/systemSetting/addCustomerCharge.html",
+          "controller": "addCustomerChargeCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyCustomerCharge",
+          "url": "/modifyCustomerCharge?productId&productSkuId",
+          "template": "views/systemSetting/modifyCustomerCharge.html",
+          "controller": "modifyCustomerChargeCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addCustomerChargeItem",
+          "url": "/addCustomerChargeItem",
+          "template": "views/systemSetting/addCustomerChargeItem.html",
+          "controller": "addCustomerChargeItemCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyCustomerChargeItem",
+          "url": "/modifyCustomerChargeItem?id",
+          "template": "views/systemSetting/modifyCustomerChargeItem.html",
+          "controller": "modifyCustomerChargeItemCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.customerChargeChoice",
+          "url": "/customerChargeChoice?id",
+          "template": "views/systemSetting/customerChargeChoice.html",
+          "controller": "customerChargeChoiceCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.productPlanList",
+          "url": "/productPlanList",
+          "template": "views/systemSetting/productPlanList.html",
+          "controller": "productPlanListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addProductPlan",
+          "url": "/addProductPlan",
+          "template": "views/systemSetting/addProductPlan.html",
+          "controller": "addProductPlanCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyProductPlan",
+          "url": "/modifyProductPlan?productId",
+          "template": "views/systemSetting/modifyProductPlan.html",
+          "controller": "modifyProductPlanCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addGroupedit",
+          "url": "/addGroupedit",
+          "template": "views/systemSetting/addGroupedit.html",
+          "controller": "addGroupeditCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyGroupedit",
+          "url": "/modifyGroupedit?id",
+          "template": "views/systemSetting/modifyGroupedit.html",
+          "controller": "modifyGroupeditCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addRecordTemplate",
+          "url": "/addRecordTemplate",
+          "template": "views/systemSetting/addRecordTemplate.html",
+          "controller": "addRecordTemplateCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.commonSetTemp",
+          "url": "/commonSetTemp?type&id",
+          "template": "views/systemSetting/commonSetTemp.html",
+          "controller": "commonSetTempCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.suiFangJieLunTem",
+          "url": "/suiFangJieLunTem?id",
+          "template": "views/systemSetting/suiFangJieLunTem.html",
+          "controller": "suiFangJieLunTemCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyRecordTemplate",
+          "url": "/modifyRecordTemplate?id",
+          "template": "views/systemSetting/modifyRecordTemplate.html",
+          "controller": "modifyRecordTemplateCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addCheckItem",
+          "url": "/addCheckItem?id",
+          "template": "views/systemSetting/addCheckItem.html",
+          "controller": "addCheckItemCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.depotList",
+          "url": "/depotList",
+          "template": "views/systemSetting/depotList.html",
+          "controller": "depotListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyProcessCenter",
+          "url": "/modifyProcessCenter?id",
+          "template": "views/systemSetting/modifyProcessCenter.html",
+          "controller": "modifyProcessCenterCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addProcessCenter",
+          "url": "/addProcessCenter",
+          "template": "views/systemSetting/addProcessCenter.html",
+          "controller": "addProcessCenterCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addDepot",
+          "url": "/addDepot",
+          "template": "views/systemSetting/addDepot.html",
+          "controller": "addDepotCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.depotModify",
+          "url": "/depotModify?id",
+          "template": "views/systemSetting/depotModify.html",
+          "controller": "depotModifyCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addSupplier",
+          "url": "/addSupplier",
+          "template": "views/systemSetting/addSupplier.html",
+          "controller": "addSupplierCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addMedicalFee",
+          "url": "/addMedicalFee",
+          "template": "views/systemSetting/addMedicalFee.html",
+          "controller": "addMedicalFeeCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.modifyMedicalFee",
+          "url": "/modifyMedicalFee?id",
+          "template": "views/systemSetting/modifyMedicalFee.html",
+          "controller": "modifyMedicalFeeCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.supplierModify",
+          "url": "/supplierModify?supplierId",
+          "template": "views/systemSetting/supplierModify.html",
+          "controller": "supplierModifyCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.supplierCertificate",
+          "url": "/supplierCertificate?supplierId",
+          "template": "views/systemSetting/supplierCertificate.html",
+          "controller": "supplierCertificateCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.memberChannelList",
+          "url": "/memberChannelList",
+          "template": "views/systemSetting/memberChannelList.html",
+          "controller": "memberChannelListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.recordTemplateList",
+          "url": "/recordTemplateList",
+          "template": "views/systemSetting/recordTemplateList.html",
+          "controller": "recordTemplateListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.suiFangNeiRongTemplate",
+          "url": "/suiFangNeiRongTemplate",
+          "template": "views/systemSetting/suiFangNeiRongTemplate.html",
+          "controller": "suiFangNeiRongTemplateCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.suiFangJieLunTemplate",
+          "url": "/suiFangJieLunTemplate",
+          "template": "views/systemSetting/suiFangJieLunTemplate.html",
+          "controller": "suiFangJieLunTemplateCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.toothCheckTemplate",
+          "url": "/toothCheckTemplate",
+          "template": "views/systemSetting/toothCheckTemplate.html",
+          "controller": "toothCheckTemplateCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.memberTypeModify",
+          "url": "/memberTypeModify?id",
+          "template": "views/systemSetting/memberTypeModify.html",
+          "controller": "memberTypeModifyCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addMemberType",
+          "url": "/addMemberType?id",
+          "template": "views/systemSetting/addMemberType.html",
+          "controller": "addMemberTypeCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addCheck",
+          "url": "/addCheck",
+          "template": "views/systemSetting/addCheck.html",
+          "controller": "addCheckCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.addProjectCard",
+          "url": "/addProjectCard?id",
+          "template": "views/systemSetting/addProjectCard.html",
+          "controller": "addProjectCardCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.pointsAdmin",
+          "url": "/pointsAdmin",
+          "template": "views/systemSetting/pointsAdmin.html",
+          "controller": "pointsAdminCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.appointAdmin",
+          "url": "/appointAdmin",
+          "template": "views/systemSetting/appointAdmin.html",
+          "controller": "appointAdminCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.recipeAdmin",
+          "url": "/recipeAdmin",
+          "template": "views/systemSetting/recipeAdmin.html",
+          "controller": "recipeAdminCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.chargeAdmin",
+          "url": "/chargeAdmin",
+          "template": "views/systemSetting/chargeAdmin.html",
+          "controller": "chargeAdminCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.wecomAdmin",
+          "url": "/wecomAdmin",
+          "template": "views/systemSetting/wecomAdmin.html",
+          "controller": "wecomAdminCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.frontAdmin",
+          "url": "/frontAdmin",
+          "template": "views/systemSetting/frontAdmin.html",
+          "controller": "frontAdminCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.stockAdmin",
+          "url": "/stockAdmin",
+          "template": "views/systemSetting/stockAdmin.html",
+          "controller": "stockAdminCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.schoolCheckRecord",
+          "url": "/schoolCheckRecord",
+          "template": "views/systemSetting/schoolCheckRecord.html",
+          "controller": "schoolCheckRecordCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.appConfig",
+          "url": "/appConfig",
+          "template": "views/systemSetting/appConfig.html",
+          "controller": "appConfigCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.reportDateAdmin",
+          "url": "/reportDateAdmin",
+          "template": "views/systemSetting/reportDateAdmin.html",
+          "controller": "reportDateAdminCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.chargeWays",
+          "url": "/chargeWays",
+          "template": "views/systemSetting/chargeWays.html",
+          "controller": "chargeWaysCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting",
+          "url": "/systemSetting",
+          "template": "views/systemSetting/systemSetting.html",
+          "controller": "systemSettingCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "visionAdmin",
+          "url": "/visionAdmin?chartType&isSocket",
+          "template": "views/systemSetting/visionAdmin.html",
+          "controller": "visionAdminCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F7_详情/编辑/变更页(必须带 id 入参,无独立入口)": {
+      "count": 18,
+      "items": [
+        {
+          "state": "hospital.updateHospital",
+          "url": "/updateHospital?id&companyId",
+          "template": "views/hospital/updateHospital.html",
+          "controller": "updateHospitalCtrl",
+          "parent": "hospital",
+          "isList": false,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "hospital.updateHospital.updateDepartment",
+          "url": "/updateDepartment?departmentId",
+          "template": "views/hospital/updateDepartment.html",
+          "controller": "updateDepartmentCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.inventoryProductDetail",
+          "url": "/inventoryProductDetail?stockTakingId",
+          "template": "views/materialAdmin/inventoryProductDetail.html",
+          "controller": "inventoryProductModifyCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.inventoryProductModify",
+          "url": "/inventoryProductModify?stockTakingId",
+          "template": "views/materialAdmin/inventoryProductModify.html",
+          "controller": "inventoryProductModifyCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.addProductDelivery",
+          "url": "/addProductDelivery?storehouseId&productType",
+          "template": "views/materialAdmin/addProductDelivery.html",
+          "controller": "addProductDeliveryCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.deliveryProductModify",
+          "url": "/deliveryProductModify?stockOutId",
+          "template": "views/materialAdmin/deliveryProductModify.html",
+          "controller": "deliveryProductModifyCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.deliveryProductDetail",
+          "url": "/deliveryProductDetail?stockOutId",
+          "template": "views/materialAdmin/deliveryProductDetail.html",
+          "controller": "deliveryProductModifyCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.addStockProductChange",
+          "url": "/addStockProductChange?storehouseId&status",
+          "template": "views/materialAdmin/addStockProductChange.html",
+          "controller": "addStockProductChangeCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.modifyStockProductChange",
+          "url": "/modifyStockProductChange?id&storehouseId",
+          "template": "views/materialAdmin/modifyStockProductChange.html",
+          "controller": "modifyStockProductChangeCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.stockProductChangeDetail",
+          "url": "/stockProductChangeDetail?id&storehouseId",
+          "template": "views/materialAdmin/stockProductChangeDetail.html",
+          "controller": "modifyStockProductChangeCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.stockProductChangeCheck",
+          "url": "/stockProductChangeCheck?id&storehouseId",
+          "template": "views/materialAdmin/stockProductChangeCheck.html",
+          "controller": "stockProductChangeCheckCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord",
+          "url": "/adminMyRecord?medicalRecordId",
+          "template": "views/myMember/adminMyRecord.html",
+          "controller": "adminMyRecordCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminSalesRecord",
+          "url": "/adminSalesRecord?medicalRecordId",
+          "template": "views/myMember/adminSalesRecord.html",
+          "controller": "adminSalesRecordCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminPasswordModify",
+          "url": "/adminPasswordModify?adminId",
+          "template": "views/adminManage/adminPasswordModify.html",
+          "controller": "adminPasswordModifyCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "stockChangeCheck",
+          "url": "/stockChangeCheck?id",
+          "template": "views/materialAdmin/stockChangeCheck.html",
+          "controller": "stockChangeCheckCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "modifyMateCheck",
+          "url": "/modifyMateCheck?checkId",
+          "template": "views/screenAdmin/modifyMateCheck.html",
+          "controller": "modifyMateCheckCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "promotionDetail",
+          "url": "/promotionDetail?id",
+          "template": "views/memberManage/promotionDetail.html",
+          "controller": "promotionDetailCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "orderDetail",
+          "url": "/orderDetail?orderId",
+          "template": "views/memberManage/orderDetail.html",
+          "controller": "orderDetailCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "F8_独立业务页(权限树未收录,需裁决归属)": {
+      "count": 29,
+      "items": [
+        {
+          "state": "adminMyRecord.prescriptsRecord",
+          "url": "/prescriptsRecord",
+          "template": "views/myMember/prescriptsRecord.html",
+          "controller": "prescriptsRecordCtrl",
+          "parent": "adminMyRecord",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord.prescription",
+          "url": "/prescription",
+          "template": "views/myMember/prescription.html",
+          "controller": "prescriptionCtrl",
+          "parent": "adminMyRecord",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord.drugPrescription",
+          "url": "/drugPrescription",
+          "template": "views/myMember/drugPrescription.html",
+          "controller": "drugPrescriptionCtrl",
+          "parent": "adminMyRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord.customerProductRecord",
+          "url": "/customerProductRecord",
+          "template": "views/myMember/customerProductRecord.html",
+          "controller": "customerProductRecordCtrl",
+          "parent": "adminMyRecord",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord.followList",
+          "url": "/followList",
+          "template": "views/myMember/followList.html",
+          "controller": "followListCtrl",
+          "parent": "adminMyRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminSalesRecord.myMemberRecord",
+          "url": "/myMemberRecord",
+          "template": "views/myMember/myMemberRecord.html",
+          "controller": "myMemberRecordCtrl",
+          "parent": "adminSalesRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.hospitallist",
+          "url": "/hospitallist",
+          "template": "views/hospital/hospitalList.html",
+          "controller": "hospitalListCtrl",
+          "parent": "hospital",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.updateHospital.adminMap",
+          "url": "/adminMap",
+          "template": "views/hospital/adminMap.html",
+          "controller": "adminMapCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.updateHospital.adminClinic",
+          "url": "/adminClinic",
+          "template": "views/hospital/adminClinic.html",
+          "controller": "adminClinicCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.updateHospital.addDepartment",
+          "url": "/addDepartment",
+          "template": "views/hospital/addDepartment.html",
+          "controller": "addDepartmentCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.updateHospital.departmentList",
+          "url": "/updateDepartment",
+          "template": "views/hospital/departmentList.html",
+          "controller": "departmentListCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": false,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "timeCard",
+          "url": "/timeCard",
+          "template": "views/myMember/timeCard.html",
+          "controller": "timeCardCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "addPromotion",
+          "url": "/addPromotion",
+          "template": "views/memberManage/addPromotion.html",
+          "controller": "addPromotionCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "inspection",
+          "url": "/inspection",
+          "template": "views/screenAdmin/inspection.html",
+          "controller": "inspectionCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "contrastReportByArea",
+          "url": "/contrastReportByArea",
+          "template": "views/screenAdmin/contrastReportByArea.html",
+          "controller": "contrastReportByAreaCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "accessReport",
+          "url": "/accessReport",
+          "template": "views/screenAdmin/accessReport.html",
+          "controller": "accessReportCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "progressReport",
+          "url": "/progressReport",
+          "template": "views/screenAdmin/progressReport.html",
+          "controller": "progressReportCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "mateProgressReport",
+          "url": "/mateProgressReport",
+          "template": "views/screenAdmin/mateProgressReport.html",
+          "controller": "mateProgressReportCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "exportrec",
+          "url": "/exportrec",
+          "template": "views/screenAdmin/exportrec.html",
+          "controller": "exportrecCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adultVisionMesure",
+          "url": "/adultVisionMesure",
+          "template": "views/screenAdmin/visionMesure.html",
+          "controller": "visionMesureCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "childVisionMesure",
+          "url": "/childVisionMesure",
+          "template": "views/screenAdmin/childVisionMesure.html",
+          "controller": "visionMesureCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "machineOrder",
+          "url": "/machineOrder",
+          "template": "views/machineCenter/machineOrder.html",
+          "controller": "machineOrderCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "addMemberTag",
+          "url": "/addMemberTag",
+          "template": "views/memberManage/addMemberTag.html",
+          "controller": "addMemberTagCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital",
+          "url": "/hospital",
+          "template": "views/hospital/hospital.html",
+          "controller": "hospitalCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "appointOrder",
+          "url": "/appointOrder",
+          "template": "views/bookManage/appointOrder.html",
+          "controller": "appointOrderCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "purchase",
+          "url": "/purchase",
+          "template": "views/purchase/purchase.html",
+          "controller": "purchaseCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "mateCheckReportListNew",
+          "url": "/mateCheckReportListNew",
+          "template": "views/screenAdmin/mateCheckReportListNew.html",
+          "controller": "mateCheckReportListNewCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods",
+          "url": "/goods",
+          "template": "views/materialAdmin/goods.html",
+          "controller": "goodsCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "homePage",
+          "url": "/homePage",
+          "template": "views/home/homePage.html",
+          "controller": "homePageCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    },
+    "G0_命令式可达(R6 静态扫描盲区)": {
+      "count": 26,
+      "items": [
+        {
+          "state": "adminMyRecord.myMemberRecord",
+          "url": "/myMemberRecord",
+          "template": "views/myMember/myMemberRecord.html",
+          "controller": "myMemberRecordCtrl",
+          "parent": "adminMyRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord.myMaterialBill",
+          "url": "/myMaterialBill",
+          "template": "views/myMember/myMaterialBill.html",
+          "controller": "myMaterialBillCtrl",
+          "parent": "adminMyRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminMyRecord.myCheckBill",
+          "url": "/myCheckBill",
+          "template": "views/myMember/myCheckBill.html",
+          "controller": "myCheckBillCtrl",
+          "parent": "adminMyRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "adminSalesRecord.myMaterialBill",
+          "url": "/myMaterialBill",
+          "template": "views/myMember/myMaterialBill.html",
+          "controller": "myMaterialBillCtrl",
+          "parent": "adminSalesRecord",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.updateHospital.adminHospital",
+          "url": "/adminHospital",
+          "template": "views/hospital/updateHospital.adminHospital.html",
+          "controller": "updateAdminHospitalCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "hospital.updateHospital.employeeList",
+          "url": "/employeeList",
+          "template": "views/hospital/employeeList.html",
+          "controller": "employeeListCtrl",
+          "parent": "hospital.updateHospital",
+          "isList": false,
+          "hasUiSrefOnlyCommented": true
+        },
+        {
+          "state": "goods.addProductInventory",
+          "url": "/addProductInventory?storehouseId",
+          "template": "views/materialAdmin/addProductInventory.html",
+          "controller": "addProductInventoryCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "goods.addProductBivariateTable",
+          "url": "/addProductBivariateTable?storehouseId&productId",
+          "template": "views/materialAdmin/addProductBivariateTable.html",
+          "controller": "addProductBivariateTableCtrl",
+          "parent": "goods",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.materiallist",
+          "url": "/materiallist",
+          "template": "views/systemSetting/materiallist.html",
+          "controller": "materiallistCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.InspectList",
+          "url": "/InspectList",
+          "template": "views/systemSetting/InspectList.html",
+          "controller": "InspectListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.customerChargeItem",
+          "url": "/customerChargeItem",
+          "template": "views/systemSetting/customerChargeItem.html",
+          "controller": "customerChargeItemCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.processCenter",
+          "url": "/processCenter",
+          "template": "views/systemSetting/processCenter.html",
+          "controller": "processCenterCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.medicalFeesList",
+          "url": "/medicalFeesList",
+          "template": "views/systemSetting/medicalFeesList.html",
+          "controller": "medicalFeesListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.memberTypeList",
+          "url": "/memberTypeList",
+          "template": "views/systemSetting/memberTypeList.html",
+          "controller": "memberTypeListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.checkList",
+          "url": "/checkList",
+          "template": "views/systemSetting/checkList.html",
+          "controller": "checkListCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.projectCard",
+          "url": "/projectCard",
+          "template": "views/systemSetting/projectCard.html",
+          "controller": "projectCardCtrl",
+          "parent": "systemSetting",
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "systemSetting.checkModify",
+          "url": "/checkModify?id",
+          "template": "views/systemSetting/checkModify.html",
+          "controller": "checkModifyCtrl",
+          "parent": "systemSetting",
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "404",
+          "url": "/404",
+          "template": "views/home/404.html",
+          "controller": "404Ctrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "memberRecyle",
+          "url": "/memberRecyle?type&companyId",
+          "template": "views/memberManage/memberRecyle.html",
+          "controller": "memberRecyleCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "requirement",
+          "url": "/requirement",
+          "template": "views/memberManage/requirement.html",
+          "controller": "requirementCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "requirementStatus",
+          "url": "/requirementStatus?id",
+          "template": "views/memberManage/requirementStatus.html",
+          "controller": "requirementStatusCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "materialImport",
+          "url": "/materialImport",
+          "template": "views/systemSetting/materialImport.html",
+          "controller": "materialImportCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "addVisit",
+          "url": "/remindList/addVisit?followUpId?patientId",
+          "template": "views/visitManage/addVisit.html",
+          "controller": "addVisitCtrl",
+          "parent": null,
+          "isList": true,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "visitDetails",
+          "url": "/remindList/visitDetails?followUpId&look",
+          "template": "views/visitManage/visitDetails.html",
+          "controller": "visitDetailsCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "login",
+          "url": "/login",
+          "template": "views/home/login.html",
+          "controller": "loginCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        },
+        {
+          "state": "screenQueue",
+          "url": "/screenQueue?bigScreenId",
+          "template": "views/clinic/screenQueue.html",
+          "controller": "screenQueueCtrl",
+          "parent": null,
+          "isList": false,
+          "hasUiSrefOnlyCommented": false
+        }
+      ]
+    }
+  },
+  "162_零端点定性": {
+    "Z1_模板近乎空壳(<1.2KB)": {
+      "count": 25,
+      "items": [
+        "views/authAdmin/wechatAuthFailed.html",
+        "views/authAdmin/wechatAuthSuccess.html",
+        "views/customer/analysis.html",
+        "views/home/404.html",
+        "views/home/allSize.html",
+        "views/hospital/departmentList.html",
+        "views/hospital/hospital.html",
+        "views/memberManage/addMemberTag.html",
+        "views/memberManage/promotionDetail.html",
+        "views/orderAdmin/addOrder.html",
+        "views/orderAdmin/dealRecord.html",
+        "views/orderAdmin/deliveryRecord.html",
+        "views/orderAdmin/modifyOrder.html",
+        "views/reportMedical/feeStatistic.html",
+        "views/reportMedical/materialStatistic.html",
+        "views/reportMedical/medicalStatistic.html",
+        "views/reportMedical/myDeliveryRecord.html",
+        "views/reportMedical/myJxcRecord.html",
+        "views/reportMedical/myReceiptRecord.html",
+        "views/reportMedical/reportMaterial.html",
+        "views/reportMedical/reportOperateAll.html",
+        "views/reportMedical/reportSale.html",
+        "views/screenAdmin/mateCheckReportListNew.html",
+        "views/systemSetting/addCustomerChargeItem.html",
+        "views/systemSetting/systemSetting.html"
+      ]
+    },
+    "Z2_报表 Tab 页(数据由父页注入)": {
+      "count": 5,
+      "items": [
+        "views/reportMedical/pointsListCharge.html",
+        "views/reportMedical/reportFee.html",
+        "views/reportMedical/reportMedicalRate.html",
+        "views/reportMedical/satisfyRate.html",
+        "views/reportMedical/unPayCharge.html"
+      ]
+    },
+    "Z3_系统设置二阶页(配置项为主)": {
+      "count": 36,
+      "items": [
+        "views/systemSetting/InspectList.html",
+        "views/systemSetting/addCheck.html",
+        "views/systemSetting/addDepot.html",
+        "views/systemSetting/addFirstDoctor.html",
+        "views/systemSetting/addInspect.html",
+        "views/systemSetting/addMemberType.html",
+        "views/systemSetting/addProcessCenter.html",
+        "views/systemSetting/addProductPlan.html",
+        "views/systemSetting/addRecordTemplate.html",
+        "views/systemSetting/addSupplier.html",
+        "views/systemSetting/brandList.html",
+        "views/systemSetting/checkModify.html",
+        "views/systemSetting/customerCharge.html",
+        "views/systemSetting/customerChargeItem.html",
+        "views/systemSetting/customerMaterialCertificate.html",
+        "views/systemSetting/depotList.html",
+        "views/systemSetting/depotModify.html",
+        "views/systemSetting/firstDoctorList.html",
+        "views/systemSetting/logList.html",
+        "views/systemSetting/materialCertificate.html",
+        "views/systemSetting/medicalFeesList.html",
+        "views/systemSetting/memberChannelList.html",
+        "views/systemSetting/memberCharge.html",
+        "views/systemSetting/memberTypeList.html",
+        "views/systemSetting/memberTypeModify.html",
+        "views/systemSetting/modifyCustomerChargeItem.html",
+        "views/systemSetting/modifyFirstDoctor.html",
+        "views/systemSetting/modifyInspect.html",
+        "views/systemSetting/modifyMedicalFee.html",
+        "views/systemSetting/modifyProcessCenter.html",
+        "views/systemSetting/modifyProductPlan.html",
+        "views/systemSetting/processCenter.html",
+        "views/systemSetting/productPlanList.html",
+        "views/systemSetting/supplierCertificate.html",
+        "views/systemSetting/supplierList.html",
+        "views/systemSetting/supplierModify.html"
+      ]
+    },
+    "Z4_有结构但未挂端点(疑似抽取失败)": {
+      "count": 96,
+      "items": [
+        "views/adminManage/adminModify.html",
+        "views/adminManage/encryptUser.html",
+        "views/adminManage/memberAdmin.html",
+        "views/authAdmin/aioIntroduce.html",
+        "views/authAdmin/coinRuleIntroduce.html",
+        "views/bookManage/bookDetail.html",
+        "views/bookManage/bookSettings.html",
+        "views/chargeAdmin/deliveryInput.html",
+        "views/chargeAdmin/deliveryInputRecord.html",
+        "views/chargeAdmin/deliveryProcessing.html",
+        "views/chargeAdmin/payBackDetail.html",
+        "views/chargeAdmin/payedDetail.html",
+        "views/couponAdmin/couponHistory.html",
+        "views/grouponAdmin/grouponDetail.html",
+        "views/grouponAdmin/grouponList.html",
+        "views/grouponAdmin/grouponOrder.html",
+        "views/home/admin.html",
+        "views/home/homePage.html",
+        "views/hospital/addDepartment.html",
+        "views/hospital/addHospital.html",
+        "views/hospital/updateDepartment.html",
+        "views/hospital/updateHospital.adminHospital.html",
+        "views/inspectAdmin/addInspect.html",
+        "views/inspectAdmin/inspectList.html",
+        "views/inspectAdmin/modifyInspect.html",
+        "views/machineCenter/completeStockLoss.html",
+        "views/machineCenter/completeStockLoss.html",
+        "views/machineCenter/stockLossDetail.html",
+        "views/machineCenter/stockLossDetail.html",
+        "views/materialAdmin/addPurchaseRequest.html",
+        "views/materialAdmin/adminBill.html",
+        "views/materialAdmin/adminBillOneDetial.html",
+        "views/materialAdmin/deliveryDelete.html",
+        "views/materialAdmin/deliveryModifyCustomer.html",
+        "views/materialAdmin/inventoryDetail.html",
+        "views/materialAdmin/inventoryDetail.html",
+        "views/materialAdmin/inventoryModify.html",
+        "views/materialAdmin/inventoryModify.html",
+        "views/materialAdmin/inventoryProductDetail.html",
+        "views/materialAdmin/inventoryProductModify.html",
+        "views/materialAdmin/materialImportRecord.html",
+        "views/materialAdmin/materialImportRecord.html",
+        "views/materialAdmin/materialInventory.html",
+        "views/materialAdmin/materialInventory.html",
+        "views/materialAdmin/materialOutportRecord.html",
+        "views/materialAdmin/materialOutportRecord.html",
+        "views/materialAdmin/materialPurchaseBackGoods.html",
+        "views/materialAdmin/materialPurchaseBackOne.html",
+        "views/materialAdmin/materialPurchaseReturn.html",
+        "views/materialAdmin/purchaseDetail.html",
+        "views/materialAdmin/purchaseReciept.html",
+        "views/materialAdmin/purchaseRecieptDetail.html",
+        "views/materialAdmin/purchaseRequestCheck.html",
+        "views/materialAdmin/purchaseRequestCheckDetail.html",
+        "views/materialAdmin/purchaseRequestDetail.html",
+        "views/materialAdmin/purchaseRequestModify.html",
+        "views/materialAdmin/stockChangeCheck.html",
+        "views/materialAdmin/stockChangeCheck.html",
+        "views/materialAdmin/stockChangeDetail.html",
+        "views/materialAdmin/stockChangeDetail.html",
+        "views/materialAdmin/stockProductChangeCheck.html",
+        "views/memberManage/addPromotion.html",
+        "views/memberManage/addRecommend.html",
+        "views/memberManage/chargeList.html",
+        "views/memberManage/memberCard.html",
+        "views/memberManage/memberPoint.html",
+        "views/memberManage/memberTag.html",
+        "views/memberManage/modifyPromotion.html",
+        "views/memberManage/modifyRecommend.html",
+        "views/memberManage/myCoupon.html",
+        "views/memberManage/orderDetail.html",
+        "views/memberManage/patientList.html",
+        "views/memberManage/productOrder.html",
+        "views/memberManage/recommendCustomer.html",
+        "views/memberManage/secKillProductList.html",
+        "views/memberManage/secKillPromotionList.html",
+        "views/memberManage/selectOrderList.html",
+        "views/myMember/myMedicalHistory.html",
+        "views/myMember/myMedicalRecordList.html",
+        "views/newsAdmin/addNew.html",
+        "views/newsAdmin/modifyNew.html",
+        "views/newsAdmin/newsList.html",
+        "views/optometryList/optometryLogList.html",
+        "views/orderManage/orderManage.html",
+        "views/screenAdmin/addScreenPromotion.html",
+        "views/screenAdmin/cloudPrinterConfig.html",
+        "views/screenAdmin/mateCheckReportConfig.html",
+        "views/screenAdmin/mateCheckReportList.html",
+        "views/screenAdmin/modifyMateCheck.html",
+        "views/screenAdmin/modifyScreenPromotion.html",
+        "views/screenAdmin/physicalReport.html",
+        "views/screenAdmin/schoolList.html",
+        "views/screenAdmin/schoolMateCheckList.html",
+        "views/screenAdmin/schoolMateCheckReports.html",
+        "views/screenAdmin/screenRecordReport.html",
+        "views/targetMarket/targetCouponList.html"
+      ]
+    }
+  },
+  "零端点_按模块": {
+    "systemSetting": 38,
+    "materialAdmin": 32,
+    "memberManage": 18,
+    "reportMedical": 14,
+    "screenAdmin": 12,
+    "hospital": 6,
+    "chargeAdmin": 5,
+    "home": 4,
+    "authAdmin": 4,
+    "machineCenter": 4,
+    "orderAdmin": 4,
+    "inspectAdmin": 3,
+    "adminManage": 3,
+    "grouponAdmin": 3,
+    "newsAdmin": 3,
+    "myMember": 2,
+    "bookManage": 2,
+    "targetMarket": 1,
+    "orderManage": 1,
+    "optometryList": 1,
+    "couponAdmin": 1,
+    "customer": 1
+  }
+}

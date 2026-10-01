@@ -1,0 +1,522 @@
+{
+  "generatedBy": "re/gen-ui-inventory.py",
+  "source": {
+    "routes": "re/routes.csv",
+    "pages": "re/pages.json"
+  },
+  "totals": {
+    "routes": 486,
+    "pageTemplates": 485,
+    "failedTemplates": 12,
+    "modules": 33,
+    "rootMenus": 306,
+    "nestedPages": 180,
+    "deadRoutes": 0,
+    "hostsWithChildren": 15
+  },
+  "moduleSummary": [
+    {
+      "module": "materialAdmin",
+      "pageCount": 84,
+      "rootMenus": 40,
+      "nestedPages": 44,
+      "deadRoutes": 0
+    },
+    {
+      "module": "systemSetting",
+      "pageCount": 80,
+      "rootMenus": 8,
+      "nestedPages": 72,
+      "deadRoutes": 0
+    },
+    {
+      "module": "screenAdmin",
+      "pageCount": 76,
+      "rootMenus": 76,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "reportMedical",
+      "pageCount": 42,
+      "rootMenus": 6,
+      "nestedPages": 36,
+      "deadRoutes": 0
+    },
+    {
+      "module": "memberManage",
+      "pageCount": 33,
+      "rootMenus": 33,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "machineCenter",
+      "pageCount": 21,
+      "rootMenus": 18,
+      "nestedPages": 3,
+      "deadRoutes": 0
+    },
+    {
+      "module": "chargeAdmin",
+      "pageCount": 19,
+      "rootMenus": 19,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "myMember",
+      "pageCount": 18,
+      "rootMenus": 8,
+      "nestedPages": 10,
+      "deadRoutes": 0
+    },
+    {
+      "module": "adminManage",
+      "pageCount": 17,
+      "rootMenus": 17,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "home",
+      "pageCount": 12,
+      "rootMenus": 11,
+      "nestedPages": 1,
+      "deadRoutes": 0
+    },
+    {
+      "module": "authAdmin",
+      "pageCount": 12,
+      "rootMenus": 12,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "hospital",
+      "pageCount": 11,
+      "rootMenus": 2,
+      "nestedPages": 9,
+      "deadRoutes": 0
+    },
+    {
+      "module": "clinic",
+      "pageCount": 8,
+      "rootMenus": 8,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "customer",
+      "pageCount": 7,
+      "rootMenus": 2,
+      "nestedPages": 5,
+      "deadRoutes": 0
+    },
+    {
+      "module": "bookManage",
+      "pageCount": 4,
+      "rootMenus": 4,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "assistCheckList",
+      "pageCount": 4,
+      "rootMenus": 4,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "orderAdmin",
+      "pageCount": 4,
+      "rootMenus": 4,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "grouponAdmin",
+      "pageCount": 4,
+      "rootMenus": 4,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "couponAdmin",
+      "pageCount": 4,
+      "rootMenus": 4,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "checkinList",
+      "pageCount": 3,
+      "rootMenus": 3,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "targetMarket",
+      "pageCount": 3,
+      "rootMenus": 3,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "inspectAdmin",
+      "pageCount": 3,
+      "rootMenus": 3,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "newsAdmin",
+      "pageCount": 3,
+      "rootMenus": 3,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "optometry",
+      "pageCount": 2,
+      "rootMenus": 2,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "customize",
+      "pageCount": 2,
+      "rootMenus": 2,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "optometryList",
+      "pageCount": 2,
+      "rootMenus": 2,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "visitManage",
+      "pageCount": 2,
+      "rootMenus": 2,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "(root)",
+      "pageCount": 1,
+      "rootMenus": 1,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "orderManage",
+      "pageCount": 1,
+      "rootMenus": 1,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "getGlassNotify",
+      "pageCount": 1,
+      "rootMenus": 1,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "purchase",
+      "pageCount": 1,
+      "rootMenus": 1,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "hospitalRecharge",
+      "pageCount": 1,
+      "rootMenus": 1,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    },
+    {
+      "module": "pointsAdmin",
+      "pageCount": 1,
+      "rootMenus": 1,
+      "nestedPages": 0,
+      "deadRoutes": 0
+    }
+  ],
+  "nestedHosts": [
+    {
+      "hostState": "systemSetting",
+      "childCount": 73,
+      "children": [
+        "systemSetting.InspectList",
+        "systemSetting.addCheck",
+        "systemSetting.addCheckItem",
+        "systemSetting.addCustomerCharge",
+        "systemSetting.addCustomerChargeItem",
+        "systemSetting.addDepot",
+        "systemSetting.addGroupedit",
+        "systemSetting.addInspect",
+        "systemSetting.addMaterial",
+        "systemSetting.addMedicalFee",
+        "systemSetting.addMemberType",
+        "systemSetting.addProcessCenter",
+        "systemSetting.addProductPlan",
+        "systemSetting.addProjectCard",
+        "systemSetting.addRecordTemplate",
+        "systemSetting.addSupplier",
+        "systemSetting.appConfig",
+        "systemSetting.appointAdmin",
+        "systemSetting.batchMaterial",
+        "systemSetting.brandList",
+        "systemSetting.chargeAdmin",
+        "systemSetting.chargeWays",
+        "systemSetting.checkList",
+        "systemSetting.checkModify",
+        "systemSetting.commonSetTemp",
+        "systemSetting.company",
+        "systemSetting.customerCharge",
+        "systemSetting.customerChargeChoice",
+        "systemSetting.customerChargeItem",
+        "systemSetting.customerMaterialCertificate",
+        "systemSetting.depotList",
+        "systemSetting.depotModify",
+        "systemSetting.firstApproval",
+        "systemSetting.frontAdmin",
+        "systemSetting.groupeditList",
+        "systemSetting.materialCertificate",
+        "systemSetting.materialImport",
+        "systemSetting.materialModify",
+        "systemSetting.materiallist",
+        "systemSetting.medicalFeesList",
+        "systemSetting.memberChannelList",
+        "systemSetting.memberCharge",
+        "systemSetting.memberTypeList",
+        "systemSetting.memberTypeModify",
+        "systemSetting.messageAdmin",
+        "systemSetting.modifyCustomerCharge",
+        "systemSetting.modifyCustomerChargeItem",
+        "systemSetting.modifyGroupedit",
+        "systemSetting.modifyInspect",
+        "systemSetting.modifyMedicalFee",
+        "systemSetting.modifyProcessCenter",
+        "systemSetting.modifyProductPlan",
+        "systemSetting.modifyRecordTemplate",
+        "systemSetting.openPlate",
+        "systemSetting.phoneAdmin",
+        "systemSetting.pointsAdmin",
+        "systemSetting.printConfig",
+        "systemSetting.processCenter",
+        "systemSetting.productPlanList",
+        "systemSetting.projectCard",
+        "systemSetting.recipeAdmin",
+        "systemSetting.recordTemplateList",
+        "systemSetting.reportDateAdmin",
+        "systemSetting.schoolCheckRecord",
+        "systemSetting.stockAdmin",
+        "systemSetting.suiFangJieLunTem",
+        "systemSetting.suiFangJieLunTemplate",
+        "systemSetting.suiFangNeiRongTemplate",
+        "systemSetting.supplierCertificate",
+        "systemSetting.supplierList",
+        "systemSetting.supplierModify",
+        "systemSetting.toothCheckTemplate",
+        "systemSetting.wecomAdmin"
+      ]
+    },
+    {
+      "hostState": "goods",
+      "childCount": 36,
+      "children": [
+        "goods.addCompanyDelivery",
+        "goods.addCompanyInventory",
+        "goods.addCompanyMultiDelivery",
+        "goods.addCompanyMultiReceipts",
+        "goods.addCompanyReceipt",
+        "goods.addProductBivariateTable",
+        "goods.addProductDelivery",
+        "goods.addProductInventory",
+        "goods.addStockCompanyChange",
+        "goods.addStockProductChange",
+        "goods.companyImportRecord",
+        "goods.companyMaterialReceipts",
+        "goods.companyStockList",
+        "goods.completeStockLoss",
+        "goods.deliveryCompanyDetail",
+        "goods.deliveryCompanyModify",
+        "goods.deliveryProductDetail",
+        "goods.deliveryProductModify",
+        "goods.inventoryCompanyDetail",
+        "goods.inventoryCompanyModify",
+        "goods.inventoryProductDetail",
+        "goods.inventoryProductModify",
+        "goods.materialCompanyDelivery",
+        "goods.materialCompanyInventory",
+        "goods.materialCompanyOutportRecord",
+        "goods.modifyStockCompanyChange",
+        "goods.modifyStockProductChange",
+        "goods.receiptCompanyDetail",
+        "goods.receiptCompanyInvalid",
+        "goods.receiptCompanyModify",
+        "goods.stockCompanyChange",
+        "goods.stockCompanyChangeCheck",
+        "goods.stockCompanyChangeDetail",
+        "goods.stockLossDetail",
+        "goods.stockProductChangeCheck",
+        "goods.stockProductChangeDetail"
+      ]
+    },
+    {
+      "hostState": "report.reportFee",
+      "childCount": 12,
+      "children": [
+        "report.reportFee.feeBankCard",
+        "report.reportFee.feeDay",
+        "report.reportFee.feeMonth",
+        "report.reportFee.feeRecharge",
+        "report.reportFee.pointsListCharge",
+        "report.reportFee.pointsListReCharge",
+        "report.reportFee.refundFee",
+        "report.reportFee.timeCardRecharge",
+        "report.reportFee.timecardBlance",
+        "report.reportFee.timecardPerformance",
+        "report.reportFee.unPayCharge",
+        "report.reportFee.unPayRecharge"
+      ]
+    },
+    {
+      "hostState": "purchase",
+      "childCount": 11,
+      "children": [
+        "purchase.addPurchasement",
+        "purchase.addSalePurchase",
+        "purchase.materialPurchase",
+        "purchase.materialPurchaseBackGoods",
+        "purchase.materialPurchaseBackLook",
+        "purchase.materialPurchaseBackOne",
+        "purchase.materialPurchaseReturn",
+        "purchase.purchaseModify",
+        "purchase.purchaseReciept",
+        "purchase.purchaseRecieptDetail",
+        "purchase.purchaseRequestCheck"
+      ]
+    },
+    {
+      "hostState": "adminMyRecord",
+      "childCount": 8,
+      "children": [
+        "adminMyRecord.customerProductRecord",
+        "adminMyRecord.drugPrescription",
+        "adminMyRecord.followList",
+        "adminMyRecord.myCheckBill",
+        "adminMyRecord.myMaterialBill",
+        "adminMyRecord.myMemberRecord",
+        "adminMyRecord.prescription",
+        "adminMyRecord.prescriptsRecord"
+      ]
+    },
+    {
+      "hostState": "hospital.updateHospital",
+      "childCount": 7,
+      "children": [
+        "hospital.updateHospital.addDepartment",
+        "hospital.updateHospital.adminClinic",
+        "hospital.updateHospital.adminHospital",
+        "hospital.updateHospital.adminMap",
+        "hospital.updateHospital.departmentList",
+        "hospital.updateHospital.employeeList",
+        "hospital.updateHospital.updateDepartment"
+      ]
+    },
+    {
+      "hostState": "report",
+      "childCount": 6,
+      "children": [
+        "report.analysis",
+        "report.reportFee",
+        "report.reportMaterial",
+        "report.reportMedicalRate",
+        "report.reportOperateAll",
+        "report.reportSale"
+      ]
+    },
+    {
+      "hostState": "report.reportSale",
+      "childCount": 5,
+      "children": [
+        "report.reportSale.backGoodRecord",
+        "report.reportSale.deliveryList",
+        "report.reportSale.machineProcessList",
+        "report.reportSale.saleList",
+        "report.reportSale.saleRecord"
+      ]
+    },
+    {
+      "hostState": "report.reportMedicalRate",
+      "childCount": 4,
+      "children": [
+        "report.reportMedicalRate.customerChannelRate",
+        "report.reportMedicalRate.satisfyDetailRate",
+        "report.reportMedicalRate.satisfyRate",
+        "report.reportMedicalRate.successRate"
+      ]
+    },
+    {
+      "hostState": "report.reportOperateAll",
+      "childCount": 4,
+      "children": [
+        "report.reportOperateAll.feeCashier",
+        "report.reportOperateAll.hospitalReport",
+        "report.reportOperateAll.reportOperate",
+        "report.reportOperateAll.singleHospitalProfit"
+      ]
+    },
+    {
+      "hostState": "report.analysis",
+      "childCount": 4,
+      "children": [
+        "report.analysis.conversionFunnel",
+        "report.analysis.followUpAnalysis",
+        "report.analysis.profileAnalysis",
+        "report.analysis.rfmModel"
+      ]
+    },
+    {
+      "hostState": "materialStatistic",
+      "childCount": 3,
+      "children": [
+        "materialStatistic.myDeliveryRecord",
+        "materialStatistic.myJxcRecord",
+        "materialStatistic.myReceiptRecord"
+      ]
+    },
+    {
+      "hostState": "report.reportMaterial",
+      "childCount": 3,
+      "children": [
+        "report.reportMaterial.deliveryRecordPort",
+        "report.reportMaterial.jxcRecord",
+        "report.reportMaterial.receiptRecord"
+      ]
+    },
+    {
+      "hostState": "adminSalesRecord",
+      "childCount": 2,
+      "children": [
+        "adminSalesRecord.myMaterialBill",
+        "adminSalesRecord.myMemberRecord"
+      ]
+    },
+    {
+      "hostState": "hospital",
+      "childCount": 2,
+      "children": [
+        "hospital.hospitallist",
+        "hospital.updateHospital"
+      ]
+    }
+  ]
+}

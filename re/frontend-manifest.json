@@ -1,0 +1,40 @@
+﻿{
+    "target":  "视光之家 (bestvisionWeb)",
+    "version":  "6.9",
+    "observedAt":  "2026-09-30",
+    "observedBy":  "<核验账号> @ <机构名> (只读核验)",
+    "method":  "静态公开资源 GET；无业务数据、无凭据、无写操作",
+    "reclassified":  "L0 事实基线 (裁决 E, 2026-09-30)",
+    "artifacts":  [
+                      {
+                          "name":  "controller.js",
+                          "url":  "https://<PROD_HOST>/pc/js/controller/controller-76f1134453.js",
+                          "bytes":  2194811,
+                          "sha256":  "30b13f04b81b3794fb5552cab21936aad8e6245486e1cd8e39dac3ac5b83d72a"
+                      },
+                      {
+                          "name":  "directive.js",
+                          "url":  "https://<PROD_HOST>/pc/js/directive/directive-1699b90cad.js",
+                          "bytes":  731251,
+                          "sha256":  "1b75717a280a880ed486ca9d9695a8517e91a241f7da369b175c2871f83f97f7"
+                      },
+                      {
+                          "name":  "main.js",
+                          "url":  "https://<PROD_HOST>/pc/js/main/main-0283a75ded.js",
+                          "bytes":  173700,
+                          "sha256":  "f874c90be78c3582843a2724935f213f9160b3717ef958e486e3af8e70920b83"
+                      },
+                      {
+                          "name":  "factory.js",
+                          "url":  "https://<PROD_HOST>/pc/js/factory/factory-c7cec33f4b.js",
+                          "bytes":  229117,
+                          "sha256":  "0181d3fc1e16f987b5e3e693cdaea4f48941b4bd659772d3bada4388d763a8e8"
+                      },
+                      {
+                          "name":  "service.js",
+                          "url":  "https://<PROD_HOST>/pc/js/service/service-a8283608aa.js",
+                          "bytes":  931,
+                          "sha256":  "21c44738897c50e34f6461d83b6062458c2e83c53ed519eefcfc6f47d9d2597b"
+                      }
+                  ]
+}

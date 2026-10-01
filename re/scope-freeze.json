@@ -1,0 +1,4383 @@
+{
+  "generatedBy": "re/gen-scope-freeze.py",
+  "basis": "裁决 A~E（老板 2026-10-01 拍板）",
+  "total": 485,
+  "tally": {
+    "建-P1": 466,
+    "不建": 12,
+    "待裁决": 3,
+    "Phase2": 4
+  },
+  "permissionAttribution": {
+    "PROD": 288,
+    "NONE": 171,
+    "CMD": 26
+  },
+  "routes": [
+    {
+      "state": "optometry",
+      "url": "/optometry",
+      "template": "views/optometry/optometry.html",
+      "controller": "optometryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "optometryGlasses",
+      "url": "/optometryGlasses?medicalRecordId&edit",
+      "template": "views/optometry/optometryGlasses.html",
+      "controller": "optometryGlassesCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "homeAnnouncement",
+      "url": "/homeAnnouncement",
+      "template": "views/home/homeAnnouncement.html",
+      "controller": "homeAnnouncementCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "homeAnnouncementDetails",
+      "url": "/homeAnnouncementDetails?id",
+      "template": "views/home/homeAnnouncementDetails.html",
+      "controller": "homeAnnouncementDetailsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "home",
+      "url": "/home?renew",
+      "template": "views/home/home.html",
+      "controller": "homeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "bigScreen",
+      "url": "/bigScreen",
+      "template": "views/clinic/bigScreen.html",
+      "controller": "bigScreenCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "consultingScreen",
+      "url": "/consultingScreen",
+      "template": "views/clinic/consultingScreen.html",
+      "controller": "consultingScreenCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "screenQueue",
+      "url": "/screenQueue?bigScreenId",
+      "template": "views/clinic/screenQueue.html",
+      "controller": "screenQueueCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "adminCall",
+      "url": "/adminCall",
+      "template": "views/clinic/adminCall.html",
+      "controller": "adminCallCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "doctorWorkbench",
+      "url": "/doctorWorkbench",
+      "template": "views/clinic/doctorWorkbench.html",
+      "controller": "doctorWorkbenchCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "checkCall",
+      "url": "/checkCall",
+      "template": "views/clinic/checkCall.html",
+      "controller": "checkCallCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "workBeach",
+      "url": "/workBeach",
+      "template": "views/home/workBeach.html",
+      "controller": "workBeachCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "404",
+      "url": "/404",
+      "template": "views/home/404.html",
+      "controller": "404Ctrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "admin",
+      "url": "/admin",
+      "template": "views/home/admin.html",
+      "controller": "adminCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "allSize",
+      "url": "/allSize",
+      "template": "views/home/allSize.html",
+      "controller": "allSizeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyPassword",
+      "url": "/modifyPassword",
+      "template": "views/home/modifyPassword.html",
+      "controller": "modifyPasswordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myMember",
+      "url": "/myMember",
+      "template": "views/myMember/myMember.html",
+      "controller": "myMemberCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addCheckin",
+      "url": "/addCheckin?appointId&type",
+      "template": "views/checkinList/addCheckin.html",
+      "controller": "addCheckinCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "yuYueJiLu",
+      "url": "/yuYueJiLu",
+      "template": "views/checkinList/yuYueJiLu.html",
+      "controller": "yuYueJiLuCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "checkinList",
+      "url": "/checkinList?printCheckinId&appointId",
+      "template": "views/checkinList/checkinList.html",
+      "controller": "checkinListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminMyRecord",
+      "url": "/adminMyRecord?medicalRecordId",
+      "template": "views/myMember/adminMyRecord.html",
+      "controller": "adminMyRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminMyRecord.myMemberRecord",
+      "url": "/myMemberRecord",
+      "template": "views/myMember/myMemberRecord.html",
+      "controller": "myMemberRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "adminMyRecord.prescriptsRecord",
+      "url": "/prescriptsRecord",
+      "template": "views/myMember/prescriptsRecord.html",
+      "controller": "prescriptsRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminMyRecord.prescription",
+      "url": "/prescription",
+      "template": "views/myMember/prescription.html",
+      "controller": "prescriptionCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminMyRecord.drugPrescription",
+      "url": "/drugPrescription",
+      "template": "views/myMember/drugPrescription.html",
+      "controller": "drugPrescriptionCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminMyRecord.customerProductRecord",
+      "url": "/customerProductRecord",
+      "template": "views/myMember/customerProductRecord.html",
+      "controller": "customerProductRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminMyRecord.myMaterialBill",
+      "url": "/myMaterialBill",
+      "template": "views/myMember/myMaterialBill.html",
+      "controller": "myMaterialBillCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "adminMyRecord.myCheckBill",
+      "url": "/myCheckBill",
+      "template": "views/myMember/myCheckBill.html",
+      "controller": "myCheckBillCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "adminMyRecord.followList",
+      "url": "/followList",
+      "template": "views/myMember/followList.html",
+      "controller": "followListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminSalesRecord",
+      "url": "/adminSalesRecord?medicalRecordId",
+      "template": "views/myMember/adminSalesRecord.html",
+      "controller": "adminSalesRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminSalesRecord.myMemberRecord",
+      "url": "/myMemberRecord",
+      "template": "views/myMember/myMemberRecord.html",
+      "controller": "myMemberRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminSalesRecord.myMaterialBill",
+      "url": "/myMaterialBill",
+      "template": "views/myMember/myMaterialBill.html",
+      "controller": "myMaterialBillCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "myMedicalRecordList",
+      "url": "/myMedicalRecordList?patientId&customerId",
+      "template": "views/myMember/myMedicalRecordList.html",
+      "controller": "myMedicalRecordListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myMedicalHistory",
+      "url": "/myMedicalHistory?patientId",
+      "template": "views/myMember/myMedicalHistory.html",
+      "controller": "myMedicalHistoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "updateMyMember",
+      "url": "/updateMyMember?customerId",
+      "template": "views/myMember/updateMyMember.html",
+      "controller": "updateMemberCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addSaleRecord",
+      "url": "/addSaleRecord",
+      "template": "views/myMember/addSaleRecord.html",
+      "controller": "addSaleRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "timeCard",
+      "url": "/timeCard",
+      "template": "views/myMember/timeCard.html",
+      "controller": "timeCardCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "member",
+      "url": "/member?tagId",
+      "template": "views/memberManage/member.html",
+      "controller": "memberCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "branchMember",
+      "url": "/branchMember",
+      "template": "views/memberManage/branchMember.html",
+      "controller": "memberCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "memberRecyle",
+      "url": "/memberRecyle?type&companyId",
+      "template": "views/memberManage/memberRecyle.html",
+      "controller": "memberRecyleCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "memberTag",
+      "url": "/memberTag",
+      "template": "views/memberManage/memberTag.html",
+      "controller": "memberTagCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addMemberTag",
+      "url": "/addMemberTag",
+      "template": "views/memberManage/addMemberTag.html",
+      "controller": "addMemberTagCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "recommendPhoneList",
+      "url": "/recommendPhoneList",
+      "template": "views/memberManage/recommendPhoneList.html",
+      "controller": "recommendPhoneListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "recommendTable",
+      "url": "/recommendTable",
+      "template": "views/memberManage/recommendTable.html",
+      "controller": "recommendTableCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "recommendDetail",
+      "url": "/recommendDetail",
+      "template": "views/memberManage/recommendDetail.html",
+      "controller": "recommendDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "recommendCustomer",
+      "url": "/recommendCustomer",
+      "template": "views/memberManage/recommendCustomer.html",
+      "controller": "recommendCustomerCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addRecommend",
+      "url": "/addRecommend",
+      "template": "views/memberManage/addRecommend.html",
+      "controller": "addRecommendCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyRecommend",
+      "url": "/modifyRecommend?promotionId",
+      "template": "views/memberManage/modifyRecommend.html",
+      "controller": "modifyRecommendCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "secKillPromotionList",
+      "url": "/secKillPromotionList",
+      "template": "views/memberManage/secKillPromotionList.html",
+      "controller": "secKillPromotionListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "productOrder",
+      "url": "/productOrder?seckillProductId",
+      "template": "views/memberManage/productOrder.html",
+      "controller": "productOrderCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addPromotion",
+      "url": "/addPromotion",
+      "template": "views/memberManage/addPromotion.html",
+      "controller": "addPromotionCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "modifyPromotion",
+      "url": "/modifyPromotion?promotionId",
+      "template": "views/memberManage/modifyPromotion.html",
+      "controller": "modifyPromotionCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "promotionDetail",
+      "url": "/promotionDetail?id",
+      "template": "views/memberManage/promotionDetail.html",
+      "controller": "promotionDetailCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "secKillProductList",
+      "url": "/secKillProductList?promotionId",
+      "template": "views/memberManage/secKillProductList.html",
+      "controller": "secKillProductListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addSecKillProduct",
+      "url": "/addSecKillProduct?promotionId",
+      "template": "views/memberManage/addSecKillProduct.html",
+      "controller": "addSecKillProductCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifySecKillProduct",
+      "url": "/modifySecKillProduct?seckillProductId",
+      "template": "views/memberManage/modifySecKillProduct.html",
+      "controller": "modifySecKillProductCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "secKillProductDetail",
+      "url": "/secKillProductDetail?seckillProductId",
+      "template": "views/memberManage/secKillProductDetail.html",
+      "controller": "secKillProductDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "updateMember",
+      "url": "/updateMember?customerId",
+      "template": "views/memberManage/updateMember.html",
+      "controller": "updateMemberCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "patientList",
+      "url": "/patientList?customerId",
+      "template": "views/memberManage/patientList.html",
+      "controller": "patientListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "chargeList",
+      "url": "/chargeList?customerId",
+      "template": "views/memberManage/chargeList.html",
+      "controller": "chargeListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "memberPoint",
+      "url": "/memberPoint?customerId",
+      "template": "views/memberManage/memberPoint.html",
+      "controller": "memberPointCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "memberCard",
+      "url": "/memberCard?customerId",
+      "template": "views/memberManage/memberCard.html",
+      "controller": "memberCardCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myCoupon",
+      "url": "/myCoupon?customerId",
+      "template": "views/memberManage/myCoupon.html",
+      "controller": "myCouponCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "selectOrderList",
+      "url": "/selectOrderList?keyword",
+      "template": "views/memberManage/selectOrderList.html",
+      "controller": "selectOrderListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "sendPlatform",
+      "url": "/sendPlatform",
+      "template": "views/memberManage/sendPlatform.html",
+      "controller": "sendPlatformCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "requirement",
+      "url": "/requirement",
+      "template": "views/memberManage/requirement.html",
+      "controller": "requirementCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "requirementStatus",
+      "url": "/requirementStatus?id",
+      "template": "views/memberManage/requirementStatus.html",
+      "controller": "requirementStatusCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "groupSend",
+      "url": "/groupSend?taskTemplateBatchSendId",
+      "template": "views/memberManage/groupSend.html",
+      "controller": "groupSendCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "groupSendLook",
+      "url": "/groupSendLook?taskTemplateBatchSendId",
+      "template": "views/memberManage/groupSendLook.html",
+      "controller": "groupSendLookCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "orderDetail",
+      "url": "/orderDetail?orderId",
+      "template": "views/memberManage/orderDetail.html",
+      "controller": "orderDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "targetCouponList",
+      "url": "/targetCouponList",
+      "template": "views/targetMarket/targetCouponList.html",
+      "controller": "targetCouponListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addTargetCoupon",
+      "url": "/addTargetCoupon",
+      "template": "views/targetMarket/addTargetCoupon.html",
+      "controller": "addTargetCouponCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "targetCouponDetail",
+      "url": "/targetCouponDetail?taskCouponBatchSendId",
+      "template": "views/targetMarket/targetCouponDetail.html",
+      "controller": "targetCouponDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addHospital",
+      "url": "/addHospital",
+      "template": "views/hospital/addHospital.html",
+      "controller": "addHospitalCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "hospital.hospitallist",
+      "url": "/hospitallist",
+      "template": "views/hospital/hospitalList.html",
+      "controller": "hospitalListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital",
+      "url": "/hospital",
+      "template": "views/hospital/hospital.html",
+      "controller": "hospitalCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital.updateHospital",
+      "url": "/updateHospital?id&companyId",
+      "template": "views/hospital/updateHospital.html",
+      "controller": "updateHospitalCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital.updateHospital.adminHospital",
+      "url": "/adminHospital",
+      "template": "views/hospital/updateHospital.adminHospital.html",
+      "controller": "updateAdminHospitalCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "hospital.updateHospital.departmentList",
+      "url": "/updateDepartment",
+      "template": "views/hospital/departmentList.html",
+      "controller": "departmentListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital.updateHospital.employeeList",
+      "url": "/employeeList",
+      "template": "views/hospital/employeeList.html",
+      "controller": "employeeListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "hospital.updateHospital.adminMap",
+      "url": "/adminMap",
+      "template": "views/hospital/adminMap.html",
+      "controller": "adminMapCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital.updateHospital.adminClinic",
+      "url": "/adminClinic",
+      "template": "views/hospital/adminClinic.html",
+      "controller": "adminClinicCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital.updateHospital.updateDepartment",
+      "url": "/updateDepartment?departmentId",
+      "template": "views/hospital/updateDepartment.html",
+      "controller": "updateDepartmentCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "hospital.updateHospital.addDepartment",
+      "url": "/addDepartment",
+      "template": "views/hospital/addDepartment.html",
+      "controller": "addDepartmentCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "orderManage",
+      "url": "/orderManage",
+      "template": "views/orderManage/orderManage.html",
+      "controller": "orderManageCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "inspectList",
+      "url": "/inspectList",
+      "template": "views/inspectAdmin/inspectList.html",
+      "controller": "InspectListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addInspect",
+      "url": "/addInspect",
+      "template": "views/inspectAdmin/addInspect.html",
+      "controller": "addInspectCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyInspect",
+      "url": "/modifyInspect?id",
+      "template": "views/inspectAdmin/modifyInspect.html",
+      "controller": "modifyInspectCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "coinRuleIntroduce",
+      "url": "/coinRuleIntroduce",
+      "template": "views/authAdmin/coinRuleIntroduce.html",
+      "controller": "coinRuleIntroduceCtrl",
+      "disposition": "待裁决",
+      "reason": "介绍/测试落地页，不在 5 项裁决范围，需单独拍板",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "aioIntroduce",
+      "url": "/aioIntroduce",
+      "template": "views/authAdmin/aioIntroduce.html",
+      "controller": "aioIntroduceCtrl",
+      "disposition": "待裁决",
+      "reason": "介绍/测试落地页，不在 5 项裁决范围，需单独拍板",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "myAccount",
+      "url": "/myAccount",
+      "template": "views/authAdmin/myAccount.html",
+      "controller": "myAccountCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myAccountDetails",
+      "url": "/myAccountDetails?payChannel",
+      "template": "views/authAdmin/myAccountDetails.html",
+      "controller": "myAccountDetailsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myAccountDetailsForScan",
+      "url": "/myAccountDetailsForScan",
+      "template": "views/authAdmin/myAccountDetailsForScan.html",
+      "controller": "myAccountDetailsForScanCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myAccountHistory",
+      "url": "/myAccountHistory",
+      "template": "views/authAdmin/myAccountHistory.html",
+      "controller": "myAccountHistoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myAccountCoin",
+      "url": "/myAccountCoin",
+      "template": "views/authAdmin/myAccountCoin.html",
+      "controller": "myAccountCoinCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myAccountCoinDetails",
+      "url": "/myAccountCoinDetails",
+      "template": "views/authAdmin/myAccountCoinDetails.html",
+      "controller": "myAccountCoinDetailsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "myAccountOverviews",
+      "url": "/myAccountOverviews",
+      "template": "views/authAdmin/myAccountOverviews.html",
+      "controller": "myAccountOverviewsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "appointOrder",
+      "url": "/appointOrder",
+      "template": "views/bookManage/appointOrder.html",
+      "controller": "appointOrderCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "bookManage",
+      "url": "/bookManage",
+      "template": "views/bookManage/bookManage.html",
+      "controller": "bookManageCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "bookSettings",
+      "url": "/bookSettings",
+      "template": "views/bookManage/bookSettings.html",
+      "controller": "bookSettingsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "bookDetail",
+      "url": "/bookDetail?appointmentId",
+      "template": "views/bookManage/bookDetail.html",
+      "controller": "bookDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "getGlassNotifyList",
+      "url": "/getGlassNotifyList",
+      "template": "views/getGlassNotify/getGlassNotifyList.html",
+      "controller": "getGlassNotifyListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "medicalStatistic",
+      "url": "/medicalStatistic",
+      "template": "views/reportMedical/medicalStatistic.html",
+      "controller": "reportMedicalRateCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMedicalRate",
+      "url": "/reportMedicalRate",
+      "template": "views/reportMedical/reportMedicalRate.html",
+      "controller": "reportMedicalRateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMedicalRate.successRate",
+      "url": "/successRate",
+      "template": "views/reportMedical/successRate.html",
+      "controller": "successRateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMedicalRate.satisfyRate",
+      "url": "/satisfyRate",
+      "template": "views/reportMedical/satisfyRate.html",
+      "controller": "satisfyRateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMedicalRate.satisfyDetailRate",
+      "url": "/satisfyDetailRate",
+      "template": "views/reportMedical/satisfyDetailRate.html",
+      "controller": "satisfyDetailRateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMedicalRate.customerChannelRate",
+      "url": "/customerChannelRate",
+      "template": "views/reportMedical/customerChannelRate.html",
+      "controller": "customerChannelRateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "profitReport",
+      "url": "/profitReport",
+      "template": "views/reportMedical/profitReport.html",
+      "controller": "profitReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "stockInReport",
+      "url": "/stockInReport",
+      "template": "views/reportMedical/stockInReport.html",
+      "controller": "jxcRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "report.reportSale",
+      "url": "/reportSale",
+      "template": "views/reportMedical/reportSale.html",
+      "controller": "reportSaleCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "materialStatistic",
+      "url": "/materialStatistic",
+      "template": "views/reportMedical/materialStatistic.html",
+      "controller": "reportSaleCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "materialStatistic.myReceiptRecord",
+      "url": "/myReceiptRecord",
+      "template": "views/reportMedical/myReceiptRecord.html",
+      "controller": "myReceiptRecordCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "materialStatistic.myDeliveryRecord",
+      "url": "/myDeliveryRecord",
+      "template": "views/reportMedical/myDeliveryRecord.html",
+      "controller": "myDeliveryRecordCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "materialStatistic.myJxcRecord",
+      "url": "/myJxcRecord",
+      "template": "views/reportMedical/myJxcRecord.html",
+      "controller": "myJxcRecordCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMaterial",
+      "url": "/reportMaterial",
+      "template": "views/reportMedical/reportMaterial.html",
+      "controller": "reportSaleCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportSale.saleList",
+      "url": "/saleList",
+      "template": "views/reportMedical/saleList.html",
+      "controller": "saleListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportSale.deliveryList",
+      "url": "/deliveryList",
+      "template": "views/reportMedical/deliveryList.html",
+      "controller": "deliveryReportListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "report.reportSale.machineProcessList",
+      "url": "/machineProcessList",
+      "template": "views/reportMedical/machineProcessList.html",
+      "controller": "machineProcessListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMaterial.receiptRecord",
+      "url": "/receiptRecord",
+      "template": "views/reportMedical/receiptRecord.html",
+      "controller": "receiptRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMaterial.deliveryRecordPort",
+      "url": "/deliveryRecordPort",
+      "template": "views/reportMedical/deliveryRecordPort.html",
+      "controller": "deliveryRecordPortCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportMaterial.jxcRecord",
+      "url": "/jxcRecord",
+      "template": "views/reportMedical/jxcRecord.html",
+      "controller": "jxcRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportSale.saleRecord",
+      "url": "/saleRecord",
+      "template": "views/reportMedical/saleRecord.html",
+      "controller": "saleRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportSale.backGoodRecord",
+      "url": "/backGoodRecord",
+      "template": "views/reportMedical/backGoodRecord.html",
+      "controller": "backGoodRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "feeStatistic",
+      "url": "/feeStatistic",
+      "template": "views/reportMedical/feeStatistic.html",
+      "controller": "reportFeeCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee",
+      "url": "/reportFee",
+      "template": "views/reportMedical/reportFee.html",
+      "controller": "reportFeeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.feeDay",
+      "url": "/feeDay",
+      "template": "views/reportMedical/feeDay.html",
+      "controller": "feeDayCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportOperateAll.feeCashier",
+      "url": "/feeCashier",
+      "template": "views/reportMedical/feeCashier.html",
+      "controller": "feeCashierCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.refundFee",
+      "url": "/refundFee",
+      "template": "views/reportMedical/refundFee.html",
+      "controller": "refundFeeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.feeMonth",
+      "url": "/feeMonth",
+      "template": "views/reportMedical/feeMonth.html",
+      "controller": "feeMonthCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.feeRecharge",
+      "url": "/feeRecharge",
+      "template": "views/reportMedical/feeRecharge.html",
+      "controller": "feeRechargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.timeCardRecharge",
+      "url": "/timeCardRecharge",
+      "template": "views/reportMedical/timeCardRecharge.html",
+      "controller": "timeCardRechargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.unPayRecharge",
+      "url": "/unPayRecharge",
+      "template": "views/reportMedical/unPayRecharge.html",
+      "controller": "unPayRechargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.unPayCharge",
+      "url": "/unPayCharge",
+      "template": "views/reportMedical/unPayCharge.html",
+      "controller": "unPayChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.pointsListReCharge",
+      "url": "/pointsListReCharge",
+      "template": "views/reportMedical/pointsListReCharge.html",
+      "controller": "pointsListReChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.pointsListCharge",
+      "url": "/pointsListCharge",
+      "template": "views/reportMedical/pointsListCharge.html",
+      "controller": "pointsListChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.feeBankCard",
+      "url": "/feeBankCard",
+      "template": "views/reportMedical/feeBankCard.html",
+      "controller": "feeBankCardCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.timecardBlance",
+      "url": "/timecardBlance",
+      "template": "views/reportMedical/timecardBlance.html",
+      "controller": "timecardBlanceCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportFee.timecardPerformance",
+      "url": "/timecardPerformance",
+      "template": "views/reportMedical/timecardPerformance.html",
+      "controller": "timecardPerformanceCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report",
+      "url": "/report",
+      "template": "views/reportMedical/report.html",
+      "controller": "reportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportOperateAll.reportOperate",
+      "url": "/reportOperate",
+      "template": "views/reportMedical/reportOperate.html",
+      "controller": "reportOperateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportOperateAll.hospitalReport",
+      "url": "/hospitalReport",
+      "template": "views/reportMedical/hospitalReport.html",
+      "controller": "hospitalReportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportOperateAll.singleHospitalProfit",
+      "url": "/singleHospitalProfit",
+      "template": "views/reportMedical/singleHospitalProfit.html",
+      "controller": "singleHospitalProfitCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.reportOperateAll",
+      "url": "/reportOperateAll",
+      "template": "views/reportMedical/reportOperateAll.html",
+      "controller": "reportOperateAllCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "encryptUser",
+      "url": "/encryptUser",
+      "template": "views/adminManage/encryptUser.html",
+      "controller": "encryptUserCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminList",
+      "url": "/adminList",
+      "template": "views/adminManage/adminList.html",
+      "controller": "adminListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "createAdminArea",
+      "url": "/createAdminArea",
+      "template": "views/adminManage/createAdminArea.html",
+      "controller": "createAdminAreaCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyAdminArea",
+      "url": "/modifyAdminArea?adminId",
+      "template": "views/adminManage/modifyAdminArea.html",
+      "controller": "modifyAdminAreaCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminAreaList",
+      "url": "/adminAreaList",
+      "template": "views/adminManage/adminAreaList.html",
+      "controller": "adminAreaListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "areaRoleAdmin",
+      "url": "/areaRoleAdmin",
+      "template": "views/adminManage/areaRoleAdmin.html",
+      "controller": "areaRoleAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "areaScreenAdmin",
+      "url": "/areaScreenAdmin",
+      "template": "views/adminManage/areaScreenAdmin.html",
+      "controller": "areaScreenAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "roleAdmin",
+      "url": "/roleAdmin",
+      "template": "views/adminManage/roleAdmin.html",
+      "controller": "roleAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addRole",
+      "url": "/addRole",
+      "template": "views/adminManage/addRole.html",
+      "controller": "addRoleCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyRole",
+      "url": "/modifyRole?roleId",
+      "template": "views/adminManage/modifyRole.html",
+      "controller": "modifyRoleCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyAreaRole",
+      "url": "/modifyAreaRole?roleId",
+      "template": "views/adminManage/modifyAreaRole.html",
+      "controller": "modifyAreaRoleCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "roleDetail",
+      "url": "/roleDetail?roleId",
+      "template": "views/adminManage/roleDetail.html",
+      "controller": "modifyRoleCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "memberAdmin",
+      "url": "/memberAdmin",
+      "template": "views/adminManage/memberAdmin.html",
+      "controller": "memberAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "createAdmin",
+      "url": "/createAdmin",
+      "template": "views/adminManage/createAdmin.html",
+      "controller": "createAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminModify",
+      "url": "/adminModify?adminId",
+      "template": "views/adminManage/adminModify.html",
+      "controller": "adminModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminPasswordModify",
+      "url": "/adminPasswordModify?adminId",
+      "template": "views/adminManage/adminPasswordModify.html",
+      "controller": "adminPasswordModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminAreaPasswordModify",
+      "url": "/adminAreaPasswordModify?adminId",
+      "template": "views/adminManage/adminPasswordModify.html",
+      "controller": "adminPasswordModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "wechatAuth",
+      "url": "/wechatAuth",
+      "template": "views/authAdmin/wechatAuth.html",
+      "controller": "wechatAuthCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "wechatAuthSuccess",
+      "url": "/wechatAuthSuccess",
+      "template": "views/authAdmin/wechatAuthSuccess.html",
+      "controller": "wechatAuthSuccessCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "wechatAuthFailed",
+      "url": "/wechatAuthFailed",
+      "template": "views/authAdmin/wechatAuthFailed.html",
+      "controller": "wechatAuthFailedCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "materialPurchaseRequest",
+      "url": "/materialPurchaseRequest",
+      "template": "views/materialAdmin/materialPurchaseRequest.html",
+      "controller": "materialPurchaseRequestCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addPurchaseRequest",
+      "url": "/addPurchaseRequest",
+      "template": "views/materialAdmin/addPurchaseRequest.html",
+      "controller": "addPurchaseRequestCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase",
+      "url": "/purchase",
+      "template": "views/purchase/purchase.html",
+      "controller": "purchaseCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "purchase.materialPurchase",
+      "url": "/materialPurchase",
+      "template": "views/materialAdmin/materialPurchase.html",
+      "controller": "materialPurchaseCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.materialPurchaseReturn",
+      "url": "/materialPurchaseReturn",
+      "template": "views/materialAdmin/materialPurchaseReturn.html",
+      "controller": "materialPurchaseReturnCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.purchaseRequestCheck",
+      "url": "/purchaseRequestCheck",
+      "template": "views/materialAdmin/purchaseRequestCheck.html",
+      "controller": "purchaseRequestCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.purchaseModify",
+      "url": "/purchaseModify?purchaseId",
+      "template": "views/materialAdmin/purchaseModify.html",
+      "controller": "purchaseModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.materialPurchaseBackOne",
+      "url": "/materialPurchaseBackOne?id&type&stockPurchaseOutId",
+      "template": "views/materialAdmin/materialPurchaseBackOne.html",
+      "controller": "materialPurchaseBackOneCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.materialPurchaseBackGoods",
+      "url": "/materialPurchaseBackGoods?stockPurchaseOutId&storehouseId",
+      "template": "views/materialAdmin/materialPurchaseBackGoods.html",
+      "controller": "materialPurchaseBackGoodsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.materialPurchaseBackLook",
+      "url": "/materialPurchaseBackLook?stockPurchaseOutId&storehouseId",
+      "template": "views/materialAdmin/materialPurchaseBackLook.html",
+      "controller": "materialPurchaseBackLookCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminBill",
+      "url": "/adminBill",
+      "template": "views/materialAdmin/adminBill.html",
+      "controller": "adminBillCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "testPage",
+      "url": "/testPage",
+      "template": "views/home/testPage.html",
+      "controller": "testPageCtrl",
+      "disposition": "待裁决",
+      "reason": "介绍/测试落地页，不在 5 项裁决范围，需单独拍板",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "adminBillDetial",
+      "url": "/adminBillDetial?supplierId",
+      "template": "views/materialAdmin/adminBillDetial.html",
+      "controller": "adminBillDetialCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adminBillOneDetial",
+      "url": "/adminBillOneDetial?supplierId&stockSettlementId",
+      "template": "views/materialAdmin/adminBillOneDetial.html",
+      "controller": "adminBillOneDetialCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.addSalePurchase",
+      "url": "/addSalePurchase",
+      "template": "views/materialAdmin/addSalePurchase.html",
+      "controller": "addSalePurchaseCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.addPurchasement",
+      "url": "/addPurchasement",
+      "template": "views/materialAdmin/addPurchasement.html",
+      "controller": "addPurchasementCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchaseRequestModify",
+      "url": "/purchaseRequestModify?purchaseRequestId",
+      "template": "views/materialAdmin/purchaseRequestModify.html",
+      "controller": "purchaseRequestModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchaseRequestDetail",
+      "url": "/purchaseRequestDetail?purchaseRequestId",
+      "template": "views/materialAdmin/purchaseRequestDetail.html",
+      "controller": "purchaseRequestModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchaseRequestCheckDetail",
+      "url": "/purchaseRequestCheckDetail?purchaseRequestId",
+      "template": "views/materialAdmin/purchaseRequestCheckDetail.html",
+      "controller": "purchaseRequestCheckDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.purchaseReciept",
+      "url": "/purchaseReciept?purchaseId",
+      "template": "views/materialAdmin/purchaseReciept.html",
+      "controller": "purchaseRecieptCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchase.purchaseRecieptDetail",
+      "url": "/purchaseRecieptDetail?purchaseId",
+      "template": "views/materialAdmin/purchaseRecieptDetail.html",
+      "controller": "purchaseRecieptCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "purchaseDetail",
+      "url": "/purchaseDetail?purchaseId",
+      "template": "views/materialAdmin/purchaseDetail.html",
+      "controller": "purchaseDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.companyMaterialReceipts",
+      "url": "/companyMaterialReceipts",
+      "template": "views/materialAdmin/materialReceipts.html",
+      "controller": "materialReceiptsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "materialReceipts",
+      "url": "/materialReceipts",
+      "template": "views/materialAdmin/materialReceipts.html",
+      "controller": "materialReceiptsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addCompanyReceipt",
+      "url": "/addCompanyReceipt?storehouseId",
+      "template": "views/materialAdmin/addReceipt.html",
+      "controller": "addReceiptCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addReceipt",
+      "url": "/addReceipt",
+      "template": "views/materialAdmin/addReceipt.html",
+      "controller": "addReceiptCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addMultiReceipts",
+      "url": "/addMultiReceipts",
+      "template": "views/materialAdmin/addMultiReceipts.html",
+      "controller": "addMultiReceiptsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addCompanyMultiReceipts",
+      "url": "/addCompanyMultiReceipts?storehouseId",
+      "template": "views/materialAdmin/addMultiReceipts.html",
+      "controller": "addMultiReceiptsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addMultiDelivery",
+      "url": "/addMultiDelivery?storehouseId",
+      "template": "views/materialAdmin/addMultiDelivery.html",
+      "controller": "addMultiDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addCompanyMultiDelivery",
+      "url": "/addCompanyMultiDelivery?storehouseId",
+      "template": "views/materialAdmin/addMultiDelivery.html",
+      "controller": "addMultiDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "materialImportRecord",
+      "url": "/materialImportRecord",
+      "template": "views/materialAdmin/materialImportRecord.html",
+      "controller": "materialImportRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.companyImportRecord",
+      "url": "/companyImportRecord?storehouseId",
+      "template": "views/materialAdmin/materialImportRecord.html",
+      "controller": "materialImportRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "materialOutportRecord",
+      "url": "/materialOutportRecord?storehouseId",
+      "template": "views/materialAdmin/materialOutportRecord.html",
+      "controller": "materialOutportRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.materialCompanyOutportRecord",
+      "url": "/materialCompanyOutportRecord?storehouseId",
+      "template": "views/materialAdmin/materialOutportRecord.html",
+      "controller": "materialOutportRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.receiptCompanyDetail",
+      "url": "/receiptCompanyDetail?stockInId",
+      "template": "views/materialAdmin/receiptDetail.html",
+      "controller": "receiptDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "receiptDetail",
+      "url": "/receiptDetail?stockInId",
+      "template": "views/materialAdmin/receiptDetail.html",
+      "controller": "receiptDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "receiptInvalid",
+      "url": "/receiptInvalid?stockInId",
+      "template": "views/materialAdmin/receiptInvalid.html",
+      "controller": "receiptInvalidCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.receiptCompanyInvalid",
+      "url": "/receiptCompanyInvalid?stockInId",
+      "template": "views/materialAdmin/receiptInvalid.html",
+      "controller": "receiptInvalidCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "receiptDetailCustomer",
+      "url": "/receiptDetailCustomer?stockInId",
+      "template": "views/materialAdmin/receiptDetailCustomer.html",
+      "controller": "receiptDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "receiptModify",
+      "url": "/receiptModify?stockInId",
+      "template": "views/materialAdmin/receiptModify.html",
+      "controller": "receiptModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.receiptCompanyModify",
+      "url": "/receiptCompanyModify?stockInId",
+      "template": "views/materialAdmin/receiptModify.html",
+      "controller": "receiptModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "materialInventory",
+      "url": "/materialInventory",
+      "template": "views/materialAdmin/materialInventory.html",
+      "controller": "materialInventoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.materialCompanyInventory",
+      "url": "/materialCompanyInventory",
+      "template": "views/materialAdmin/materialInventory.html",
+      "controller": "materialInventoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addInventory",
+      "url": "/addInventory",
+      "template": "views/materialAdmin/addInventory.html",
+      "controller": "addInventoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addCompanyInventory",
+      "url": "/addCompanyInventory?storehouseId",
+      "template": "views/materialAdmin/addInventory.html",
+      "controller": "addInventoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addProductInventory",
+      "url": "/addProductInventory?storehouseId",
+      "template": "views/materialAdmin/addProductInventory.html",
+      "controller": "addProductInventoryCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "goods.addProductBivariateTable",
+      "url": "/addProductBivariateTable?storehouseId&productId",
+      "template": "views/materialAdmin/addProductBivariateTable.html",
+      "controller": "addProductBivariateTableCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "inventoryDetail",
+      "url": "/inventoryDetail?stockTakingId",
+      "template": "views/materialAdmin/inventoryDetail.html",
+      "controller": "inventoryDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.inventoryCompanyDetail",
+      "url": "/inventoryCompanyDetail?stockTakingId",
+      "template": "views/materialAdmin/inventoryDetail.html",
+      "controller": "inventoryDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.inventoryProductDetail",
+      "url": "/inventoryProductDetail?stockTakingId",
+      "template": "views/materialAdmin/inventoryProductDetail.html",
+      "controller": "inventoryProductModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "inventoryModify",
+      "url": "/inventoryModify?stockTakingId",
+      "template": "views/materialAdmin/inventoryModify.html",
+      "controller": "inventoryModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.inventoryProductModify",
+      "url": "/inventoryProductModify?stockTakingId",
+      "template": "views/materialAdmin/inventoryProductModify.html",
+      "controller": "inventoryProductModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "goods.inventoryCompanyModify",
+      "url": "/inventoryCompanyModify?stockTakingId",
+      "template": "views/materialAdmin/inventoryModify.html",
+      "controller": "inventoryModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "materialDelivery",
+      "url": "/materialDelivery",
+      "template": "views/materialAdmin/materialDelivery.html",
+      "controller": "materialDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.materialCompanyDelivery",
+      "url": "/materialCompanyDelivery",
+      "template": "views/materialAdmin/materialDelivery.html",
+      "controller": "materialDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addDelivery",
+      "url": "/addDelivery",
+      "template": "views/materialAdmin/addDelivery.html",
+      "controller": "addDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addCompanyDelivery",
+      "url": "/addCompanyDelivery?storehouseId&productType",
+      "template": "views/materialAdmin/addDelivery.html",
+      "controller": "addDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addProductDelivery",
+      "url": "/addProductDelivery?storehouseId&productType",
+      "template": "views/materialAdmin/addProductDelivery.html",
+      "controller": "addProductDeliveryCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "addDeliveryCustomer",
+      "url": "/addDeliveryCustomer",
+      "template": "views/materialAdmin/addDeliveryCustomer.html",
+      "controller": "addDeliveryCustomerCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryModifyCustomer",
+      "url": "/deliveryModifyCustomer?stockOutId",
+      "template": "views/materialAdmin/deliveryModifyCustomer.html",
+      "controller": "deliveryModifyCustomerCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.deliveryCompanyModify",
+      "url": "/deliveryCompanyModify?stockOutId",
+      "template": "views/materialAdmin/deliveryModify.html",
+      "controller": "deliveryModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.deliveryProductModify",
+      "url": "/deliveryProductModify?stockOutId",
+      "template": "views/materialAdmin/deliveryProductModify.html",
+      "controller": "deliveryProductModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "goods.deliveryProductDetail",
+      "url": "/deliveryProductDetail?stockOutId",
+      "template": "views/materialAdmin/deliveryProductDetail.html",
+      "controller": "deliveryProductModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "deliveryModify",
+      "url": "/deliveryModify?stockOutId",
+      "template": "views/materialAdmin/deliveryModify.html",
+      "controller": "deliveryModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.deliveryCompanyDetail",
+      "url": "/deliveryCompanyDetail?stockOutId",
+      "template": "views/materialAdmin/deliveryDetail.html",
+      "controller": "deliveryDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryDetail",
+      "url": "/deliveryDetail?stockOutId",
+      "template": "views/materialAdmin/deliveryDetail.html",
+      "controller": "deliveryDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryDelete",
+      "url": "/deliveryDelete?stockOutId",
+      "template": "views/materialAdmin/deliveryDelete.html",
+      "controller": "deliveryDeleteCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryDetailCustomer",
+      "url": "/deliveryDetailCustomer?stockOutId",
+      "template": "views/materialAdmin/deliveryDetailCustomer.html",
+      "controller": "deliveryDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "viewStockList",
+      "url": "/viewStockList",
+      "template": "views/materialAdmin/viewStockList.html",
+      "controller": "stockListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "viewStockList2",
+      "url": "/viewStockList2",
+      "template": "views/materialAdmin/viewStockList2.html",
+      "controller": "stockListsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "viewStockList3",
+      "url": "/viewStockList3",
+      "template": "views/materialAdmin/viewStockList3.html",
+      "controller": "stockListssCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "stockChange",
+      "url": "/stockChange",
+      "template": "views/materialAdmin/stockChange.html",
+      "controller": "stockChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.stockCompanyChange",
+      "url": "/stockCompanyChange",
+      "template": "views/materialAdmin/stockChange.html",
+      "controller": "stockChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addStockChange",
+      "url": "/addStockChange",
+      "template": "views/materialAdmin/addStockChange.html",
+      "controller": "addStockChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addStockCompanyChange",
+      "url": "/addStockCompanyChange?storehouseId&status",
+      "template": "views/materialAdmin/addStockCompanyChange.html",
+      "controller": "addStockChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.addStockProductChange",
+      "url": "/addStockProductChange?storehouseId&status",
+      "template": "views/materialAdmin/addStockProductChange.html",
+      "controller": "addStockProductChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "goods.modifyStockCompanyChange",
+      "url": "/modifyStockCompanyChange?id&storehouseId",
+      "template": "views/materialAdmin/modifyStockChange.html",
+      "controller": "modifyStockChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.modifyStockProductChange",
+      "url": "/modifyStockProductChange?id&storehouseId",
+      "template": "views/materialAdmin/modifyStockProductChange.html",
+      "controller": "modifyStockProductChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "goods.stockProductChangeDetail",
+      "url": "/stockProductChangeDetail?id&storehouseId",
+      "template": "views/materialAdmin/stockProductChangeDetail.html",
+      "controller": "modifyStockProductChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "modifyStockChange",
+      "url": "/modifyStockChange?id",
+      "template": "views/materialAdmin/modifyStockChange.html",
+      "controller": "modifyStockChangeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "stockChangeDetail",
+      "url": "/stockChangeDetail?id",
+      "template": "views/materialAdmin/stockChangeDetail.html",
+      "controller": "stockChangeDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.stockCompanyChangeDetail",
+      "url": "/stockCompanyChangeDetail?id",
+      "template": "views/materialAdmin/stockChangeDetail.html",
+      "controller": "stockChangeDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "stockChangeCheck",
+      "url": "/stockChangeCheck?id",
+      "template": "views/materialAdmin/stockChangeCheck.html",
+      "controller": "stockChangeCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "goods.stockCompanyChangeCheck",
+      "url": "/stockCompanyChangeCheck?id&storehouseId",
+      "template": "views/materialAdmin/stockChangeCheck.html",
+      "controller": "stockChangeCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.stockProductChangeCheck",
+      "url": "/stockProductChangeCheck?id&storehouseId",
+      "template": "views/materialAdmin/stockProductChangeCheck.html",
+      "controller": "stockProductChangeCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting",
+      "url": "/systemSetting",
+      "template": "views/systemSetting/systemSetting.html",
+      "controller": "systemSettingCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.company",
+      "url": "/company",
+      "template": "views/home/company.html",
+      "controller": "companyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "sataServerList",
+      "url": "/sataServerList",
+      "template": "views/systemSetting/sataServerList.html",
+      "controller": "sataServerListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "logList",
+      "url": "/logList?deviceId",
+      "template": "views/systemSetting/logList.html",
+      "controller": "logListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "systemSetting.openPlate",
+      "url": "/openPlate",
+      "template": "views/systemSetting/openPlate.html",
+      "controller": "openPlateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.memberCharge",
+      "url": "/memberCharge",
+      "template": "views/systemSetting/memberCharge.html",
+      "controller": "memberChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.messageAdmin",
+      "url": "/messageAdmin",
+      "template": "views/systemSetting/messageAdmin.html",
+      "controller": "messageAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.phoneAdmin",
+      "url": "/phoneAdmin",
+      "template": "views/systemSetting/phoneAdmin.html",
+      "controller": "phoneAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.printConfig",
+      "url": "/printConfig",
+      "template": "views/systemSetting/printConfig.html",
+      "controller": "printConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.materiallist",
+      "url": "/materiallist",
+      "template": "views/systemSetting/materiallist.html",
+      "controller": "materiallistCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.brandList",
+      "url": "/brandList",
+      "template": "views/systemSetting/brandList.html",
+      "controller": "brandListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "systemSetting.materialImport",
+      "url": "/materialImport",
+      "template": "views/systemSetting/materialImport.html",
+      "controller": "materialImportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "materialImport",
+      "url": "/materialImport",
+      "template": "views/systemSetting/materialImport.html",
+      "controller": "materialImportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "visionAdmin",
+      "url": "/visionAdmin?chartType&isSocket",
+      "template": "views/systemSetting/visionAdmin.html",
+      "controller": "visionAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addMaterial",
+      "url": "/addMaterial",
+      "template": "views/systemSetting/addMaterial.html",
+      "controller": "addMaterialCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.batchMaterial",
+      "url": "/batchMaterial",
+      "template": "views/systemSetting/batchMaterial.html",
+      "controller": "batchMaterialCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.materialModify",
+      "url": "/materialModify?productId&productSkuId",
+      "template": "views/systemSetting/materialModify.html",
+      "controller": "materialModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.materialCertificate",
+      "url": "/materialCertificate?productId&productSkuId",
+      "template": "views/systemSetting/materialCertificate.html",
+      "controller": "materialCertificateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.customerMaterialCertificate",
+      "url": "/customerMaterialCertificate?productId&productSkuId",
+      "template": "views/systemSetting/customerMaterialCertificate.html",
+      "controller": "materialCertificateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.firstApproval",
+      "url": "/firstApproval?productId&productSkuId&supplierId&type",
+      "template": "views/systemSetting/firstApproval.html",
+      "controller": "firstApprovalCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.supplierList",
+      "url": "/supplierList",
+      "template": "views/systemSetting/supplierList.html",
+      "controller": "supplierListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.InspectList",
+      "url": "/InspectList",
+      "template": "views/systemSetting/InspectList.html",
+      "controller": "InspectListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.groupeditList",
+      "url": "/groupeditList",
+      "template": "views/systemSetting/groupeditList.html",
+      "controller": "groupeditListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.customerCharge",
+      "url": "/customerCharge",
+      "template": "views/systemSetting/customerCharge.html",
+      "controller": "customerChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addCustomerCharge",
+      "url": "/addCustomerCharge",
+      "template": "views/systemSetting/addCustomerCharge.html",
+      "controller": "addCustomerChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.modifyCustomerCharge",
+      "url": "/modifyCustomerCharge?productId&productSkuId",
+      "template": "views/systemSetting/modifyCustomerCharge.html",
+      "controller": "modifyCustomerChargeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.customerChargeItem",
+      "url": "/customerChargeItem",
+      "template": "views/systemSetting/customerChargeItem.html",
+      "controller": "customerChargeItemCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.addCustomerChargeItem",
+      "url": "/addCustomerChargeItem",
+      "template": "views/systemSetting/addCustomerChargeItem.html",
+      "controller": "addCustomerChargeItemCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.modifyCustomerChargeItem",
+      "url": "/modifyCustomerChargeItem?id",
+      "template": "views/systemSetting/modifyCustomerChargeItem.html",
+      "controller": "modifyCustomerChargeItemCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.customerChargeChoice",
+      "url": "/customerChargeChoice?id",
+      "template": "views/systemSetting/customerChargeChoice.html",
+      "controller": "customerChargeChoiceCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.productPlanList",
+      "url": "/productPlanList",
+      "template": "views/systemSetting/productPlanList.html",
+      "controller": "productPlanListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addProductPlan",
+      "url": "/addProductPlan",
+      "template": "views/systemSetting/addProductPlan.html",
+      "controller": "addProductPlanCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.modifyProductPlan",
+      "url": "/modifyProductPlan?productId",
+      "template": "views/systemSetting/modifyProductPlan.html",
+      "controller": "modifyProductPlanCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addInspect",
+      "url": "/addInspect",
+      "template": "views/systemSetting/addInspect.html",
+      "controller": "addInspectCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "systemSetting.addGroupedit",
+      "url": "/addGroupedit",
+      "template": "views/systemSetting/addGroupedit.html",
+      "controller": "addGroupeditCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.modifyGroupedit",
+      "url": "/modifyGroupedit?id",
+      "template": "views/systemSetting/modifyGroupedit.html",
+      "controller": "modifyGroupeditCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addRecordTemplate",
+      "url": "/addRecordTemplate",
+      "template": "views/systemSetting/addRecordTemplate.html",
+      "controller": "addRecordTemplateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.commonSetTemp",
+      "url": "/commonSetTemp?type&id",
+      "template": "views/systemSetting/commonSetTemp.html",
+      "controller": "commonSetTempCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.suiFangJieLunTem",
+      "url": "/suiFangJieLunTem?id",
+      "template": "views/systemSetting/suiFangJieLunTem.html",
+      "controller": "suiFangJieLunTemCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.modifyRecordTemplate",
+      "url": "/modifyRecordTemplate?id",
+      "template": "views/systemSetting/modifyRecordTemplate.html",
+      "controller": "modifyRecordTemplateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.modifyInspect",
+      "url": "/modifyInspect?id",
+      "template": "views/systemSetting/modifyInspect.html",
+      "controller": "modifyInspectCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "systemSetting.addCheckItem",
+      "url": "/addCheckItem?id",
+      "template": "views/systemSetting/addCheckItem.html",
+      "controller": "addCheckItemCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.depotList",
+      "url": "/depotList",
+      "template": "views/systemSetting/depotList.html",
+      "controller": "depotListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.processCenter",
+      "url": "/processCenter",
+      "template": "views/systemSetting/processCenter.html",
+      "controller": "processCenterCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.modifyProcessCenter",
+      "url": "/modifyProcessCenter?id",
+      "template": "views/systemSetting/modifyProcessCenter.html",
+      "controller": "modifyProcessCenterCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addProcessCenter",
+      "url": "/addProcessCenter",
+      "template": "views/systemSetting/addProcessCenter.html",
+      "controller": "addProcessCenterCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addDepot",
+      "url": "/addDepot",
+      "template": "views/systemSetting/addDepot.html",
+      "controller": "addDepotCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.depotModify",
+      "url": "/depotModify?id",
+      "template": "views/systemSetting/depotModify.html",
+      "controller": "depotModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addSupplier",
+      "url": "/addSupplier",
+      "template": "views/systemSetting/addSupplier.html",
+      "controller": "addSupplierCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addMedicalFee",
+      "url": "/addMedicalFee",
+      "template": "views/systemSetting/addMedicalFee.html",
+      "controller": "addMedicalFeeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.medicalFeesList",
+      "url": "/medicalFeesList",
+      "template": "views/systemSetting/medicalFeesList.html",
+      "controller": "medicalFeesListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.modifyMedicalFee",
+      "url": "/modifyMedicalFee?id",
+      "template": "views/systemSetting/modifyMedicalFee.html",
+      "controller": "modifyMedicalFeeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.supplierModify",
+      "url": "/supplierModify?supplierId",
+      "template": "views/systemSetting/supplierModify.html",
+      "controller": "supplierModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.supplierCertificate",
+      "url": "/supplierCertificate?supplierId",
+      "template": "views/systemSetting/supplierCertificate.html",
+      "controller": "supplierCertificateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "firstDoctorList",
+      "url": "/firstDoctorList",
+      "template": "views/systemSetting/firstDoctorList.html",
+      "controller": "firstDoctorListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addFirstDoctor",
+      "url": "/addFirstDoctor",
+      "template": "views/systemSetting/addFirstDoctor.html",
+      "controller": "addFirstDoctorCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyFirstDoctor",
+      "url": "/modifyFirstDoctor?id",
+      "template": "views/systemSetting/modifyFirstDoctor.html",
+      "controller": "modifyFirstDoctorCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "systemSetting.memberTypeList",
+      "url": "/memberTypeList",
+      "template": "views/systemSetting/memberTypeList.html",
+      "controller": "memberTypeListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.memberChannelList",
+      "url": "/memberChannelList",
+      "template": "views/systemSetting/memberChannelList.html",
+      "controller": "memberChannelListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.recordTemplateList",
+      "url": "/recordTemplateList",
+      "template": "views/systemSetting/recordTemplateList.html",
+      "controller": "recordTemplateListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.suiFangNeiRongTemplate",
+      "url": "/suiFangNeiRongTemplate",
+      "template": "views/systemSetting/suiFangNeiRongTemplate.html",
+      "controller": "suiFangNeiRongTemplateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.suiFangJieLunTemplate",
+      "url": "/suiFangJieLunTemplate",
+      "template": "views/systemSetting/suiFangJieLunTemplate.html",
+      "controller": "suiFangJieLunTemplateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.toothCheckTemplate",
+      "url": "/toothCheckTemplate",
+      "template": "views/systemSetting/toothCheckTemplate.html",
+      "controller": "toothCheckTemplateCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.memberTypeModify",
+      "url": "/memberTypeModify?id",
+      "template": "views/systemSetting/memberTypeModify.html",
+      "controller": "memberTypeModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.addMemberType",
+      "url": "/addMemberType?id",
+      "template": "views/systemSetting/addMemberType.html",
+      "controller": "addMemberTypeCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.checkList",
+      "url": "/checkList",
+      "template": "views/systemSetting/checkList.html",
+      "controller": "checkListCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.addCheck",
+      "url": "/addCheck",
+      "template": "views/systemSetting/addCheck.html",
+      "controller": "addCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.projectCard",
+      "url": "/projectCard",
+      "template": "views/systemSetting/projectCard.html",
+      "controller": "projectCardCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "systemSetting.addProjectCard",
+      "url": "/addProjectCard?id",
+      "template": "views/systemSetting/addProjectCard.html",
+      "controller": "addProjectCardCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.pointsAdmin",
+      "url": "/pointsAdmin",
+      "template": "views/systemSetting/pointsAdmin.html",
+      "controller": "pointsAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.appointAdmin",
+      "url": "/appointAdmin",
+      "template": "views/systemSetting/appointAdmin.html",
+      "controller": "appointAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.recipeAdmin",
+      "url": "/recipeAdmin",
+      "template": "views/systemSetting/recipeAdmin.html",
+      "controller": "recipeAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.chargeAdmin",
+      "url": "/chargeAdmin",
+      "template": "views/systemSetting/chargeAdmin.html",
+      "controller": "chargeAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.wecomAdmin",
+      "url": "/wecomAdmin",
+      "template": "views/systemSetting/wecomAdmin.html",
+      "controller": "wecomAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.frontAdmin",
+      "url": "/frontAdmin",
+      "template": "views/systemSetting/frontAdmin.html",
+      "controller": "frontAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.stockAdmin",
+      "url": "/stockAdmin",
+      "template": "views/systemSetting/stockAdmin.html",
+      "controller": "stockAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.schoolCheckRecord",
+      "url": "/schoolCheckRecord",
+      "template": "views/systemSetting/schoolCheckRecord.html",
+      "controller": "schoolCheckRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.appConfig",
+      "url": "/appConfig",
+      "template": "views/systemSetting/appConfig.html",
+      "controller": "appConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.reportDateAdmin",
+      "url": "/reportDateAdmin",
+      "template": "views/systemSetting/reportDateAdmin.html",
+      "controller": "reportDateAdminCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.chargeWays",
+      "url": "/chargeWays",
+      "template": "views/systemSetting/chargeWays.html",
+      "controller": "chargeWaysCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "systemSetting.checkModify",
+      "url": "/checkModify?id",
+      "template": "views/systemSetting/checkModify.html",
+      "controller": "checkModifyCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "screenList",
+      "url": "/screenList?promotionId&schoolPlanId",
+      "template": "views/screenAdmin/screenList.html",
+      "controller": "screenListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "multiImportStudent",
+      "url": "/multiImportStudent",
+      "template": "views/screenAdmin/multiImportStudent.html",
+      "controller": "multiImportStudentCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "schoolPlanList",
+      "url": "/schoolPlanList",
+      "template": "views/screenAdmin/schoolPlanList.html",
+      "controller": "schoolPlanListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "areaSchoolPlanList",
+      "url": "/areaSchoolPlanList",
+      "template": "views/screenAdmin/schoolPlanList.html",
+      "controller": "schoolPlanListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addSchoolPlan",
+      "url": "/addSchoolPlan",
+      "template": "views/screenAdmin/addSchoolPlan.html",
+      "controller": "addSchoolPlanCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addAreaSchoolPlan",
+      "url": "/addAreaSchoolPlan",
+      "template": "views/screenAdmin/addSchoolPlan.html",
+      "controller": "addSchoolPlanCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifySchoolPlan",
+      "url": "/modifySchoolPlan?schoolPlanId",
+      "template": "views/screenAdmin/modifySchoolPlan.html",
+      "controller": "modifySchoolPlanCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyAreaSchoolPlan",
+      "url": "/modifyAreaSchoolPlan?schoolPlanId",
+      "template": "views/screenAdmin/modifySchoolPlan.html",
+      "controller": "modifySchoolPlanCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "schoolMateCheckList",
+      "url": "/schoolMateCheckList?promotionId&schoolPlanId",
+      "template": "views/screenAdmin/schoolMateCheckList.html",
+      "controller": "schoolMateCheckListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenBackConfig",
+      "url": "/screenBackConfig",
+      "template": "views/screenAdmin/screenBackConfig.html",
+      "controller": "screenBackConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenPromotionConfig",
+      "url": "/screenPromotionConfig",
+      "template": "views/screenAdmin/screenPromotionConfig.html",
+      "controller": "screenPromotionConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenPromotionToothConfig",
+      "url": "/screenPromotionToothConfig",
+      "template": "views/screenAdmin/screenPromotionToothConfig.html",
+      "controller": "screenPromotionToothConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenUrlConfig",
+      "url": "/screenUrlConfig",
+      "template": "views/screenAdmin/screenUrlConfig.html",
+      "controller": "screenUrlConfigCtrl",
+      "disposition": "Phase2",
+      "reason": "裁决B：硬件对接，一期不做",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "cloudPrinterConfig",
+      "url": "/cloudPrinterConfig",
+      "template": "views/screenAdmin/cloudPrinterConfig.html",
+      "controller": "cloudPrinterConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "zhiShiBangConfig",
+      "url": "/zhiShiBangConfig",
+      "template": "views/screenAdmin/zhiShiBangConfig.html",
+      "controller": "zhiShiBangConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "healthScreenConfig",
+      "url": "/healthScreenConfig",
+      "template": "views/screenAdmin/healthScreenConfig.html",
+      "controller": "healthScreenConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "detectionLog",
+      "url": "/detectionLog",
+      "template": "views/customize/detectionLog.html",
+      "controller": "detectionLogCtrl",
+      "disposition": "Phase2",
+      "reason": "裁决B：硬件对接，一期不做",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "blueToothTransfer",
+      "url": "/blueToothTransfer",
+      "template": "views/customize/blueToothTransfer.html",
+      "controller": "blueToothTransferCtrl",
+      "disposition": "Phase2",
+      "reason": "裁决B：硬件对接，一期不做",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "screenConditionBatch",
+      "url": "/screenConditionBatch",
+      "template": "views/screenAdmin/screenConditionBatch.html",
+      "controller": "screenConditionBatchCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenConditionBatchGroupSend",
+      "url": "/screenConditionBatchGroupSend?taskScreenTemplateBatchSendId",
+      "template": "views/screenAdmin/screenConditionBatchGroupSend.html",
+      "controller": "screenConditionBatchGroupSendCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenConditionBatchGroupSendLook",
+      "url": "/screenConditionBatchGroupSendLook?taskScreenTemplateBatchSendId",
+      "template": "views/screenAdmin/screenConditionBatchGroupSendLook.html",
+      "controller": "screenConditionBatchGroupSendLookCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenPromotionList",
+      "url": "/screenPromotionList",
+      "template": "views/screenAdmin/screenPromotionList.html",
+      "controller": "screenPromotionListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "cloudPrinterList",
+      "url": "/cloudPrinterList",
+      "template": "views/screenAdmin/cloudPrinterList.html",
+      "controller": "cloudPrinterListCtrl",
+      "disposition": "Phase2",
+      "reason": "裁决B：硬件对接，一期不做",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "fundus",
+      "url": "/fundus",
+      "template": "views/screenAdmin/fundus.html",
+      "controller": "fundusCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "pos",
+      "url": "/pos",
+      "template": "views/screenAdmin/pos.html",
+      "controller": "posCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "queueMachine",
+      "url": "/queueMachine",
+      "template": "views/clinic/queueMachine.html",
+      "controller": "queueMachineCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "queueMachineConfig",
+      "url": "/queueMachineConfig?queueMachineId",
+      "template": "views/clinic/queueMachineConfig.html",
+      "controller": "queueMachineConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reportRecord",
+      "url": "/reportRecord",
+      "template": "views/screenAdmin/reportRecord.html",
+      "controller": "reportRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reportStatistic",
+      "url": "/reportStatistic",
+      "template": "views/screenAdmin/reportStatistic.html",
+      "controller": "reportStatisticCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "fundusLog",
+      "url": "/fundusLog?fundusDeviceId",
+      "template": "views/screenAdmin/fundusLog.html",
+      "controller": "fundusLogCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenPromotionStudent",
+      "url": "/screenPromotionStudent",
+      "template": "views/screenAdmin/screenPromotionStudent.html",
+      "controller": "screenPromotionStudentCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addScreenPromotion",
+      "url": "/addScreenPromotion?schoolId&classId",
+      "template": "views/screenAdmin/addScreenPromotion.html",
+      "controller": "addScreenPromotionCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyScreenPromotion",
+      "url": "/modifyScreenPromotion?promotionId&schoolPlanId",
+      "template": "views/screenAdmin/modifyScreenPromotion.html",
+      "controller": "modifyScreenPromotionCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "schoolMateCheckReports",
+      "url": "/schoolMateCheckReports",
+      "template": "views/screenAdmin/schoolMateCheckReports.html",
+      "controller": "schoolMateCheckReportsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateCheckReportList",
+      "url": "/mateCheckReportList",
+      "template": "views/screenAdmin/mateCheckReportList.html",
+      "controller": "schoolMateCheckReportsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateCheckReportConfig",
+      "url": "/mateCheckReportConfig?type",
+      "template": "views/screenAdmin/mateCheckReportConfig.html",
+      "controller": "mateCheckReportConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateCheckReportListNew",
+      "url": "/mateCheckReportListNew",
+      "template": "views/screenAdmin/mateCheckReportListNew.html",
+      "controller": "mateCheckReportListNewCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "physicalReport",
+      "url": "/physicalReport",
+      "template": "views/screenAdmin/physicalReport.html",
+      "controller": "physicalReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "physicalContrastReport",
+      "url": "/physicalContrastReport",
+      "template": "views/screenAdmin/physicalContrastReport.html",
+      "controller": "physicalContrastReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "inspection",
+      "url": "/inspection",
+      "template": "views/screenAdmin/inspection.html",
+      "controller": "inspectionCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "screenSchoolReport",
+      "url": "/screenSchoolReport",
+      "template": "views/screenAdmin/screenSchoolReport.html",
+      "controller": "screenSchoolReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateSchoolReport",
+      "url": "/mateSchoolReport",
+      "template": "views/screenAdmin/mateSchoolReport.html",
+      "controller": "screenSchoolReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenClassReport",
+      "url": "/screenClassReport",
+      "template": "views/screenAdmin/screenClassReport.html",
+      "controller": "screenClassReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateClassReport",
+      "url": "/mateClassReport",
+      "template": "views/screenAdmin/mateClassReport.html",
+      "controller": "screenClassReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "schoolPlanReport",
+      "url": "/schoolPlanReport",
+      "template": "views/screenAdmin/schoolPlanReport.html",
+      "controller": "schoolPlanReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenReportInschool",
+      "url": "/screenReportInschool",
+      "template": "views/screenAdmin/screenReportInschool.html",
+      "controller": "screenReportInschoolCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "classReportInschool",
+      "url": "/classReportInschool",
+      "template": "views/screenAdmin/classReportInschool.html",
+      "controller": "classReportInschoolCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "studentReportInschool",
+      "url": "/studentReportInschool",
+      "template": "views/screenAdmin/studentReportInschool.html",
+      "controller": "studentReportInschoolCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "contrastReportInschool",
+      "url": "/contrastReportInschool",
+      "template": "views/screenAdmin/contrastReportInschool.html",
+      "controller": "contrastReportInschoolCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenContrastReport",
+      "url": "/screenContrastReport",
+      "template": "views/screenAdmin/screenContrastReport.html",
+      "controller": "screenContrastReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateContrastReport",
+      "url": "/mateContrastReport",
+      "template": "views/screenAdmin/mateContrastReport.html",
+      "controller": "screenContrastReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "transformationRate",
+      "url": "/transformationRate",
+      "template": "views/screenAdmin/transformationRate.html",
+      "controller": "transformationRateCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "contrastReportByArea",
+      "url": "/contrastReportByArea",
+      "template": "views/screenAdmin/contrastReportByArea.html",
+      "controller": "contrastReportByAreaCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "accessReport",
+      "url": "/accessReport",
+      "template": "views/screenAdmin/accessReport.html",
+      "controller": "accessReportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "progressReport",
+      "url": "/progressReport",
+      "template": "views/screenAdmin/progressReport.html",
+      "controller": "progressReportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "mateProgressReport",
+      "url": "/mateProgressReport",
+      "template": "views/screenAdmin/mateProgressReport.html",
+      "controller": "mateProgressReportCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "screenStudentReport",
+      "url": "/screenStudentReport",
+      "template": "views/screenAdmin/screenStudentReport.html",
+      "controller": "screenStudentReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "mateRecordReport",
+      "url": "/mateRecordReport",
+      "template": "views/screenAdmin/mateRecordReport.html",
+      "controller": "screenStudentReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "printStudentReport",
+      "url": "/printStudentReport",
+      "template": "views/screenAdmin/printStudentReport.html",
+      "controller": "printStudentReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenRecordReport",
+      "url": "/screenRecordReport",
+      "template": "views/screenAdmin/screenRecordReport.html",
+      "controller": "screenRecordReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "medicalConfig",
+      "url": "/medicalConfig",
+      "template": "views/screenAdmin/medicalConfig.html",
+      "controller": "medicalConfigCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "screenInStore",
+      "url": "/screenInStore",
+      "template": "views/screenAdmin/screenInStore.html",
+      "controller": "screenInStoreCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reachStoreAppointAllReport",
+      "url": "/reachStoreAppointAllReport",
+      "template": "views/screenAdmin/reachStoreAppointAllReport.html",
+      "controller": "reachStoreAppointAllReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reachStoreAppointSingleReport",
+      "url": "/reachStoreAppointSingleReport",
+      "template": "views/screenAdmin/reachStoreAppointSingleReport.html",
+      "controller": "reachStoreAppointSingleReportCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reachStoreAppointDetails",
+      "url": "/reachStoreAppointDetails",
+      "template": "views/screenAdmin/reachStoreAppointDetails.html",
+      "controller": "reachStoreAppointDetailsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "markOriginSet",
+      "url": "/markOriginSet",
+      "template": "views/screenAdmin/markOriginSet.html",
+      "controller": "markOriginSetCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "exportrec",
+      "url": "/exportrec",
+      "template": "views/screenAdmin/exportrec.html",
+      "controller": "exportrecCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "modifySchoolMateCheck",
+      "url": "/modifySchoolMateCheck?checkId",
+      "template": "views/screenAdmin/modifySchoolMateCheck.html",
+      "controller": "modifySchoolMateCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyHealthScreen",
+      "url": "/modifyHealthScreen?checkId&checkCode",
+      "template": "views/screenAdmin/modifyHealthScreen.html",
+      "controller": "modifyHealthScreenCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyMateCheck",
+      "url": "/modifyMateCheck?checkId",
+      "template": "views/screenAdmin/modifyMateCheck.html",
+      "controller": "modifyMateCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "viewSchoolMateCheck",
+      "url": "/viewSchoolMateCheck?checkId",
+      "template": "views/screenAdmin/viewSchoolMateCheck.html",
+      "controller": "modifySchoolMateCheckCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "schoolList",
+      "url": "/schoolList",
+      "template": "views/screenAdmin/schoolList.html",
+      "controller": "schoolListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addSchool",
+      "url": "/addSchool",
+      "template": "views/screenAdmin/addSchool.html",
+      "controller": "addSchoolCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "dataChart",
+      "url": "/dataChart",
+      "template": "views/screenAdmin/dataChart.html",
+      "controller": "dataChartCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "updateSchool",
+      "url": "/updateSchool?schoolId",
+      "template": "views/screenAdmin/updateSchool.html",
+      "controller": "updateSchoolCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "classList",
+      "url": "/classList?schoolId",
+      "template": "views/screenAdmin/classList.html",
+      "controller": "classListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "visionMesure",
+      "url": "/visionMesure",
+      "template": "views/screenAdmin/visionSelect.html",
+      "controller": "visionMesureCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "adultVisionMesure",
+      "url": "/adultVisionMesure",
+      "template": "views/screenAdmin/visionMesure.html",
+      "controller": "visionMesureCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "projectionScreen",
+      "url": "/projectionScreen",
+      "template": "views/screenAdmin/projectionScreen.html",
+      "controller": "projectionScreenCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决B：大屏/工作台，一期建",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "childVisionMesure",
+      "url": "/childVisionMesure",
+      "template": "views/screenAdmin/childVisionMesure.html",
+      "controller": "visionMesureCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "optometryList",
+      "url": "/optometryList",
+      "template": "views/optometryList/optometryList.html",
+      "controller": "optometryListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "optometryLogList",
+      "url": "/optometryLogList?uartDeviceId",
+      "template": "views/optometryList/optometryLogList.html",
+      "controller": "optometryLogListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "assistCheckList",
+      "url": "/assistCheckList",
+      "template": "views/assistCheckList/assistCheckList.html",
+      "controller": "assistCheckListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "smsSet",
+      "url": "/smsSet",
+      "template": "views/assistCheckList/smsSet.html",
+      "controller": "smsSetCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "remindList",
+      "url": "/remindList",
+      "template": "views/assistCheckList/remindList.html",
+      "controller": "remindListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addVisit",
+      "url": "/remindList/addVisit?followUpId?patientId",
+      "template": "views/visitManage/addVisit.html",
+      "controller": "addVisitCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "visitDetails",
+      "url": "/remindList/visitDetails?followUpId&look",
+      "template": "views/visitManage/visitDetails.html",
+      "controller": "visitDetailsCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    },
+    {
+      "state": "machineOrder",
+      "url": "/machineOrder",
+      "template": "views/machineCenter/machineOrder.html",
+      "controller": "machineOrderCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "machineOrderWaitProcess",
+      "url": "/machineOrderWaitProcess",
+      "template": "views/machineCenter/machineOrderWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderWaitAccess",
+      "url": "/machineOrderWaitAccess",
+      "template": "views/machineCenter/machineOrderWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderChainWaitAccess",
+      "url": "/machineOrderChainWaitAccess",
+      "template": "views/machineCenter/machineOrderChainWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderChainWaitProcess",
+      "url": "/machineOrderChainWaitProcess",
+      "template": "views/machineCenter/machineOrderChainWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderChainProcessing",
+      "url": "/machineOrderChainProcessing",
+      "template": "views/machineCenter/machineOrderChainWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderChainTesting",
+      "url": "/machineOrderChainTesting",
+      "template": "views/machineCenter/machineOrderChainWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderProcessing",
+      "url": "/machineOrderProcessing",
+      "template": "views/machineCenter/machineOrderWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderTesting",
+      "url": "/machineOrderTesting",
+      "template": "views/machineCenter/machineOrderWaitAccess.html",
+      "controller": "machineOrderWaitProcessCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "stockLossList",
+      "url": "/stockLossList",
+      "template": "views/machineCenter/stockLossList.html",
+      "controller": "stockLossListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.stockLossDetail",
+      "url": "/stockLossDetail?stockLossId",
+      "template": "views/machineCenter/stockLossDetail.html",
+      "controller": "stockLossDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "chainStockLossDetail",
+      "url": "/chainStockLossDetail?stockLossId",
+      "template": "views/machineCenter/stockLossDetail.html",
+      "controller": "stockLossDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods.completeStockLoss",
+      "url": "/completeStockLoss?stockLossId",
+      "template": "views/machineCenter/completeStockLoss.html",
+      "controller": "completeStockLossCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "completeChainStockLoss",
+      "url": "/completeChainStockLoss?stockLossId",
+      "template": "views/machineCenter/completeStockLoss.html",
+      "controller": "completeStockLossCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "stockChainLossList",
+      "url": "/stockChainLossList",
+      "template": "views/machineCenter/stockLossList.html",
+      "controller": "stockLossListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "goods",
+      "url": "/goods",
+      "template": "views/materialAdmin/goods.html",
+      "controller": "goodsCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "goods.companyStockList",
+      "url": "/companyStockList",
+      "template": "views/machineCenter/companyStockList.html",
+      "controller": "companyStockListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "chainStockList",
+      "url": "/chainStockList",
+      "template": "views/machineCenter/companyStockList.html",
+      "controller": "companyStockListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderBroken",
+      "url": "/machineOrderBroken?cashflowId&machineCenterId&chain",
+      "template": "views/machineCenter/machineOrderBroken.html",
+      "controller": "machineOrderBrokenCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderChainBroken",
+      "url": "/machineOrderChainBroken?cashflowId&machineCenterId&chain",
+      "template": "views/machineCenter/machineOrderBroken.html",
+      "controller": "machineOrderBrokenCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderCompleted",
+      "url": "/machineOrderCompleted?cashflowId&machineCenterId",
+      "template": "views/machineCenter/machineOrderCompleted.html",
+      "controller": "machineOrderBrokenCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderChainCompleted",
+      "url": "/machineOrderChainCompleted?cashflowId&machineCenterId",
+      "template": "views/machineCenter/machineOrderCompleted.html",
+      "controller": "machineOrderBrokenCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "assistChecking",
+      "url": "/assistChecking?medicalExamineId&editable&medicalRecordId",
+      "template": "views/assistCheckList/assistChecking.html",
+      "controller": "assistCheckingCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "hospitalRecharge",
+      "url": "/hospitalRecharge",
+      "template": "views/hospitalRecharge/hospitalRecharge.html",
+      "controller": "hospitalRechargeCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "waitChargeList",
+      "url": "/waitChargeList",
+      "template": "views/chargeAdmin/waitChargeList.html",
+      "controller": "waitChargeListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "unPayList",
+      "url": "/unPayList",
+      "template": "views/chargeAdmin/unPayList.html",
+      "controller": "unPayListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "unPayDetail",
+      "url": "/unPayDetail?customerId",
+      "template": "views/chargeAdmin/unPayDetail.html",
+      "controller": "unPayDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "waitChargeDetail",
+      "url": "/waitChargeDetail?medicalRecordId",
+      "template": "views/chargeAdmin/waitChargeDetail.html",
+      "controller": "waitChargeDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "waitPayBack",
+      "url": "/waitPayBack?cashflowId",
+      "template": "views/chargeAdmin/waitPayBack.html",
+      "controller": "waitPayBackCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "partBack",
+      "url": "/partBack?cashflowId",
+      "template": "views/chargeAdmin/partBack.html",
+      "controller": "partBackCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "payBackDetail",
+      "url": "/payBackDetail?refundId&refundLogId",
+      "template": "views/chargeAdmin/payBackDetail.html",
+      "controller": "payBackDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "waitPayList",
+      "url": "/waitPayList",
+      "template": "views/chargeAdmin/waitPayList.html",
+      "controller": "waitPayListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "payedList",
+      "url": "/payedList",
+      "template": "views/chargeAdmin/payedList.html",
+      "controller": "payedListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "waitPayBackList",
+      "url": "/waitPayBackList",
+      "template": "views/chargeAdmin/waitPayBackList.html",
+      "controller": "waitPayBackListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reChargeList",
+      "url": "/reChargeList",
+      "template": "views/chargeAdmin/reChargeList.html",
+      "controller": "reChargeListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "reChargeListBack",
+      "url": "/reChargeListBack?customerId",
+      "template": "views/chargeAdmin/reChargeListBack.html",
+      "controller": "reChargeListBackCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "machineOrderList",
+      "url": "/machineOrderList",
+      "template": "views/chargeAdmin/machineOrderList.html",
+      "controller": "machineOrderListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryList",
+      "url": "/deliveryList",
+      "template": "views/chargeAdmin/deliveryList.html",
+      "controller": "deliveryListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryProcessing",
+      "url": "/deliveryProcessing?cashflowId",
+      "template": "views/chargeAdmin/deliveryProcessing.html",
+      "controller": "deliveryProcessingCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryInput",
+      "url": "/deliveryInput?cashflowId",
+      "template": "views/chargeAdmin/deliveryInput.html",
+      "controller": "deliveryInputCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryInputRecord",
+      "url": "/deliveryInputRecord?cashflowId",
+      "template": "views/chargeAdmin/deliveryInputRecord.html",
+      "controller": "deliveryInputRecordCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "payedDetail",
+      "url": "/payedDetail?cashflowId",
+      "template": "views/chargeAdmin/payedDetail.html",
+      "controller": "payedDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "waitPayDetail",
+      "url": "/waitPayDetail?cashflowId",
+      "template": "views/chargeAdmin/waitPayDetail.html",
+      "controller": "waitPayDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "homePage",
+      "url": "/homePage",
+      "template": "views/home/homePage.html",
+      "controller": "homePageCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "pointsList",
+      "url": "/pointsList",
+      "template": "views/pointsAdmin/pointsList.html",
+      "controller": "pointsListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyOrder",
+      "url": "/modifyOrder?orderId&merchantId",
+      "template": "views/orderAdmin/modifyOrder.html",
+      "controller": "modifyOrderCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "dealRecord",
+      "url": "/dealRecord?orderId&merchantId",
+      "template": "views/orderAdmin/dealRecord.html",
+      "controller": "dealRecordCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "deliveryRecord",
+      "url": "/deliveryRecord?orderId&merchantId",
+      "template": "views/orderAdmin/deliveryRecord.html",
+      "controller": "deliveryRecordCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addOrder",
+      "url": "/addOrder",
+      "template": "views/orderAdmin/addOrder.html",
+      "controller": "addOrderCtrl",
+      "disposition": "不建",
+      "reason": "裁决A：生产模板 404/0字节，一比一不继承",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addGroupon",
+      "url": "/addGroupon",
+      "template": "views/grouponAdmin/addGroupon.html",
+      "controller": "addGrouponCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "grouponDetail",
+      "url": "/grouponDetail?grouponProductId",
+      "template": "views/grouponAdmin/grouponDetail.html",
+      "controller": "grouponDetailCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "grouponOrder",
+      "url": "/grouponOrder?grouponProductId",
+      "template": "views/grouponAdmin/grouponOrder.html",
+      "controller": "grouponOrderCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "grouponList",
+      "url": "/grouponList",
+      "template": "views/grouponAdmin/grouponList.html",
+      "controller": "grouponListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "couponHistory",
+      "url": "/couponHistory",
+      "template": "views/couponAdmin/couponHistory.html",
+      "controller": "couponHistoryCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "couponList",
+      "url": "/couponList",
+      "template": "views/couponAdmin/couponList.html",
+      "controller": "couponListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addCoupon",
+      "url": "/addCoupon",
+      "template": "views/couponAdmin/addCoupon.html",
+      "controller": "addCouponCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyCoupon",
+      "url": "/modifyCoupon?couponId",
+      "template": "views/couponAdmin/modifyCoupon.html",
+      "controller": "modifyCouponCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "newsList",
+      "url": "/newsList",
+      "template": "views/newsAdmin/newsList.html",
+      "controller": "newsListCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "followUp",
+      "url": "/followUp",
+      "template": "views/customer/followUp.html",
+      "controller": "followUpCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "report.analysis",
+      "url": "/analysis",
+      "template": "views/customer/analysis.html",
+      "controller": "analysisCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.analysis.conversionFunnel",
+      "url": "/conversionFunnel",
+      "template": "views/customer/conversionFunnel.html",
+      "controller": "conversionFunnelCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.analysis.followUpAnalysis",
+      "url": "/followUpAnalysis",
+      "template": "views/customer/followUpAnalysis.html",
+      "controller": "followUpAnalysisCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.analysis.rfmModel",
+      "url": "/rfmModel",
+      "template": "views/customer/rfmModel.html",
+      "controller": "rfmModelCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "report.analysis.profileAnalysis",
+      "url": "/profileAnalysis",
+      "template": "views/customer/profileAnalysis.html",
+      "controller": "profileAnalysisCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：独立业务页，本期不补权限点",
+      "permissionState": "NONE"
+    },
+    {
+      "state": "followUpDetails",
+      "url": "/followUpDetails?firstMedicalRecordId&patientId",
+      "template": "views/customer/followUpDetails.html",
+      "controller": "followUpDetailsCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "addNew",
+      "url": "/addNew",
+      "template": "views/newsAdmin/addNew.html",
+      "controller": "addNewCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "modifyNew",
+      "url": "/modifyNew?id",
+      "template": "views/newsAdmin/modifyNew.html",
+      "controller": "modifyNewCtrl",
+      "disposition": "建-P1",
+      "reason": "权限树内，有界面归属",
+      "permissionState": "PROD"
+    },
+    {
+      "state": "login",
+      "url": "/login",
+      "template": "views/home/login.html",
+      "controller": "loginCtrl",
+      "disposition": "建-P1",
+      "reason": "裁决C：命令式可达（静态盲区）",
+      "permissionState": "CMD"
+    }
+  ]
+}

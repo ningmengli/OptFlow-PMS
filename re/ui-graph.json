@@ -1,0 +1,3218 @@
+{
+  "generatedBy": "re/gen-ui-graph.py",
+  "totals": {
+    "templatesScanned": 434,
+    "jumpEdges": 633,
+    "liveEdges": 528,
+    "commentedEdges": 105,
+    "states": 485,
+    "rootStates": 305,
+    "nestedHosts": 15,
+    "statesWithNoLiveEntry": 28,
+    "missingTemplates": 11
+  },
+  "missingTemplates": [
+    "views/memberManage/promotionDetail.html",
+    "views/orderAdmin/addOrder.html",
+    "views/orderAdmin/dealRecord.html",
+    "views/orderAdmin/deliveryRecord.html",
+    "views/orderAdmin/modifyOrder.html",
+    "views/reportMedical/feeStatistic.html",
+    "views/reportMedical/materialStatistic.html",
+    "views/reportMedical/medicalStatistic.html",
+    "views/reportMedical/myDeliveryRecord.html",
+    "views/reportMedical/myJxcRecord.html",
+    "views/reportMedical/myReceiptRecord.html"
+  ],
+  "modules": [
+    {
+      "module": "materialAdmin",
+      "stateCount": 84,
+      "nestedHosts": [
+        "goods"
+      ]
+    },
+    {
+      "module": "systemSetting",
+      "stateCount": 80,
+      "nestedHosts": [
+        "systemSetting"
+      ]
+    },
+    {
+      "module": "screenAdmin",
+      "stateCount": 76,
+      "nestedHosts": []
+    },
+    {
+      "module": "reportMedical",
+      "stateCount": 42,
+      "nestedHosts": [
+        "materialStatistic",
+        "report",
+        "report.reportFee",
+        "report.reportMaterial",
+        "report.reportMedicalRate",
+        "report.reportOperateAll",
+        "report.reportSale"
+      ]
+    },
+    {
+      "module": "memberManage",
+      "stateCount": 33,
+      "nestedHosts": []
+    },
+    {
+      "module": "machineCenter",
+      "stateCount": 21,
+      "nestedHosts": []
+    },
+    {
+      "module": "chargeAdmin",
+      "stateCount": 19,
+      "nestedHosts": []
+    },
+    {
+      "module": "myMember",
+      "stateCount": 18,
+      "nestedHosts": [
+        "adminMyRecord",
+        "adminSalesRecord"
+      ]
+    },
+    {
+      "module": "adminManage",
+      "stateCount": 17,
+      "nestedHosts": []
+    },
+    {
+      "module": "home",
+      "stateCount": 12,
+      "nestedHosts": []
+    },
+    {
+      "module": "authAdmin",
+      "stateCount": 12,
+      "nestedHosts": []
+    },
+    {
+      "module": "hospital",
+      "stateCount": 11,
+      "nestedHosts": [
+        "hospital",
+        "hospital.updateHospital"
+      ]
+    },
+    {
+      "module": "clinic",
+      "stateCount": 8,
+      "nestedHosts": []
+    },
+    {
+      "module": "customer",
+      "stateCount": 7,
+      "nestedHosts": [
+        "report.analysis"
+      ]
+    },
+    {
+      "module": "bookManage",
+      "stateCount": 4,
+      "nestedHosts": []
+    },
+    {
+      "module": "assistCheckList",
+      "stateCount": 4,
+      "nestedHosts": []
+    },
+    {
+      "module": "orderAdmin",
+      "stateCount": 4,
+      "nestedHosts": []
+    },
+    {
+      "module": "grouponAdmin",
+      "stateCount": 4,
+      "nestedHosts": []
+    },
+    {
+      "module": "couponAdmin",
+      "stateCount": 4,
+      "nestedHosts": []
+    },
+    {
+      "module": "checkinList",
+      "stateCount": 3,
+      "nestedHosts": []
+    },
+    {
+      "module": "targetMarket",
+      "stateCount": 3,
+      "nestedHosts": []
+    },
+    {
+      "module": "inspectAdmin",
+      "stateCount": 3,
+      "nestedHosts": []
+    },
+    {
+      "module": "newsAdmin",
+      "stateCount": 3,
+      "nestedHosts": []
+    },
+    {
+      "module": "optometry",
+      "stateCount": 2,
+      "nestedHosts": []
+    },
+    {
+      "module": "customize",
+      "stateCount": 2,
+      "nestedHosts": []
+    },
+    {
+      "module": "optometryList",
+      "stateCount": 2,
+      "nestedHosts": []
+    },
+    {
+      "module": "visitManage",
+      "stateCount": 2,
+      "nestedHosts": []
+    },
+    {
+      "module": "orderManage",
+      "stateCount": 1,
+      "nestedHosts": []
+    },
+    {
+      "module": "getGlassNotify",
+      "stateCount": 1,
+      "nestedHosts": []
+    },
+    {
+      "module": "purchase",
+      "stateCount": 1,
+      "nestedHosts": [
+        "purchase"
+      ]
+    },
+    {
+      "module": "hospitalRecharge",
+      "stateCount": 1,
+      "nestedHosts": []
+    },
+    {
+      "module": "pointsAdmin",
+      "stateCount": 1,
+      "nestedHosts": []
+    }
+  ],
+  "nestedHostTrees": [
+    {
+      "state": "systemSetting",
+      "url": "/systemSetting",
+      "template": "views/systemSetting/systemSetting.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "systemSetting.InspectList",
+          "url": "/InspectList",
+          "template": "views/systemSetting/InspectList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addInspect.html",
+              "label": "取消"
+            },
+            {
+              "from": "views/systemSetting/modifyInspect.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addCheck",
+          "url": "/addCheck",
+          "template": "views/systemSetting/addCheck.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/checkList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addCheckItem",
+          "url": "/addCheckItem?id",
+          "template": "views/systemSetting/addCheckItem.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/checkModify.html",
+              "label": "关联项目"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addCustomerCharge",
+          "url": "/addCustomerCharge",
+          "template": "views/systemSetting/addCustomerCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/customerCharge.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addCustomerChargeItem",
+          "url": "/addCustomerChargeItem",
+          "template": "views/systemSetting/addCustomerChargeItem.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/customerChargeItem.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addDepot",
+          "url": "/addDepot",
+          "template": "views/systemSetting/addDepot.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addGroupedit",
+          "url": "/addGroupedit",
+          "template": "views/systemSetting/addGroupedit.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/groupeditList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addInspect",
+          "url": "/addInspect",
+          "template": "views/systemSetting/addInspect.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/InspectList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addMaterial",
+          "url": "/addMaterial",
+          "template": "views/systemSetting/addMaterial.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addMedicalFee",
+          "url": "/addMedicalFee",
+          "template": "views/systemSetting/addMedicalFee.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/medicalFeesList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addMemberType",
+          "url": "/addMemberType?id",
+          "template": "views/systemSetting/addMemberType.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/memberTypeList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addProcessCenter",
+          "url": "/addProcessCenter",
+          "template": "views/systemSetting/addProcessCenter.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/processCenter.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addProductPlan",
+          "url": "/addProductPlan",
+          "template": "views/systemSetting/addProductPlan.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/productPlanList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addProjectCard",
+          "url": "/addProjectCard?id",
+          "template": "views/systemSetting/addProjectCard.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/projectCard.html",
+              "label": "新增"
+            },
+            {
+              "from": "views/systemSetting/projectCard.html",
+              "label": "编辑"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addRecordTemplate",
+          "url": "/addRecordTemplate",
+          "template": "views/systemSetting/addRecordTemplate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/recordTemplateList.html",
+              "label": "新增"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.addSupplier",
+          "url": "/addSupplier",
+          "template": "views/systemSetting/addSupplier.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.appConfig",
+          "url": "/appConfig",
+          "template": "views/systemSetting/appConfig.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.appointAdmin",
+          "url": "/appointAdmin",
+          "template": "views/systemSetting/appointAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.batchMaterial",
+          "url": "/batchMaterial",
+          "template": "views/systemSetting/batchMaterial.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.brandList",
+          "url": "/brandList",
+          "template": "views/systemSetting/brandList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.chargeAdmin",
+          "url": "/chargeAdmin",
+          "template": "views/systemSetting/chargeAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.chargeWays",
+          "url": "/chargeWays",
+          "template": "views/systemSetting/chargeWays.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.checkList",
+          "url": "/checkList",
+          "template": "views/systemSetting/checkList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addCheckItem.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/systemSetting/addCheckItem.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/systemSetting/checkModify.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.checkModify",
+          "url": "/checkModify?id",
+          "template": "views/systemSetting/checkModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addCheckItem.html",
+              "label": "检查修改"
+            },
+            {
+              "from": "views/systemSetting/checkList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.commonSetTemp",
+          "url": "/commonSetTemp?type&id",
+          "template": "views/systemSetting/commonSetTemp.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/suiFangNeiRongTemplate.html",
+              "label": "新增"
+            },
+            {
+              "from": "views/systemSetting/suiFangNeiRongTemplate.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/systemSetting/toothCheckTemplate.html",
+              "label": "新增"
+            },
+            {
+              "from": "views/systemSetting/toothCheckTemplate.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.company",
+          "url": "/company",
+          "template": "views/home/company.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.customerCharge",
+          "url": "/customerCharge",
+          "template": "views/systemSetting/customerCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addCustomerCharge.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.customerChargeChoice",
+          "url": "/customerChargeChoice?id",
+          "template": "views/systemSetting/customerChargeChoice.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/customerChargeItem.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/systemSetting/modifyCustomerChargeItem.html",
+              "label": "可选值"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.customerChargeItem",
+          "url": "/customerChargeItem",
+          "template": "views/systemSetting/customerChargeItem.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/customerChargeChoice.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/systemSetting/customerChargeChoice.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/systemSetting/modifyCustomerChargeItem.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.customerMaterialCertificate",
+          "url": "/customerMaterialCertificate?productId&productSkuId",
+          "template": "views/systemSetting/customerMaterialCertificate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/modifyCustomerCharge.html",
+              "label": "资质证件"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.depotList",
+          "url": "/depotList",
+          "template": "views/systemSetting/depotList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.depotModify",
+          "url": "/depotModify?id",
+          "template": "views/systemSetting/depotModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.firstApproval",
+          "url": "/firstApproval?productId&productSkuId&supplierId&type",
+          "template": "views/systemSetting/firstApproval.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/customerMaterialCertificate.html",
+              "label": "首营审批"
+            },
+            {
+              "from": "views/systemSetting/materialCertificate.html",
+              "label": "首营审批"
+            },
+            {
+              "from": "views/systemSetting/materialModify.html",
+              "label": "首营审批"
+            },
+            {
+              "from": "views/systemSetting/modifyCustomerCharge.html",
+              "label": "首营审批"
+            },
+            {
+              "from": "views/systemSetting/supplierCertificate.html",
+              "label": "首营审批"
+            },
+            {
+              "from": "views/systemSetting/supplierModify.html",
+              "label": "首营审批"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.frontAdmin",
+          "url": "/frontAdmin",
+          "template": "views/systemSetting/frontAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.groupeditList",
+          "url": "/groupeditList",
+          "template": "views/systemSetting/groupeditList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addGroupedit.html",
+              "label": "取消"
+            },
+            {
+              "from": "views/systemSetting/addProductPlan.html",
+              "label": "取消"
+            },
+            {
+              "from": "views/systemSetting/modifyGroupedit.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.materialCertificate",
+          "url": "/materialCertificate?productId&productSkuId",
+          "template": "views/systemSetting/materialCertificate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/materialModify.html",
+              "label": "资质证件"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.materialImport",
+          "url": "/materialImport",
+          "template": "views/systemSetting/materialImport.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.materialModify",
+          "url": "/materialModify?productId&productSkuId",
+          "template": "views/systemSetting/materialModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/materialCertificate.html",
+              "label": "物资收费"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.materiallist",
+          "url": "/materiallist",
+          "template": "views/systemSetting/materiallist.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addMaterial.html",
+              "label": "取消"
+            },
+            {
+              "from": "views/systemSetting/batchMaterial.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.medicalFeesList",
+          "url": "/medicalFeesList",
+          "template": "views/systemSetting/medicalFeesList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.memberChannelList",
+          "url": "/memberChannelList",
+          "template": "views/systemSetting/memberChannelList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.memberCharge",
+          "url": "/memberCharge",
+          "template": "views/systemSetting/memberCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.memberTypeList",
+          "url": "/memberTypeList",
+          "template": "views/systemSetting/memberTypeList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.memberTypeModify",
+          "url": "/memberTypeModify?id",
+          "template": "views/systemSetting/memberTypeModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/memberTypeList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.messageAdmin",
+          "url": "/messageAdmin",
+          "template": "views/systemSetting/messageAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyCustomerCharge",
+          "url": "/modifyCustomerCharge?productId&productSkuId",
+          "template": "views/systemSetting/modifyCustomerCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/customerCharge.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/systemSetting/customerMaterialCertificate.html",
+              "label": "物资收费"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyCustomerChargeItem",
+          "url": "/modifyCustomerChargeItem?id",
+          "template": "views/systemSetting/modifyCustomerChargeItem.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyGroupedit",
+          "url": "/modifyGroupedit?id",
+          "template": "views/systemSetting/modifyGroupedit.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/groupeditList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyInspect",
+          "url": "/modifyInspect?id",
+          "template": "views/systemSetting/modifyInspect.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/InspectList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyMedicalFee",
+          "url": "/modifyMedicalFee?id",
+          "template": "views/systemSetting/modifyMedicalFee.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/medicalFeesList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyProcessCenter",
+          "url": "/modifyProcessCenter?id",
+          "template": "views/systemSetting/modifyProcessCenter.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/processCenter.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyProductPlan",
+          "url": "/modifyProductPlan?productId",
+          "template": "views/systemSetting/modifyProductPlan.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/productPlanList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.modifyRecordTemplate",
+          "url": "/modifyRecordTemplate?id",
+          "template": "views/systemSetting/modifyRecordTemplate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/recordTemplateList.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.openPlate",
+          "url": "/openPlate",
+          "template": "views/systemSetting/openPlate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.phoneAdmin",
+          "url": "/phoneAdmin",
+          "template": "views/systemSetting/phoneAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.pointsAdmin",
+          "url": "/pointsAdmin",
+          "template": "views/systemSetting/pointsAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.printConfig",
+          "url": "/printConfig",
+          "template": "views/systemSetting/printConfig.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.processCenter",
+          "url": "/processCenter",
+          "template": "views/systemSetting/processCenter.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.productPlanList",
+          "url": "/productPlanList",
+          "template": "views/systemSetting/productPlanList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/modifyProductPlan.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.projectCard",
+          "url": "/projectCard",
+          "template": "views/systemSetting/projectCard.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.recipeAdmin",
+          "url": "/recipeAdmin",
+          "template": "views/systemSetting/recipeAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.recordTemplateList",
+          "url": "/recordTemplateList",
+          "template": "views/systemSetting/recordTemplateList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/addRecordTemplate.html",
+              "label": "取消"
+            },
+            {
+              "from": "views/systemSetting/modifyRecordTemplate.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.reportDateAdmin",
+          "url": "/reportDateAdmin",
+          "template": "views/systemSetting/reportDateAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.schoolCheckRecord",
+          "url": "/schoolCheckRecord",
+          "template": "views/systemSetting/schoolCheckRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.stockAdmin",
+          "url": "/stockAdmin",
+          "template": "views/systemSetting/stockAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.suiFangJieLunTem",
+          "url": "/suiFangJieLunTem?id",
+          "template": "views/systemSetting/suiFangJieLunTem.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/suiFangJieLunTemplate.html",
+              "label": "新增"
+            },
+            {
+              "from": "views/systemSetting/suiFangJieLunTemplate.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.suiFangJieLunTemplate",
+          "url": "/suiFangJieLunTemplate",
+          "template": "views/systemSetting/suiFangJieLunTemplate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/suiFangJieLunTem.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.suiFangNeiRongTemplate",
+          "url": "/suiFangNeiRongTemplate",
+          "template": "views/systemSetting/suiFangNeiRongTemplate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.supplierCertificate",
+          "url": "/supplierCertificate?supplierId",
+          "template": "views/systemSetting/supplierCertificate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/supplierModify.html",
+              "label": "资质证件"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.supplierList",
+          "url": "/supplierList",
+          "template": "views/systemSetting/supplierList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.supplierModify",
+          "url": "/supplierModify?supplierId",
+          "template": "views/systemSetting/supplierModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/systemSetting/supplierCertificate.html",
+              "label": "供应商"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "systemSetting.toothCheckTemplate",
+          "url": "/toothCheckTemplate",
+          "template": "views/systemSetting/toothCheckTemplate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "systemSetting.wecomAdmin",
+          "url": "/wecomAdmin",
+          "template": "views/systemSetting/wecomAdmin.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "goods",
+      "url": "/goods",
+      "template": "views/materialAdmin/goods.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "goods.addCompanyDelivery",
+          "url": "/addCompanyDelivery?storehouseId&productType",
+          "template": "views/materialAdmin/addDelivery.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "按批号出库"
+            },
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "按批号出库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addCompanyInventory",
+          "url": "/addCompanyInventory?storehouseId",
+          "template": "views/materialAdmin/addInventory.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "按批号盘点"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addCompanyMultiDelivery",
+          "url": "/addCompanyMultiDelivery?storehouseId",
+          "template": "views/materialAdmin/addMultiDelivery.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialOutportRecord.html",
+              "label": "商品筛选"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addCompanyMultiReceipts",
+          "url": "/addCompanyMultiReceipts?storehouseId",
+          "template": "views/materialAdmin/addMultiReceipts.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialImportRecord.html",
+              "label": "商品筛选"
+            },
+            {
+              "from": "views/materialAdmin/materialReceipts.html",
+              "label": "批量入库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addCompanyReceipt",
+          "url": "/addCompanyReceipt?storehouseId",
+          "template": "views/materialAdmin/addReceipt.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialReceipts.html",
+              "label": "新增入库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addProductBivariateTable",
+          "url": "/addProductBivariateTable?storehouseId&productId",
+          "template": "views/materialAdmin/addProductBivariateTable.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "goods.addProductDelivery",
+          "url": "/addProductDelivery?storehouseId&productType",
+          "template": "views/materialAdmin/addProductDelivery.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "按商品出库"
+            },
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "按商品出库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addProductInventory",
+          "url": "/addProductInventory?storehouseId",
+          "template": "views/materialAdmin/addProductInventory.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "goods.addStockCompanyChange",
+          "url": "/addStockCompanyChange?storehouseId&status",
+          "template": "views/materialAdmin/addStockCompanyChange.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "按批号调入"
+            },
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "按批号调出"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.addStockProductChange",
+          "url": "/addStockProductChange?storehouseId&status",
+          "template": "views/materialAdmin/addStockProductChange.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "按商品调入"
+            },
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "按商品调出"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.companyImportRecord",
+          "url": "/companyImportRecord?storehouseId",
+          "template": "views/materialAdmin/materialImportRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/addMultiReceipts.html",
+              "label": "入库记录"
+            },
+            {
+              "from": "views/materialAdmin/addMultiReceipts.html",
+              "label": "入库记录"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.companyMaterialReceipts",
+          "url": "/companyMaterialReceipts",
+          "template": "views/materialAdmin/materialReceipts.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/addReceipt.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/receiptDetail.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/receiptInvalid.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/receiptModify.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.companyStockList",
+          "url": "/companyStockList",
+          "template": "views/machineCenter/companyStockList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "goods.completeStockLoss",
+          "url": "/completeStockLoss?stockLossId",
+          "template": "views/machineCenter/completeStockLoss.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/machineCenter/companyStockList.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.deliveryCompanyDetail",
+          "url": "/deliveryCompanyDetail?stockOutId",
+          "template": "views/materialAdmin/deliveryDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "查看"
+            },
+            {
+              "from": "views/materialAdmin/materialOutportRecord.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.deliveryCompanyModify",
+          "url": "/deliveryCompanyModify?stockOutId",
+          "template": "views/materialAdmin/deliveryModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "审核"
+            },
+            {
+              "from": "views/materialAdmin/materialOutportRecord.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialOutportRecord.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.deliveryProductDetail",
+          "url": "/deliveryProductDetail?stockOutId",
+          "template": "views/materialAdmin/deliveryProductDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.deliveryProductModify",
+          "url": "/deliveryProductModify?stockOutId",
+          "template": "views/materialAdmin/deliveryProductModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialDelivery.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.inventoryCompanyDetail",
+          "url": "/inventoryCompanyDetail?stockTakingId",
+          "template": "views/materialAdmin/inventoryDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.inventoryCompanyModify",
+          "url": "/inventoryCompanyModify?stockTakingId",
+          "template": "views/materialAdmin/inventoryModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.inventoryProductDetail",
+          "url": "/inventoryProductDetail?stockTakingId",
+          "template": "views/materialAdmin/inventoryProductDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.inventoryProductModify",
+          "url": "/inventoryProductModify?stockTakingId",
+          "template": "views/materialAdmin/inventoryProductModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialInventory.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.materialCompanyDelivery",
+          "url": "/materialCompanyDelivery",
+          "template": "views/materialAdmin/materialDelivery.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/deliveryDetail.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/deliveryModify.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/deliveryProductDetail.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/deliveryProductModify.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.materialCompanyInventory",
+          "url": "/materialCompanyInventory",
+          "template": "views/materialAdmin/materialInventory.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/addInventory.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/addProductBivariateTable.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/addProductInventory.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/inventoryDetail.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/inventoryModify.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/inventoryProductDetail.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/inventoryProductModify.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.materialCompanyOutportRecord",
+          "url": "/materialCompanyOutportRecord?storehouseId",
+          "template": "views/materialAdmin/materialOutportRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/addMultiDelivery.html",
+              "label": "出库记录"
+            },
+            {
+              "from": "views/materialAdmin/addMultiDelivery.html",
+              "label": "出库记录"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.modifyStockCompanyChange",
+          "url": "/modifyStockCompanyChange?id&storehouseId",
+          "template": "views/materialAdmin/modifyStockChange.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.modifyStockProductChange",
+          "url": "/modifyStockProductChange?id&storehouseId",
+          "template": "views/materialAdmin/modifyStockProductChange.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.receiptCompanyDetail",
+          "url": "/receiptCompanyDetail?stockInId",
+          "template": "views/materialAdmin/receiptDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialImportRecord.html",
+              "label": "查看"
+            },
+            {
+              "from": "views/materialAdmin/materialReceipts.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.receiptCompanyInvalid",
+          "url": "/receiptCompanyInvalid?stockInId",
+          "template": "views/materialAdmin/receiptInvalid.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialReceipts.html",
+              "label": "作废"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.receiptCompanyModify",
+          "url": "/receiptCompanyModify?stockInId",
+          "template": "views/materialAdmin/receiptModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialImportRecord.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialImportRecord.html",
+              "label": "审核"
+            },
+            {
+              "from": "views/materialAdmin/materialReceipts.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialReceipts.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.stockCompanyChange",
+          "url": "/stockCompanyChange",
+          "template": "views/materialAdmin/stockChange.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/modifyStockChange.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/modifyStockProductChange.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/stockChangeCheck.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/stockChangeDetail.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/stockProductChangeCheck.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/stockProductChangeDetail.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.stockCompanyChangeCheck",
+          "url": "/stockCompanyChangeCheck?id&storehouseId",
+          "template": "views/materialAdmin/stockChangeCheck.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "入库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.stockCompanyChangeDetail",
+          "url": "/stockCompanyChangeDetail?id",
+          "template": "views/materialAdmin/stockChangeDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.stockLossDetail",
+          "url": "/stockLossDetail?stockLossId",
+          "template": "views/machineCenter/stockLossDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/machineCenter/companyStockList.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.stockProductChangeCheck",
+          "url": "/stockProductChangeCheck?id&storehouseId",
+          "template": "views/materialAdmin/stockProductChangeCheck.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "入库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "goods.stockProductChangeDetail",
+          "url": "/stockProductChangeDetail?id&storehouseId",
+          "template": "views/materialAdmin/stockProductChangeDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/stockChange.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "report.reportFee",
+      "url": "/reportFee",
+      "template": "views/reportMedical/reportFee.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.reportFee.feeBankCard",
+          "url": "/feeBankCard",
+          "template": "views/reportMedical/feeBankCard.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.feeDay",
+          "url": "/feeDay",
+          "template": "views/reportMedical/feeDay.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.feeMonth",
+          "url": "/feeMonth",
+          "template": "views/reportMedical/feeMonth.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.feeRecharge",
+          "url": "/feeRecharge",
+          "template": "views/reportMedical/feeRecharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.pointsListCharge",
+          "url": "/pointsListCharge",
+          "template": "views/reportMedical/pointsListCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.pointsListReCharge",
+          "url": "/pointsListReCharge",
+          "template": "views/reportMedical/pointsListReCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.refundFee",
+          "url": "/refundFee",
+          "template": "views/reportMedical/refundFee.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.timeCardRecharge",
+          "url": "/timeCardRecharge",
+          "template": "views/reportMedical/timeCardRecharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.timecardBlance",
+          "url": "/timecardBlance",
+          "template": "views/reportMedical/timecardBlance.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.timecardPerformance",
+          "url": "/timecardPerformance",
+          "template": "views/reportMedical/timecardPerformance.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.unPayCharge",
+          "url": "/unPayCharge",
+          "template": "views/reportMedical/unPayCharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportFee.unPayRecharge",
+          "url": "/unPayRecharge",
+          "template": "views/reportMedical/unPayRecharge.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "purchase",
+      "url": "/purchase",
+      "template": "views/purchase/purchase.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "purchase.addPurchasement",
+          "url": "/addPurchasement",
+          "template": "views/materialAdmin/addPurchasement.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchase.html",
+              "label": "新增采购"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.addSalePurchase",
+          "url": "/addSalePurchase",
+          "template": "views/materialAdmin/addSalePurchase.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchase.html",
+              "label": "以销定采"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.materialPurchase",
+          "url": "/materialPurchase",
+          "template": "views/materialAdmin/materialPurchase.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/addPurchasement.html",
+              "label": "返回"
+            },
+            {
+              "from": "views/materialAdmin/addSalePurchase.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.materialPurchaseBackGoods",
+          "url": "/materialPurchaseBackGoods?stockPurchaseOutId&storehouseId",
+          "template": "views/materialAdmin/materialPurchaseBackGoods.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchaseReturn.html",
+              "label": "退货"
+            },
+            {
+              "from": "views/materialAdmin/materialPurchaseReturn.html",
+              "label": "修改"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.materialPurchaseBackLook",
+          "url": "/materialPurchaseBackLook?stockPurchaseOutId&storehouseId",
+          "template": "views/materialAdmin/materialPurchaseBackLook.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchaseReturn.html",
+              "label": "查看"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.materialPurchaseBackOne",
+          "url": "/materialPurchaseBackOne?id&type&stockPurchaseOutId",
+          "template": "views/materialAdmin/materialPurchaseBackOne.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchaseReturn.html",
+              "label": "按批次退货"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.materialPurchaseReturn",
+          "url": "/materialPurchaseReturn",
+          "template": "views/materialAdmin/materialPurchaseReturn.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "purchase.purchaseModify",
+          "url": "/purchaseModify?purchaseId",
+          "template": "views/materialAdmin/purchaseModify.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchase.html",
+              "label": "修改"
+            },
+            {
+              "from": "views/materialAdmin/materialPurchase.html",
+              "label": "审核"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.purchaseReciept",
+          "url": "/purchaseReciept?purchaseId",
+          "template": "views/materialAdmin/purchaseReciept.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchase.html",
+              "label": "入库"
+            },
+            {
+              "from": "views/materialAdmin/purchaseRecieptDetail.html",
+              "label": "入库记录"
+            },
+            {
+              "from": "views/materialAdmin/purchaseRecieptDetail.html",
+              "label": "入库"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.purchaseRecieptDetail",
+          "url": "/purchaseRecieptDetail?purchaseId",
+          "template": "views/materialAdmin/purchaseRecieptDetail.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/materialPurchase.html",
+              "label": "查看"
+            },
+            {
+              "from": "views/materialAdmin/purchaseReciept.html",
+              "label": "采购单"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "purchase.purchaseRequestCheck",
+          "url": "/purchaseRequestCheck",
+          "template": "views/materialAdmin/purchaseRequestCheck.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/materialAdmin/purchaseRequestCheckDetail.html",
+              "label": "返回"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "adminMyRecord",
+      "url": "/adminMyRecord?medicalRecordId",
+      "template": "views/myMember/adminMyRecord.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "adminMyRecord.customerProductRecord",
+          "url": "/customerProductRecord",
+          "template": "views/myMember/customerProductRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "定制"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.drugPrescription",
+          "url": "/drugPrescription",
+          "template": "views/myMember/drugPrescription.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "药品处方"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.followList",
+          "url": "/followList",
+          "template": "views/myMember/followList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "随访"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.myCheckBill",
+          "url": "/myCheckBill",
+          "template": "views/myMember/myCheckBill.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "检查"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.myMaterialBill",
+          "url": "/myMaterialBill",
+          "template": "views/myMember/myMaterialBill.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "销售"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.myMemberRecord",
+          "url": "/myMemberRecord",
+          "template": "views/myMember/myMemberRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "问诊"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.prescription",
+          "url": "/prescription",
+          "template": "views/myMember/prescription.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "验配处方"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminMyRecord.prescriptsRecord",
+          "url": "/prescriptsRecord",
+          "template": "views/myMember/prescriptsRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminMyRecord.html",
+              "label": "配镜处方"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "hospital.updateHospital",
+      "url": "/updateHospital?id&companyId",
+      "template": "views/hospital/updateHospital.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "hospital.updateHospital.addDepartment",
+          "url": "/addDepartment",
+          "template": "views/hospital/addDepartment.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/hospital/departmentList.html",
+              "label": "点击新增部门"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital.adminClinic",
+          "url": "/adminClinic",
+          "template": "views/hospital/adminClinic.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital.adminHospital",
+          "url": "/adminHospital",
+          "template": "views/hospital/updateHospital.adminHospital.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital.adminMap",
+          "url": "/adminMap",
+          "template": "views/hospital/adminMap.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital.departmentList",
+          "url": "/updateDepartment",
+          "template": "views/hospital/departmentList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital.employeeList",
+          "url": "/employeeList",
+          "template": "views/hospital/employeeList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital.updateDepartment",
+          "url": "/updateDepartment?departmentId",
+          "template": "views/hospital/updateDepartment.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "report",
+      "url": "/report",
+      "template": "views/reportMedical/report.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.analysis",
+          "url": "/analysis",
+          "template": "views/customer/analysis.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "report.analysis.conversionFunnel",
+              "url": "/conversionFunnel",
+              "template": "views/customer/conversionFunnel.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.analysis.followUpAnalysis",
+              "url": "/followUpAnalysis",
+              "template": "views/customer/followUpAnalysis.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.analysis.profileAnalysis",
+              "url": "/profileAnalysis",
+              "template": "views/customer/profileAnalysis.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.analysis.rfmModel",
+              "url": "/rfmModel",
+              "template": "views/customer/rfmModel.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "state": "report.reportFee",
+          "url": "/reportFee",
+          "template": "views/reportMedical/reportFee.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "report.reportFee.feeBankCard",
+              "url": "/feeBankCard",
+              "template": "views/reportMedical/feeBankCard.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.feeDay",
+              "url": "/feeDay",
+              "template": "views/reportMedical/feeDay.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.feeMonth",
+              "url": "/feeMonth",
+              "template": "views/reportMedical/feeMonth.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.feeRecharge",
+              "url": "/feeRecharge",
+              "template": "views/reportMedical/feeRecharge.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.pointsListCharge",
+              "url": "/pointsListCharge",
+              "template": "views/reportMedical/pointsListCharge.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.pointsListReCharge",
+              "url": "/pointsListReCharge",
+              "template": "views/reportMedical/pointsListReCharge.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.refundFee",
+              "url": "/refundFee",
+              "template": "views/reportMedical/refundFee.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.timeCardRecharge",
+              "url": "/timeCardRecharge",
+              "template": "views/reportMedical/timeCardRecharge.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.timecardBlance",
+              "url": "/timecardBlance",
+              "template": "views/reportMedical/timecardBlance.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.timecardPerformance",
+              "url": "/timecardPerformance",
+              "template": "views/reportMedical/timecardPerformance.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.unPayCharge",
+              "url": "/unPayCharge",
+              "template": "views/reportMedical/unPayCharge.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportFee.unPayRecharge",
+              "url": "/unPayRecharge",
+              "template": "views/reportMedical/unPayRecharge.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "state": "report.reportMaterial",
+          "url": "/reportMaterial",
+          "template": "views/reportMedical/reportMaterial.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "report.reportMaterial.deliveryRecordPort",
+              "url": "/deliveryRecordPort",
+              "template": "views/reportMedical/deliveryRecordPort.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportMaterial.jxcRecord",
+              "url": "/jxcRecord",
+              "template": "views/reportMedical/jxcRecord.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportMaterial.receiptRecord",
+              "url": "/receiptRecord",
+              "template": "views/reportMedical/receiptRecord.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "state": "report.reportMedicalRate",
+          "url": "/reportMedicalRate",
+          "template": "views/reportMedical/reportMedicalRate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "report.reportMedicalRate.customerChannelRate",
+              "url": "/customerChannelRate",
+              "template": "views/reportMedical/customerChannelRate.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportMedicalRate.satisfyDetailRate",
+              "url": "/satisfyDetailRate",
+              "template": "views/reportMedical/satisfyDetailRate.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportMedicalRate.satisfyRate",
+              "url": "/satisfyRate",
+              "template": "views/reportMedical/satisfyRate.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportMedicalRate.successRate",
+              "url": "/successRate",
+              "template": "views/reportMedical/successRate.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "state": "report.reportOperateAll",
+          "url": "/reportOperateAll",
+          "template": "views/reportMedical/reportOperateAll.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "report.reportOperateAll.feeCashier",
+              "url": "/feeCashier",
+              "template": "views/reportMedical/feeCashier.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportOperateAll.hospitalReport",
+              "url": "/hospitalReport",
+              "template": "views/reportMedical/hospitalReport.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportOperateAll.reportOperate",
+              "url": "/reportOperate",
+              "template": "views/reportMedical/reportOperate.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportOperateAll.singleHospitalProfit",
+              "url": "/singleHospitalProfit",
+              "template": "views/reportMedical/singleHospitalProfit.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "state": "report.reportSale",
+          "url": "/reportSale",
+          "template": "views/reportMedical/reportSale.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "report.reportSale.backGoodRecord",
+              "url": "/backGoodRecord",
+              "template": "views/reportMedical/backGoodRecord.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportSale.deliveryList",
+              "url": "/deliveryList",
+              "template": "views/reportMedical/deliveryList.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportSale.machineProcessList",
+              "url": "/machineProcessList",
+              "template": "views/reportMedical/machineProcessList.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportSale.saleList",
+              "url": "/saleList",
+              "template": "views/reportMedical/saleList.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "report.reportSale.saleRecord",
+              "url": "/saleRecord",
+              "template": "views/reportMedical/saleRecord.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "report.reportSale",
+      "url": "/reportSale",
+      "template": "views/reportMedical/reportSale.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.reportSale.backGoodRecord",
+          "url": "/backGoodRecord",
+          "template": "views/reportMedical/backGoodRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportSale.deliveryList",
+          "url": "/deliveryList",
+          "template": "views/reportMedical/deliveryList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportSale.machineProcessList",
+          "url": "/machineProcessList",
+          "template": "views/reportMedical/machineProcessList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportSale.saleList",
+          "url": "/saleList",
+          "template": "views/reportMedical/saleList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportSale.saleRecord",
+          "url": "/saleRecord",
+          "template": "views/reportMedical/saleRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "report.reportOperateAll",
+      "url": "/reportOperateAll",
+      "template": "views/reportMedical/reportOperateAll.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.reportOperateAll.feeCashier",
+          "url": "/feeCashier",
+          "template": "views/reportMedical/feeCashier.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportOperateAll.hospitalReport",
+          "url": "/hospitalReport",
+          "template": "views/reportMedical/hospitalReport.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportOperateAll.reportOperate",
+          "url": "/reportOperate",
+          "template": "views/reportMedical/reportOperate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportOperateAll.singleHospitalProfit",
+          "url": "/singleHospitalProfit",
+          "template": "views/reportMedical/singleHospitalProfit.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "report.reportMedicalRate",
+      "url": "/reportMedicalRate",
+      "template": "views/reportMedical/reportMedicalRate.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.reportMedicalRate.customerChannelRate",
+          "url": "/customerChannelRate",
+          "template": "views/reportMedical/customerChannelRate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportMedicalRate.satisfyDetailRate",
+          "url": "/satisfyDetailRate",
+          "template": "views/reportMedical/satisfyDetailRate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportMedicalRate.satisfyRate",
+          "url": "/satisfyRate",
+          "template": "views/reportMedical/satisfyRate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportMedicalRate.successRate",
+          "url": "/successRate",
+          "template": "views/reportMedical/successRate.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "report.analysis",
+      "url": "/analysis",
+      "template": "views/customer/analysis.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.analysis.conversionFunnel",
+          "url": "/conversionFunnel",
+          "template": "views/customer/conversionFunnel.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.analysis.followUpAnalysis",
+          "url": "/followUpAnalysis",
+          "template": "views/customer/followUpAnalysis.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.analysis.profileAnalysis",
+          "url": "/profileAnalysis",
+          "template": "views/customer/profileAnalysis.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.analysis.rfmModel",
+          "url": "/rfmModel",
+          "template": "views/customer/rfmModel.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "materialStatistic",
+      "url": "/materialStatistic",
+      "template": "views/reportMedical/materialStatistic.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "materialStatistic.myDeliveryRecord",
+          "url": "/myDeliveryRecord",
+          "template": "views/reportMedical/myDeliveryRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "materialStatistic.myJxcRecord",
+          "url": "/myJxcRecord",
+          "template": "views/reportMedical/myJxcRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "materialStatistic.myReceiptRecord",
+          "url": "/myReceiptRecord",
+          "template": "views/reportMedical/myReceiptRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "report.reportMaterial",
+      "url": "/reportMaterial",
+      "template": "views/reportMedical/reportMaterial.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "report.reportMaterial.deliveryRecordPort",
+          "url": "/deliveryRecordPort",
+          "template": "views/reportMedical/deliveryRecordPort.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportMaterial.jxcRecord",
+          "url": "/jxcRecord",
+          "template": "views/reportMedical/jxcRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        },
+        {
+          "state": "report.reportMaterial.receiptRecord",
+          "url": "/receiptRecord",
+          "template": "views/reportMedical/receiptRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "adminSalesRecord",
+      "url": "/adminSalesRecord?medicalRecordId",
+      "template": "views/myMember/adminSalesRecord.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "adminSalesRecord.myMaterialBill",
+          "url": "/myMaterialBill",
+          "template": "views/myMember/myMaterialBill.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminSalesRecord.html",
+              "label": "销售记录"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "adminSalesRecord.myMemberRecord",
+          "url": "/myMemberRecord",
+          "template": "views/myMember/myMemberRecord.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/myMember/adminSalesRecord.html",
+              "label": "问诊"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "state": "hospital",
+      "url": "/hospital",
+      "template": "views/hospital/hospital.html",
+      "label": "",
+      "depth": 0,
+      "inboundMenus": [],
+      "children": [
+        {
+          "state": "hospital.hospitallist",
+          "url": "/hospitallist",
+          "template": "views/hospital/hospitalList.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [
+            {
+              "from": "views/hospital/addHospital.html",
+              "label": "取消"
+            }
+          ],
+          "children": []
+        },
+        {
+          "state": "hospital.updateHospital",
+          "url": "/updateHospital?id&companyId",
+          "template": "views/hospital/updateHospital.html",
+          "label": "",
+          "depth": 1,
+          "inboundMenus": [],
+          "children": [
+            {
+              "state": "hospital.updateHospital.addDepartment",
+              "url": "/addDepartment",
+              "template": "views/hospital/addDepartment.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [
+                {
+                  "from": "views/hospital/departmentList.html",
+                  "label": "点击新增部门"
+                }
+              ],
+              "children": []
+            },
+            {
+              "state": "hospital.updateHospital.adminClinic",
+              "url": "/adminClinic",
+              "template": "views/hospital/adminClinic.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "hospital.updateHospital.adminHospital",
+              "url": "/adminHospital",
+              "template": "views/hospital/updateHospital.adminHospital.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "hospital.updateHospital.adminMap",
+              "url": "/adminMap",
+              "template": "views/hospital/adminMap.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "hospital.updateHospital.departmentList",
+              "url": "/updateDepartment",
+              "template": "views/hospital/departmentList.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "hospital.updateHospital.employeeList",
+              "url": "/employeeList",
+              "template": "views/hospital/employeeList.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            },
+            {
+              "state": "hospital.updateHospital.updateDepartment",
+              "url": "/updateDepartment?departmentId",
+              "template": "views/hospital/updateDepartment.html",
+              "label": "",
+              "depth": 2,
+              "inboundMenus": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "noLiveEntry": [
+    {
+      "state": "hospital.updateHospital.departmentList",
+      "template": "views/hospital/departmentList.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "hospital.updateHospital.employeeList",
+      "template": "views/hospital/employeeList.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "hospital.updateHospital",
+      "template": "views/hospital/updateHospital.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportSale.backGoodRecord",
+      "template": "views/reportMedical/backGoodRecord.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportMedicalRate.customerChannelRate",
+      "template": "views/reportMedical/customerChannelRate.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportSale.deliveryList",
+      "template": "views/reportMedical/deliveryList.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportMaterial.deliveryRecordPort",
+      "template": "views/reportMedical/deliveryRecordPort.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportFee.feeBankCard",
+      "template": "views/reportMedical/feeBankCard.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportOperateAll.feeCashier",
+      "template": "views/reportMedical/feeCashier.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportFee.feeDay",
+      "template": "views/reportMedical/feeDay.html",
+      "onlyCommented": 2
+    },
+    {
+      "state": "report.reportFee.feeMonth",
+      "template": "views/reportMedical/feeMonth.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportFee.feeRecharge",
+      "template": "views/reportMedical/feeRecharge.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportOperateAll.hospitalReport",
+      "template": "views/reportMedical/hospitalReport.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportMaterial.jxcRecord",
+      "template": "views/reportMedical/jxcRecord.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportSale.machineProcessList",
+      "template": "views/reportMedical/machineProcessList.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportFee.pointsListCharge",
+      "template": "views/reportMedical/pointsListCharge.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportFee.pointsListReCharge",
+      "template": "views/reportMedical/pointsListReCharge.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportMaterial.receiptRecord",
+      "template": "views/reportMedical/receiptRecord.html",
+      "onlyCommented": 2
+    },
+    {
+      "state": "report.reportFee.refundFee",
+      "template": "views/reportMedical/refundFee.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportOperateAll.reportOperate",
+      "template": "views/reportMedical/reportOperate.html",
+      "onlyCommented": 2
+    },
+    {
+      "state": "report.reportSale.saleList",
+      "template": "views/reportMedical/saleList.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportSale.saleRecord",
+      "template": "views/reportMedical/saleRecord.html",
+      "onlyCommented": 2
+    },
+    {
+      "state": "report.reportMedicalRate.satisfyDetailRate",
+      "template": "views/reportMedical/satisfyDetailRate.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportMedicalRate.satisfyRate",
+      "template": "views/reportMedical/satisfyRate.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportOperateAll.singleHospitalProfit",
+      "template": "views/reportMedical/singleHospitalProfit.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportMedicalRate.successRate",
+      "template": "views/reportMedical/successRate.html",
+      "onlyCommented": 2
+    },
+    {
+      "state": "report.reportFee.unPayCharge",
+      "template": "views/reportMedical/unPayCharge.html",
+      "onlyCommented": 1
+    },
+    {
+      "state": "report.reportFee.unPayRecharge",
+      "template": "views/reportMedical/unPayRecharge.html",
+      "onlyCommented": 1
+    }
+  ]
+}

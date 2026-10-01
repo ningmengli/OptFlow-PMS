@@ -1,0 +1,382 @@
+{
+  "rule": "state.replace(\".\",\"\")  —— 与生产 isOldActive 同规则",
+  "generatedBy": "re/gen-state-codes.py",
+  "PROD_实测70": [
+    "addCheckin",
+    "addSaleRecord",
+    "adminAreaList",
+    "adminBill",
+    "adminList",
+    "allSize",
+    "areaSchoolPlanList",
+    "assistCheckList",
+    "bookManage",
+    "branchMember",
+    "brandList",
+    "cashClients",
+    "chainStockList",
+    "clientsList",
+    "companyInventory",
+    "couponList",
+    "dataChart",
+    "deliveryList",
+    "encryptUser",
+    "followUp",
+    "fundus",
+    "getGlassNotifyList",
+    "grouponList",
+    "healthScreenConfig",
+    "home",
+    "hospitalRecharge",
+    "hospitalhospitallist",
+    "inspectList",
+    "machineOrderChainWaitAccess",
+    "machineOrderWaitAccess",
+    "mateCheckReportList",
+    "materialPurchase",
+    "materialPurchaseRequest",
+    "member",
+    "myAccount",
+    "myMember",
+    "newsList",
+    "optometry",
+    "optometryList",
+    "orderList",
+    "orderManage",
+    "physicalReport",
+    "pointsList",
+    "printStudentReport",
+    "queueMachine",
+    "recommendCustomer",
+    "recommendDetail",
+    "recommendPhoneList",
+    "remindList",
+    "reportOperateAllreportOperate",
+    "sataServerList",
+    "schoolList",
+    "schoolMateCheckReports",
+    "schoolPlanList",
+    "schoolPlanReport",
+    "screenConditionBatch",
+    "screenInStore",
+    "screenPromotionConfig",
+    "screenPromotionList",
+    "secKillPromotionList",
+    "selectOrderList",
+    "sendPlatform",
+    "stockInReport",
+    "stockList",
+    "stockListCustomer",
+    "systemSettingcheckList",
+    "viewStockList",
+    "visionMesure",
+    "waitChargeList",
+    "wechatAuth"
+  ],
+  "OF-D_自定": [
+    {
+      "leaf": "数据报表 / 数据报表 / 医务统计 / 患者来源统计",
+      "routeState": "report.reportMedicalRate.customerChannelRate",
+      "url": "/customerChannelRate",
+      "code": "reportreportMedicalRatecustomerChannelRate",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 医务统计 / 成交率",
+      "routeState": "report.reportMedicalRate.successRate",
+      "url": "/successRate",
+      "code": "reportreportMedicalRatesuccessRate",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 医务统计 / 满意度",
+      "routeState": "report.reportMedicalRate.satisfyRate",
+      "url": "/satisfyRate",
+      "code": "reportreportMedicalRatesatisfyRate",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 医务统计 / 评价流水",
+      "routeState": "report.reportMedicalRate.satisfyDetailRate",
+      "url": "/satisfyDetailRate",
+      "code": "reportreportMedicalRatesatisfyDetailRate",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 客户统计 / RFM模型",
+      "routeState": "report.analysis.rfmModel",
+      "url": "/rfmModel",
+      "code": "reportanalysisrfmModel",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 客户统计 / 客户画像分析",
+      "routeState": "report.analysis.profileAnalysis",
+      "url": "/profileAnalysis",
+      "code": "reportanalysisprofileAnalysis",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 客户统计 / 客户跟进分析",
+      "routeState": "report.analysis.followUpAnalysis",
+      "url": "/followUpAnalysis",
+      "code": "reportanalysisfollowUpAnalysis",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 客户统计 / 客户转化漏斗",
+      "routeState": "report.analysis.conversionFunnel",
+      "url": "/conversionFunnel",
+      "code": "reportanalysisconversionFunnel",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 客户统计 / 查看全部门店报表",
+      "routeState": "report.analysis",
+      "url": "/analysis",
+      "code": "reportanalysis",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 物资统计 / 入库流水",
+      "routeState": "report.reportMaterial.receiptRecord",
+      "url": "/receiptRecord",
+      "code": "reportreportMaterialreceiptRecord",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 物资统计 / 出库流水",
+      "routeState": "report.reportMaterial.deliveryRecordPort",
+      "url": "/deliveryRecordPort",
+      "code": "reportreportMaterialdeliveryRecordPort",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 物资统计 / 进销存统计",
+      "routeState": "report.reportMaterial.jxcRecord",
+      "url": "/jxcRecord",
+      "code": "reportreportMaterialjxcRecord",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 充值余额",
+      "routeState": "report.reportFee.feeBankCard",
+      "url": "/feeBankCard",
+      "code": "reportreportFeefeeBankCard",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 充值流水",
+      "routeState": "report.reportFee.feeRecharge",
+      "url": "/feeRecharge",
+      "code": "reportreportFeefeeRecharge",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 挂账余额",
+      "routeState": "report.reportFee.unPayRecharge",
+      "url": "/unPayRecharge",
+      "code": "reportreportFeeunPayRecharge",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 挂账流水",
+      "routeState": "report.reportFee.unPayCharge",
+      "url": "/unPayCharge",
+      "code": "reportreportFeeunPayCharge",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 收费月报",
+      "routeState": "report.reportFee.feeMonth",
+      "url": "/feeMonth",
+      "code": "reportreportFeefeeMonth",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 收费流水",
+      "routeState": "report.reportFee.feeDay",
+      "url": "/feeDay",
+      "code": "reportreportFeefeeDay",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 次卡业绩",
+      "routeState": "report.reportFee.timecardPerformance",
+      "url": "/timecardPerformance",
+      "code": "reportreportFeetimecardPerformance",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 次卡余额",
+      "routeState": "report.reportFee.timecardBlance",
+      "url": "/timecardBlance",
+      "code": "reportreportFeetimecardBlance",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 次卡流水",
+      "routeState": "report.reportFee.timeCardRecharge",
+      "url": "/timeCardRecharge",
+      "code": "reportreportFeetimeCardRecharge",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 积分余额",
+      "routeState": "report.reportFee.pointsListReCharge",
+      "url": "/pointsListReCharge",
+      "code": "reportreportFeepointsListReCharge",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 积分流水",
+      "routeState": "report.reportFee.pointsListCharge",
+      "url": "/pointsListCharge",
+      "code": "reportreportFeepointsListCharge",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 费用统计 / 退费流水",
+      "routeState": "report.reportFee.refundFee",
+      "url": "/refundFee",
+      "code": "reportreportFeerefundFee",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 运营统计 / 分店报表",
+      "routeState": "report.reportOperateAll.singleHospitalProfit",
+      "url": "/singleHospitalProfit",
+      "code": "reportreportOperateAllsingleHospitalProfit",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 运营统计 / 分店日报",
+      "routeState": "report.reportOperateAll.hospitalReport",
+      "url": "/hospitalReport",
+      "code": "reportreportOperateAllhospitalReport",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 运营统计 / 收银台报表",
+      "routeState": "report.reportOperateAll.feeCashier",
+      "url": "/feeCashier",
+      "code": "reportreportOperateAllfeeCashier",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 运营统计 / 整体报表",
+      "routeState": "report.reportOperateAll.reportOperate",
+      "url": "/reportOperate",
+      "code": "reportreportOperateAllreportOperate",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 销售统计 / 产品销量",
+      "routeState": "report.reportSale.saleRecord",
+      "url": "/saleRecord",
+      "code": "reportreportSalesaleRecord",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 销售统计 / 加工流水",
+      "routeState": "report.reportSale.machineProcessList",
+      "url": "/machineProcessList",
+      "code": "reportreportSalemachineProcessList",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 销售统计 / 发货流水",
+      "routeState": "report.reportSale.deliveryList",
+      "url": "/deliveryList",
+      "code": "reportreportSaledeliveryList",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 销售统计 / 退货流水",
+      "routeState": "report.reportSale.backGoodRecord",
+      "url": "/backGoodRecord",
+      "code": "reportreportSalebackGoodRecord",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 销售统计 / 销售流水",
+      "routeState": "report.reportSale.saleList",
+      "url": "/saleList",
+      "code": "reportreportSalesaleList",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "数据报表 / 数据报表 / 销售统计 / 限今日数据",
+      "routeState": "report.reportSale.todayDataOnly",
+      "code": "reportreportSaletodayDataOnly",
+      "evidence": "OF-D",
+      "note": "路由不存在，需人工命名"
+    },
+    {
+      "leaf": "数据报表 / 高级报表",
+      "routeState": "reportStatistic",
+      "url": "/reportStatistic",
+      "code": "reportStatistic",
+      "evidence": "OF-D",
+      "note": "与生产 reportOperateAllreportOperate 同构的叶子级细分编码"
+    },
+    {
+      "leaf": "诊所管理 / 标签打印机",
+      "routeState": "cloudPrinterList",
+      "url": "/cloudPrinterList",
+      "code": "cloudPrinterList",
+      "evidence": "OF-D",
+      "note": "诊所管理组补齐"
+    },
+    {
+      "leaf": "诊所管理 / 需求提交平台",
+      "routeState": "requirementStatus",
+      "url": "/requirementStatus?id",
+      "code": "requirementStatus",
+      "evidence": "OF-D",
+      "note": "诊所管理组补齐"
+    }
+  ],
+  "_校验": {
+    "生成总数": 37,
+    "重复码": [],
+    "与生产70个实值碰撞": [],
+    "无对应路由需人工命名": [
+      "数据报表 / 数据报表 / 销售统计 / 限今日数据"
+    ],
+    "叶覆盖": "35 / 35（数据报表）"
+  }
+}

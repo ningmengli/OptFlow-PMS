@@ -1,0 +1,489 @@
+{
+  "1_总量": {
+    "routes.csv 路由数": 485,
+    "pages.json 声明页数": 485,
+    "spec 分册数（不含枚举表）": 33,
+    "spec 页面行总数": 485,
+    "分册声明页数之和": 485,
+    "ui-graph 状态数": 485
+  },
+  "2_覆盖": {
+    "路由中未出现在任何分册的state数": 0,
+    "未覆盖样例": [],
+    "分册中出现但路由表没有的state数": 0,
+    "多出样例": [],
+    "分册内重复登记的state数": 0,
+    "重复明细": {}
+  },
+  "3_分册页数自洽": {
+    "声明与实际行数不符的分册数": 0,
+    "明细": [],
+    "声明合计": 485,
+    "实际行数合计": 485
+  },
+  "4_重复模板": {
+    "被多个state共用的模板数": 36,
+    "总重复state数": 40,
+    "明细": [
+      {
+        "template": "views/adminManage/adminPasswordModify.html",
+        "states": [
+          "adminPasswordModify",
+          "adminAreaPasswordModify"
+        ]
+      },
+      {
+        "template": "views/machineCenter/companyStockList.html",
+        "states": [
+          "goods.companyStockList",
+          "chainStockList"
+        ]
+      },
+      {
+        "template": "views/machineCenter/completeStockLoss.html",
+        "states": [
+          "goods.completeStockLoss",
+          "completeChainStockLoss"
+        ]
+      },
+      {
+        "template": "views/machineCenter/machineOrderBroken.html",
+        "states": [
+          "machineOrderBroken",
+          "machineOrderChainBroken"
+        ]
+      },
+      {
+        "template": "views/machineCenter/machineOrderChainWaitAccess.html",
+        "states": [
+          "machineOrderChainWaitAccess",
+          "machineOrderChainWaitProcess",
+          "machineOrderChainProcessing",
+          "machineOrderChainTesting"
+        ]
+      },
+      {
+        "template": "views/machineCenter/machineOrderCompleted.html",
+        "states": [
+          "machineOrderCompleted",
+          "machineOrderChainCompleted"
+        ]
+      },
+      {
+        "template": "views/machineCenter/machineOrderWaitAccess.html",
+        "states": [
+          "machineOrderWaitProcess",
+          "machineOrderWaitAccess",
+          "machineOrderProcessing",
+          "machineOrderTesting"
+        ]
+      },
+      {
+        "template": "views/machineCenter/stockLossDetail.html",
+        "states": [
+          "goods.stockLossDetail",
+          "chainStockLossDetail"
+        ]
+      },
+      {
+        "template": "views/machineCenter/stockLossList.html",
+        "states": [
+          "stockLossList",
+          "stockChainLossList"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/addDelivery.html",
+        "states": [
+          "addDelivery",
+          "goods.addCompanyDelivery"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/addInventory.html",
+        "states": [
+          "addInventory",
+          "goods.addCompanyInventory"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/addMultiDelivery.html",
+        "states": [
+          "addMultiDelivery",
+          "goods.addCompanyMultiDelivery"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/addMultiReceipts.html",
+        "states": [
+          "addMultiReceipts",
+          "goods.addCompanyMultiReceipts"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/addReceipt.html",
+        "states": [
+          "goods.addCompanyReceipt",
+          "addReceipt"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/deliveryDetail.html",
+        "states": [
+          "goods.deliveryCompanyDetail",
+          "deliveryDetail"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/deliveryModify.html",
+        "states": [
+          "goods.deliveryCompanyModify",
+          "deliveryModify"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/inventoryDetail.html",
+        "states": [
+          "inventoryDetail",
+          "goods.inventoryCompanyDetail"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/inventoryModify.html",
+        "states": [
+          "inventoryModify",
+          "goods.inventoryCompanyModify"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/materialDelivery.html",
+        "states": [
+          "materialDelivery",
+          "goods.materialCompanyDelivery"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/materialImportRecord.html",
+        "states": [
+          "materialImportRecord",
+          "goods.companyImportRecord"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/materialInventory.html",
+        "states": [
+          "materialInventory",
+          "goods.materialCompanyInventory"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/materialOutportRecord.html",
+        "states": [
+          "materialOutportRecord",
+          "goods.materialCompanyOutportRecord"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/materialReceipts.html",
+        "states": [
+          "goods.companyMaterialReceipts",
+          "materialReceipts"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/modifyStockChange.html",
+        "states": [
+          "goods.modifyStockCompanyChange",
+          "modifyStockChange"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/receiptDetail.html",
+        "states": [
+          "goods.receiptCompanyDetail",
+          "receiptDetail"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/receiptInvalid.html",
+        "states": [
+          "receiptInvalid",
+          "goods.receiptCompanyInvalid"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/receiptModify.html",
+        "states": [
+          "receiptModify",
+          "goods.receiptCompanyModify"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/stockChange.html",
+        "states": [
+          "stockChange",
+          "goods.stockCompanyChange"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/stockChangeCheck.html",
+        "states": [
+          "stockChangeCheck",
+          "goods.stockCompanyChangeCheck"
+        ]
+      },
+      {
+        "template": "views/materialAdmin/stockChangeDetail.html",
+        "states": [
+          "stockChangeDetail",
+          "goods.stockCompanyChangeDetail"
+        ]
+      },
+      {
+        "template": "views/myMember/myMaterialBill.html",
+        "states": [
+          "adminMyRecord.myMaterialBill",
+          "adminSalesRecord.myMaterialBill"
+        ]
+      },
+      {
+        "template": "views/myMember/myMemberRecord.html",
+        "states": [
+          "adminMyRecord.myMemberRecord",
+          "adminSalesRecord.myMemberRecord"
+        ]
+      },
+      {
+        "template": "views/screenAdmin/addSchoolPlan.html",
+        "states": [
+          "addSchoolPlan",
+          "addAreaSchoolPlan"
+        ]
+      },
+      {
+        "template": "views/screenAdmin/modifySchoolPlan.html",
+        "states": [
+          "modifySchoolPlan",
+          "modifyAreaSchoolPlan"
+        ]
+      },
+      {
+        "template": "views/screenAdmin/schoolPlanList.html",
+        "states": [
+          "schoolPlanList",
+          "areaSchoolPlanList"
+        ]
+      },
+      {
+        "template": "views/systemSetting/materialImport.html",
+        "states": [
+          "systemSetting.materialImport",
+          "materialImport"
+        ]
+      }
+    ]
+  },
+  "5_目录与路由前缀不一致": {
+    "数量": 381,
+    "样例": [
+      {
+        "state": "optometryGlasses",
+        "dir": "optometry",
+        "prefix": "optometryGlasses"
+      },
+      {
+        "state": "bigScreen",
+        "dir": "clinic",
+        "prefix": "bigScreen"
+      },
+      {
+        "state": "consultingScreen",
+        "dir": "clinic",
+        "prefix": "consultingScreen"
+      },
+      {
+        "state": "screenQueue",
+        "dir": "clinic",
+        "prefix": "screenQueue"
+      },
+      {
+        "state": "adminCall",
+        "dir": "clinic",
+        "prefix": "adminCall"
+      },
+      {
+        "state": "doctorWorkbench",
+        "dir": "clinic",
+        "prefix": "doctorWorkbench"
+      },
+      {
+        "state": "checkCall",
+        "dir": "clinic",
+        "prefix": "checkCall"
+      },
+      {
+        "state": "addCheckin",
+        "dir": "checkinList",
+        "prefix": "addCheckin"
+      },
+      {
+        "state": "yuYueJiLu",
+        "dir": "checkinList",
+        "prefix": "yuYueJiLu"
+      },
+      {
+        "state": "adminMyRecord",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.myMemberRecord",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.prescriptsRecord",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.prescription",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.drugPrescription",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.customerProductRecord",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.myMaterialBill",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.myCheckBill",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminMyRecord.followList",
+        "dir": "myMember",
+        "prefix": "adminMyRecord"
+      },
+      {
+        "state": "adminSalesRecord",
+        "dir": "myMember",
+        "prefix": "adminSalesRecord"
+      },
+      {
+        "state": "adminSalesRecord.myMemberRecord",
+        "dir": "myMember",
+        "prefix": "adminSalesRecord"
+      },
+      {
+        "state": "adminSalesRecord.myMaterialBill",
+        "dir": "myMember",
+        "prefix": "adminSalesRecord"
+      },
+      {
+        "state": "myMedicalRecordList",
+        "dir": "myMember",
+        "prefix": "myMedicalRecordList"
+      },
+      {
+        "state": "myMedicalHistory",
+        "dir": "myMember",
+        "prefix": "myMedicalHistory"
+      },
+      {
+        "state": "updateMyMember",
+        "dir": "myMember",
+        "prefix": "updateMyMember"
+      },
+      {
+        "state": "addSaleRecord",
+        "dir": "myMember",
+        "prefix": "addSaleRecord"
+      }
+    ],
+    "说明": "这些 state 的模板在 A 目录，但 state 前缀是 B；复刻时模块归属需明确以哪个为准"
+  },
+  "6_模块中文名": {
+    "仍为【待确认】的模块数": 2,
+    "模块总数": 33,
+    "清单": [
+      "00-总纲.md",
+      "02-systemSetting.md"
+    ]
+  },
+  "7_端点覆盖": {
+    "分册页面行总数": 485,
+    "零端点页面数": 162,
+    "零端点占比": 0.334,
+    "有端点页面数": 323,
+    "端点总数（去重前累加）": 1835
+  },
+  "8_可达性": {
+    "注释边总数": 105,
+    "有效边总数": 528,
+    "无有效入口的state数": 28,
+    "其中已登记进spec分册的": 28,
+    "样例": [
+      "hospital.updateHospital",
+      "hospital.updateHospital.departmentList",
+      "hospital.updateHospital.employeeList",
+      "report.reportFee.feeBankCard",
+      "report.reportFee.feeDay",
+      "report.reportFee.feeMonth",
+      "report.reportFee.feeRecharge",
+      "report.reportFee.pointsListCharge",
+      "report.reportFee.pointsListReCharge",
+      "report.reportFee.refundFee",
+      "report.reportFee.unPayCharge",
+      "report.reportFee.unPayRecharge",
+      "report.reportMaterial.deliveryRecordPort",
+      "report.reportMaterial.jxcRecord",
+      "report.reportMaterial.receiptRecord",
+      "report.reportMedicalRate.customerChannelRate",
+      "report.reportMedicalRate.satisfyDetailRate",
+      "report.reportMedicalRate.satisfyRate",
+      "report.reportMedicalRate.successRate",
+      "report.reportOperateAll.feeCashier"
+    ],
+    "风险": "这些页面在生产界面上没有可点入口，却已被当作常规页面写入分册"
+  },
+  "9_URL契约": {
+    "分册记录的url形态": "子状态自身定义（ui-router state.url 原文）",
+    "实际浏览器URL形态": "父url + \"/\" + 子url（ui-router 0.2.x 拼接）",
+    "实证": "routes.csv 记 /medicalFeesList，生产实际 #!/systemSetting/medicalFeesList",
+    "影响": "分册 §1 页面清单的 url 列不能直接当作可访问 URL 使用",
+    "嵌套宿主数": 15
+  },
+  "10_嵌套层级": {
+    "嵌套宿主": {
+      "systemSetting": 73,
+      "goods": 36,
+      "report.reportFee": 12,
+      "purchase": 11,
+      "adminMyRecord": 8,
+      "hospital.updateHospital": 7,
+      "report": 6,
+      "report.reportSale": 5,
+      "report.reportOperateAll": 4,
+      "report.reportMedicalRate": 4,
+      "report.analysis": 4,
+      "materialStatistic": 3,
+      "report.reportMaterial": 3,
+      "adminSalesRecord": 2,
+      "hospital": 2
+    },
+    "嵌套页面总数": 180,
+    "说明": "分册按 views 目录平铺，未表达 ui-router 父子嵌套，复刻时需补嵌套视图层"
+  }
+}

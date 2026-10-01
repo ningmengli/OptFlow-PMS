@@ -1,0 +1,978 @@
+{
+  "caliber": "生产权限树 8 个一级分组为主干（唯一与生产 UI 一致的口径）",
+  "groupingNote": "GROUP_OF 为语义对齐：stateFactory 本身不携带 stateType 信息，分组归属需在 G-01（108 个 state 实值）闭合后复核",
+  "groups": [
+    {
+      "group": "就诊流程",
+      "subMenus": 16,
+      "leaves": [
+        "就诊流程 / 主页 / 工作台",
+        "就诊流程 / 主页 / 登记",
+        "就诊流程 / 主页 / 我的会员",
+        "就诊流程 / 主页 / 检查报告",
+        "就诊流程 / 主页 / 开单",
+        "就诊流程 / 主页 / 收费",
+        "就诊流程 / 主页 / 发货",
+        "就诊流程 / 主页 / 店内加工中心",
+        "就诊流程 / 主页 / 连锁加工中心",
+        "就诊流程 / 预约叫号 / 接诊叫号",
+        "就诊流程 / 预约叫号 / 检查叫号",
+        "就诊流程 / 预约叫号 / 接诊叫号管理",
+        "就诊流程 / 预约叫号 / 叫号大屏",
+        "就诊流程 / 预约叫号 / 诊室屏",
+        "就诊流程 / 预约叫号 / 叫号机",
+        "就诊流程 / 预约叫号 / 预约排班"
+      ],
+      "permissionStates": 21,
+      "coveredPaths": 103,
+      "states": [
+        {
+          "state": "home",
+          "paths": [
+            "home",
+            "admin",
+            "modifyPassword",
+            "homeAnnouncement",
+            "homeAnnouncementDetails"
+          ],
+          "n": 5
+        },
+        {
+          "state": "myMember",
+          "paths": [
+            "myMember",
+            "addMedicalRecord",
+            "adminSalesRecord/myMemberRecord",
+            "adminMyRecord/myMemberRecord",
+            "adminMyRecord/followList",
+            "adminMyRecord/prescriptsRecord",
+            "adminMyRecord/prescription",
+            "adminMyRecord/drugPrescription",
+            "myMedicalHistory",
+            "myMedicalRecordList",
+            "adminMyRecord/myCheckBill",
+            "adminMyRecord/myMaterialBill",
+            "adminMyRecord/customerProductRecord",
+            "adminSalesRecord/myMaterialBill",
+            "addMaterialBill"
+          ],
+          "n": 15
+        },
+        {
+          "state": "waitChargeList",
+          "paths": [
+            "waitChargeList",
+            "waitChargeDetail",
+            "waitPayList",
+            "waitPayDetail",
+            "payedList",
+            "waitPayBack",
+            "partBack",
+            "waitPayBackList",
+            "payBackDetail",
+            "unPayList",
+            "unPayDetail",
+            "payedDetail",
+            "reChargeList",
+            "reChargeListBack"
+          ],
+          "n": 14
+        },
+        {
+          "state": "member",
+          "paths": [
+            "member",
+            "chargeList",
+            "patientList",
+            "memberTag",
+            "memberCard",
+            "memberPoint",
+            "myCoupon",
+            "updateMember",
+            "updateMyMember",
+            "adminPatient/medicalRecordList",
+            "adminPatient/updatePatient",
+            "adminPatient/addMedicalRecord",
+            "reviewRecordList"
+          ],
+          "n": 13
+        },
+        {
+          "state": "orderList",
+          "paths": [
+            "orderList",
+            "addOrder",
+            "modifyOrder",
+            "dealRecord",
+            "deliveryRecord"
+          ],
+          "n": 5
+        },
+        {
+          "state": "machineOrderWaitAccess",
+          "paths": [
+            "machineOrderWaitAccess",
+            "machineOrderWaitProcess",
+            "machineOrderProcessing",
+            "machineOrderBroken",
+            "machineOrderTesting",
+            "stockLossList",
+            "machineOrderCompleted"
+          ],
+          "n": 7
+        },
+        {
+          "state": "machineOrderChainWaitAccess",
+          "paths": [
+            "machineOrderChainWaitAccess",
+            "machineOrderChainWaitProcess",
+            "machineOrderChainProcessing",
+            "machineOrderChainBroken",
+            "machineOrderChainTesting",
+            "stockChainLossList",
+            "machineOrderChainCompleted"
+          ],
+          "n": 7
+        },
+        {
+          "state": "addCheckin",
+          "paths": [
+            "addCheckin",
+            "checkinList",
+            "yuYueJiLu",
+            "yuYueJiLuCopy"
+          ],
+          "n": 4
+        },
+        {
+          "state": "fundus",
+          "paths": [
+            "fundus",
+            "reportRecord",
+            "reportStatistic",
+            "fundusLog"
+          ],
+          "n": 4
+        },
+        {
+          "state": "adminBill",
+          "paths": [
+            "adminBill",
+            "adminBillDetial",
+            "adminBillOneDetial"
+          ],
+          "n": 3
+        },
+        {
+          "state": "myAccount",
+          "paths": [
+            "myAccount",
+            "myAccountDetails",
+            "myAccountDetailsForScan",
+            "myAccountHistory",
+            "myAccountCoin",
+            "myAccountCoinDetails",
+            "myAccountOverviews"
+          ],
+          "n": 7
+        },
+        {
+          "state": "optometry",
+          "paths": [
+            "optometry",
+            "optometryGlasses"
+          ],
+          "n": 2
+        },
+        {
+          "state": "optometryList",
+          "paths": [
+            "optometryList",
+            "optometryLogList"
+          ],
+          "n": 2
+        },
+        {
+          "state": "allSize",
+          "paths": [
+            "allSize"
+          ],
+          "n": 1
+        },
+        {
+          "state": "dataChart",
+          "paths": [
+            "dataChart"
+          ],
+          "n": 1
+        },
+        {
+          "state": "deliveryList",
+          "paths": [
+            "deliveryList",
+            "deliveryProcessing",
+            "machineOrderList",
+            "deliveryInput",
+            "deliveryInputRecord"
+          ],
+          "n": 5
+        },
+        {
+          "state": "visionMesure",
+          "paths": [
+            "visionMesure"
+          ],
+          "n": 1
+        },
+        {
+          "state": "queueMachine",
+          "paths": [
+            "queueMachine",
+            "queueMachineConfig"
+          ],
+          "n": 2
+        },
+        {
+          "state": "bookManage",
+          "paths": [
+            "bookManage",
+            "bookDetail",
+            "bookSettings"
+          ],
+          "n": 3
+        },
+        {
+          "state": "getGlassNotifyList",
+          "paths": [
+            "getGlassNotifyList"
+          ],
+          "n": 1
+        },
+        {
+          "state": "selectOrderList",
+          "paths": [
+            "selectOrderList"
+          ],
+          "n": 1
+        }
+      ]
+    },
+    {
+      "group": "患者维护",
+      "subMenus": 4,
+      "leaves": [
+        "患者维护 / 客户跟进",
+        "患者维护 / 门店会员",
+        "患者维护 / 会员库",
+        "患者维护 / 随访管理"
+      ],
+      "permissionStates": 7,
+      "coveredPaths": 16,
+      "states": [
+        {
+          "state": "branchMember",
+          "paths": [
+            "branchMember"
+          ],
+          "n": 1
+        },
+        {
+          "state": "clientsList",
+          "paths": [
+            "clientsList",
+            "addClient",
+            "modifyClient"
+          ],
+          "n": 3
+        },
+        {
+          "state": "followUp",
+          "paths": [
+            "followUp",
+            "followUpDetails"
+          ],
+          "n": 2
+        },
+        {
+          "state": "recommendCustomer",
+          "paths": [
+            "recommendCustomer",
+            "modifyRecommend",
+            "addRecommend",
+            "firstDoctorList",
+            "addFirstDoctor",
+            "modifyFirstDoctor"
+          ],
+          "n": 6
+        },
+        {
+          "state": "recommendDetail",
+          "paths": [
+            "recommendTable",
+            "recommendDetail"
+          ],
+          "n": 2
+        },
+        {
+          "state": "recommendPhoneList",
+          "paths": [
+            "recommendPhoneList"
+          ],
+          "n": 1
+        },
+        {
+          "state": "remindList",
+          "paths": [
+            "remindList"
+          ],
+          "n": 1
+        }
+      ]
+    },
+    {
+      "group": "营销管理",
+      "subMenus": 10,
+      "leaves": [
+        "营销管理 / 计次卡",
+        "营销管理 / 积分",
+        "营销管理 / 发券宝",
+        "营销管理 / 客资池",
+        "营销管理 / 推荐新客",
+        "营销管理 / 拼团",
+        "营销管理 / 秒杀",
+        "营销管理 / 订单",
+        "营销管理 / 短信电话群发",
+        "营销管理 / 预约"
+      ],
+      "permissionStates": 8,
+      "coveredPaths": 25,
+      "states": [
+        {
+          "state": "grouponList",
+          "paths": [
+            "grouponList",
+            "addGroupon",
+            "grouponDetail",
+            "grouponOrder"
+          ],
+          "n": 4
+        },
+        {
+          "state": "couponList",
+          "paths": [
+            "couponList",
+            "addCoupon",
+            "modifyCoupon",
+            "couponHistory",
+            "targetCouponList",
+            "addTargetCoupon",
+            "targetCouponDetail"
+          ],
+          "n": 7
+        },
+        {
+          "state": "secKillPromotionList",
+          "paths": [
+            "secKillPromotionList",
+            "modifyPromotion",
+            "secKillProductList",
+            "productOrder",
+            "addSecKillProduct",
+            "modifySecKillProduct",
+            "secKillProductDetail"
+          ],
+          "n": 7
+        },
+        {
+          "state": "pointsList",
+          "paths": [
+            "pointsList"
+          ],
+          "n": 1
+        },
+        {
+          "state": "orderManage",
+          "paths": [
+            "orderManage"
+          ],
+          "n": 1
+        },
+        {
+          "state": "sendPlatform",
+          "paths": [
+            "sendPlatform",
+            "groupSend",
+            "groupSendLook"
+          ],
+          "n": 3
+        },
+        {
+          "state": "addSaleRecord",
+          "paths": [
+            "addSaleRecord"
+          ],
+          "n": 1
+        },
+        {
+          "state": "hospitalRecharge",
+          "paths": [
+            "hospitalRecharge"
+          ],
+          "n": 1
+        }
+      ]
+    },
+    {
+      "group": "筛查机构",
+      "subMenus": 11,
+      "leaves": [
+        "筛查机构 / 学校管理",
+        "筛查机构 / 筛查计划",
+        "筛查机构 / 筛查录入",
+        "筛查机构 / 筛查报表",
+        "筛查机构 / 筛查跟进",
+        "筛查机构 / 视力表",
+        "筛查机构 / 筛查定向群发",
+        "筛查机构 / 筛查进度",
+        "筛查机构 / 打印筛查档案",
+        "筛查机构 / 质检考核",
+        "筛查机构 / 筛查配置"
+      ],
+      "permissionStates": 13,
+      "coveredPaths": 55,
+      "states": [
+        {
+          "state": "schoolList",
+          "paths": [
+            "schoolList",
+            "addSchool",
+            "classList",
+            "updateSchool",
+            "townList"
+          ],
+          "n": 5
+        },
+        {
+          "state": "schoolPlanList",
+          "paths": [
+            "schoolPlanList",
+            "addSchoolPlan",
+            "modifySchoolPlan"
+          ],
+          "n": 3
+        },
+        {
+          "state": "areaSchoolPlanList",
+          "paths": [
+            "areaSchoolPlanList",
+            "addAreaSchoolPlan",
+            "modifyAreaSchoolPlan"
+          ],
+          "n": 3
+        },
+        {
+          "state": "schoolPlanReport",
+          "paths": [
+            "schoolPlanReport",
+            "screenReportInschool",
+            "contrastReportInschool",
+            "classReportInschool",
+            "studentReportInschool"
+          ],
+          "n": 5
+        },
+        {
+          "state": "schoolMateCheckReports",
+          "paths": [
+            "schoolMateCheckReports",
+            "screenSchoolReport",
+            "screenClassReport",
+            "screenStudentReport",
+            "screenContrastReport",
+            "viewSchoolMateCheck",
+            "schoolMateCheckActive",
+            "screenReport",
+            "contrastReport",
+            "dioptersList"
+          ],
+          "n": 10
+        },
+        {
+          "state": "screenPromotionList",
+          "paths": [
+            "screenPromotionList",
+            "screenPromotionStudent",
+            "multiImportStudent",
+            "addScreenPromotion",
+            "schoolMateCheckList",
+            "modifyScreenPromotion",
+            "screenList",
+            "modifySchoolMateCheck",
+            "modifyHealthScreen",
+            "modifyHealthInternal"
+          ],
+          "n": 10
+        },
+        {
+          "state": "screenConditionBatch",
+          "paths": [
+            "screenConditionBatch",
+            "screenConditionBatchGroupSend",
+            "screenConditionBatchGroupSendLook"
+          ],
+          "n": 3
+        },
+        {
+          "state": "healthScreenConfig",
+          "paths": [
+            "healthScreenConfig"
+          ],
+          "n": 1
+        },
+        {
+          "state": "printStudentReport",
+          "paths": [
+            "printStudentReport",
+            "screenRecordReport",
+            "medicalConfig"
+          ],
+          "n": 3
+        },
+        {
+          "state": "inspectList",
+          "paths": [
+            "inspectList",
+            "addInspect",
+            "modifyInspect"
+          ],
+          "n": 3
+        },
+        {
+          "state": "encryptUser",
+          "paths": [
+            "encryptUser"
+          ],
+          "n": 1
+        },
+        {
+          "state": "mateCheckReportList",
+          "paths": [
+            "mateCheckReportList",
+            "mateCheckReportConfig",
+            "mateSchoolReport",
+            "mateClassReport",
+            "mateRecordReport",
+            "mateContrastReport"
+          ],
+          "n": 6
+        },
+        {
+          "state": "physicalReport",
+          "paths": [
+            "physicalReport",
+            "physicalContrastReport"
+          ],
+          "n": 2
+        }
+      ]
+    },
+    {
+      "group": "到店筛查",
+      "subMenus": 1,
+      "leaves": [
+        "到店筛查 / 体检项目设置"
+      ],
+      "permissionStates": 2,
+      "coveredPaths": 12,
+      "states": [
+        {
+          "state": "screenInStore",
+          "paths": [
+            "screenInStore",
+            "reachStoreAppointAllReport",
+            "reachStoreAppointSingleReport",
+            "reachStoreAppointDetails",
+            "transformationRate",
+            "markOriginSet"
+          ],
+          "n": 6
+        },
+        {
+          "state": "screenPromotionConfig",
+          "paths": [
+            "screenPromotionToothConfig",
+            "screenPromotionConfig",
+            "screenBackConfig",
+            "cloudPrinterConfig",
+            "zhiShiBangConfig",
+            "smsSet"
+          ],
+          "n": 6
+        }
+      ]
+    },
+    {
+      "group": "物资管理",
+      "subMenus": 20,
+      "leaves": [
+        "物资管理 / 物资 / 物资入库",
+        "物资管理 / 物资 / 入库审核",
+        "物资管理 / 物资 / 物资出库",
+        "物资管理 / 物资 / 出库审核",
+        "物资管理 / 物资 / 物资调拨",
+        "物资管理 / 物资 / 调拨审核",
+        "物资管理 / 物资 / 物资盘点",
+        "物资管理 / 物资 / 盘点审核",
+        "物资管理 / 物资 / 报损审核",
+        "物资管理 / 物资 / 审核成本价",
+        "物资管理 / 物资 / 查看成本价",
+        "物资管理 / 物资 / 管理全部仓库",
+        "物资管理 / 当前库存",
+        "物资管理 / 采购申请",
+        "物资管理 / 采购 / 采购入库",
+        "物资管理 / 采购 / 采购审核",
+        "物资管理 / 采购 / 采购退货",
+        "物资管理 / 采购 / 采购退货审核",
+        "物资管理 / 采购 / 处理采购申请",
+        "物资管理 / 供应商结算"
+      ],
+      "permissionStates": 9,
+      "coveredPaths": 83,
+      "states": [
+        {
+          "state": "companyInventory",
+          "paths": [
+            "companyStockList",
+            "completeStockLoss",
+            "stockLossDetail",
+            "companyMaterialReceipts",
+            "companyInventory",
+            "addCompanyReceipt",
+            "receiptCompanyInvalid",
+            "receiptCompanyModify",
+            "addCompanyMultiReceipts",
+            "companyImportRecord",
+            "receiptCompanyDetail",
+            "deliveryCompanyModify",
+            "deliveryCompanyDetail",
+            "addCompanyDelivery",
+            "materialCompanyInventory",
+            "addCompanyInventory",
+            "inventoryCompanyDetail",
+            "inventoryCompanyModify",
+            "stockCompanyChange",
+            "addStockCompanyChange",
+            "stockCompanyChangeDetail",
+            "stockCompanyChangeCheck",
+            "modifyStockCompanyChange",
+            "materialCompanyDelivery",
+            "addCompanyMultiDelivery",
+            "materialCompanyOutportRecord"
+          ],
+          "n": 26
+        },
+        {
+          "state": "stockList",
+          "paths": [
+            "stockList",
+            "receiptInvalid",
+            "materialReceipts",
+            "addMultiReceipts",
+            "materialImportRecord",
+            "addReceipt",
+            "receiptDetail",
+            "receiptModify",
+            "materialDelivery",
+            "materialOutportRecord",
+            "addMultiDelivery",
+            "addDelivery",
+            "deliveryModify",
+            "deliveryDetail",
+            "materialInventory",
+            "addInventory",
+            "stockChange",
+            "addStockChange",
+            "stockChangeDetail",
+            "modifyStockChange",
+            "inventoryDetail",
+            "inventoryModify"
+          ],
+          "n": 22
+        },
+        {
+          "state": "materialPurchase",
+          "paths": [
+            "materialPurchaseBackGoods",
+            "materialPurchaseBackOne",
+            "materialPurchaseBackLook",
+            "materialPurchaseReturn",
+            "materialPurchase",
+            "purchaseRequestCheck",
+            "purchaseRequestCheckDetail",
+            "addPurchasement",
+            "purchaseModify",
+            "purchaseDetail",
+            "addSalePurchase",
+            "purchaseReciept",
+            "purchaseRecieptDetail"
+          ],
+          "n": 13
+        },
+        {
+          "state": "materialPurchaseRequest",
+          "paths": [
+            "materialPurchaseRequest",
+            "purchaseRequestModify",
+            "purchaseRequestDetail",
+            "addPurchaseRequest"
+          ],
+          "n": 4
+        },
+        {
+          "state": "stockListCustomer",
+          "paths": [
+            "stockListCustomer",
+            "receiptDetailCustomer",
+            "materialDeliveryCustomer",
+            "materialReceiptsCustomer",
+            "deliveryModifyCustomer",
+            "deliveryDetailCustomer",
+            "deliveryDelete",
+            "addDeliveryCustomer"
+          ],
+          "n": 8
+        },
+        {
+          "state": "viewStockList",
+          "paths": [
+            "viewStockList",
+            "viewStockList2",
+            "viewStockList3"
+          ],
+          "n": 3
+        },
+        {
+          "state": "chainStockList",
+          "paths": [
+            "chainStockList",
+            "completeChainStockLoss",
+            "chainStockLossDetail"
+          ],
+          "n": 3
+        },
+        {
+          "state": "stockInReport",
+          "paths": [
+            "stockInReport",
+            "profitReport"
+          ],
+          "n": 2
+        },
+        {
+          "state": "cashClients",
+          "paths": [
+            "cashClients",
+            "cashDetail"
+          ],
+          "n": 2
+        }
+      ]
+    },
+    {
+      "group": "数据报表",
+      "subMenus": 35,
+      "leaves": [
+        "数据报表 / 数据报表 / 运营统计 / 整体报表",
+        "数据报表 / 数据报表 / 运营统计 / 分店日报",
+        "数据报表 / 数据报表 / 运营统计 / 分店报表",
+        "数据报表 / 数据报表 / 运营统计 / 收银台报表",
+        "数据报表 / 数据报表 / 医务统计 / 成交率",
+        "数据报表 / 数据报表 / 医务统计 / 评价流水",
+        "数据报表 / 数据报表 / 医务统计 / 满意度",
+        "数据报表 / 数据报表 / 医务统计 / 患者来源统计",
+        "数据报表 / 数据报表 / 费用统计 / 收费流水",
+        "数据报表 / 数据报表 / 费用统计 / 退费流水",
+        "数据报表 / 数据报表 / 费用统计 / 收费月报",
+        "数据报表 / 数据报表 / 费用统计 / 充值流水",
+        "数据报表 / 数据报表 / 费用统计 / 充值余额",
+        "数据报表 / 数据报表 / 费用统计 / 挂账流水",
+        "数据报表 / 数据报表 / 费用统计 / 挂账余额",
+        "数据报表 / 数据报表 / 费用统计 / 积分流水",
+        "数据报表 / 数据报表 / 费用统计 / 积分余额",
+        "数据报表 / 数据报表 / 费用统计 / 次卡流水",
+        "数据报表 / 数据报表 / 费用统计 / 次卡余额",
+        "数据报表 / 数据报表 / 费用统计 / 次卡业绩",
+        "数据报表 / 数据报表 / 物资统计 / 入库流水",
+        "数据报表 / 数据报表 / 物资统计 / 出库流水",
+        "数据报表 / 数据报表 / 物资统计 / 进销存统计",
+        "数据报表 / 数据报表 / 销售统计 / 销售流水",
+        "数据报表 / 数据报表 / 销售统计 / 退货流水",
+        "数据报表 / 数据报表 / 销售统计 / 产品销量",
+        "数据报表 / 数据报表 / 销售统计 / 发货流水",
+        "数据报表 / 数据报表 / 销售统计 / 加工流水",
+        "数据报表 / 数据报表 / 销售统计 / 限今日数据",
+        "数据报表 / 数据报表 / 客户统计 / 客户转化漏斗",
+        "数据报表 / 数据报表 / 客户统计 / 客户跟进分析",
+        "数据报表 / 数据报表 / 客户统计 / RFM模型",
+        "数据报表 / 数据报表 / 客户统计 / 客户画像分析",
+        "数据报表 / 数据报表 / 客户统计 / 查看全部门店报表",
+        "数据报表 / 高级报表"
+      ],
+      "permissionStates": 1,
+      "coveredPaths": 31,
+      "states": [
+        {
+          "state": "reportOperateAllreportOperate",
+          "paths": [
+            "reportOperateAll/reportOperate",
+            "reportOperateAll/hospitalReport",
+            "reportOperateAll/singleHospitalProfit",
+            "reportOperateAll/reportMedicalReviewRate",
+            "reportMedicalRate/successRate",
+            "reportMedicalRate/satisfyRate",
+            "reportMedicalRate/satisfyDetailRate",
+            "reportMedicalRate/customerChannelRate",
+            "reportFee/feeDay",
+            "reportFee/refundFee",
+            "reportFee/feeMonth",
+            "reportFee/feeRecharge",
+            "reportFee/feeBankCard",
+            "reportFee/unPayRecharge",
+            "reportFee/unPayCharge",
+            "reportOperateAll/feeCashier",
+            "reportFee/pointsListReCharge",
+            "reportFee/pointsListCharge",
+            "reportSale/saleRecord",
+            "reportSale/deliveryList",
+            "reportMaterial/receiptRecord",
+            "reportMaterial/deliveryRecordPort",
+            "reportMaterial/jxcRecord",
+            "reportSale/backGoodRecord",
+            "reportSale/machineProcessList",
+            "reportSale/saleList",
+            "report/analysis",
+            "report/analysis/conversionFunnel",
+            "report/analysis/followUpAnalysis",
+            "report/analysis/rfmModel",
+            "report/analysis/profileAnalysis"
+          ],
+          "n": 31
+        }
+      ]
+    },
+    {
+      "group": "诊所管理",
+      "subMenus": 11,
+      "leaves": [
+        "诊所管理 / 门店",
+        "诊所管理 / 取镜通知",
+        "诊所管理 / 公众号授权",
+        "诊所管理 / 我的账户",
+        "诊所管理 / 需求提交平台",
+        "诊所管理 / 智能解码器",
+        "诊所管理 / POS机",
+        "诊所管理 / 标签打印机",
+        "诊所管理 / 管理员",
+        "诊所管理 / 操作证书",
+        "诊所管理 / 系统设置"
+      ],
+      "permissionStates": 9,
+      "coveredPaths": 30,
+      "states": [
+        {
+          "state": "adminList",
+          "paths": [
+            "adminList",
+            "createAdmin",
+            "adminModify",
+            "memberAdmin",
+            "roleAdmin",
+            "addRole",
+            "modifyRole",
+            "roleDetail"
+          ],
+          "n": 8
+        },
+        {
+          "state": "adminAreaList",
+          "paths": [
+            "adminAreaList",
+            "createAdminArea",
+            "areaRoleAdmin",
+            "areaScreenAdmin",
+            "modifyAreaRole",
+            "modifyAdminArea",
+            "adminAreaPasswordModify"
+          ],
+          "n": 7
+        },
+        {
+          "state": "hospitalhospitallist",
+          "paths": [
+            "hospital/hospitallist",
+            "hospital/updateHospital",
+            "hospital/updateHospital/updateDepartment",
+            "addHospital",
+            "hospital/updateHospital/employeeList"
+          ],
+          "n": 5
+        },
+        {
+          "state": "sataServerList",
+          "paths": [
+            "sataServerList",
+            "logList"
+          ],
+          "n": 2
+        },
+        {
+          "state": "systemSettingcheckList",
+          "paths": [
+            "systemSetting/checkList"
+          ],
+          "n": 1
+        },
+        {
+          "state": "newsList",
+          "paths": [
+            "newsList",
+            "addNew",
+            "modifyNew"
+          ],
+          "n": 3
+        },
+        {
+          "state": "wechatAuth",
+          "paths": [
+            "wechatAuth"
+          ],
+          "n": 1
+        },
+        {
+          "state": "assistCheckList",
+          "paths": [
+            "assistCheckList",
+            "assistChecking"
+          ],
+          "n": 2
+        },
+        {
+          "state": "brandList",
+          "paths": [
+            "brandList"
+          ],
+          "n": 1
+        }
+      ]
+    }
+  ],
+  "unassignedStates": [],
+  "coverage": {
+    "totalRoutes": 485,
+    "distinctTemplates": 445,
+    "stateFactoryStates": 70,
+    "stateFactoryPaths": 355,
+    "routesCoveredByPermissions": 288,
+    "routesNotCoveredByPermissions": 197
+  }
+}

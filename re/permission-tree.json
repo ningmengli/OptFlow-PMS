@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "source": "视光之家 6.9 生产实测（<PROD_HOST>）",
+    "capturedAt": "2026-09-30",
+    "instance": "<机构名>",
+    "captureMode": "只读（roleDetail / modifyRole 模板 + controller.js 静态分析 + 勾选状态视觉取证）",
+    "writeOperationsOnProduction": 0,
+    "piiRecorded": false,
+    "note": "本文件为结构化地图，不含任何原始 bundle、患者数据、凭据"
+  },
+
+  "readContract": {
+    "endpoint": "/admin/getRoleStateListForUpdate.json",
+    "method": "POST",
+    "params": {
+      "adminRoleId": "Long(必填) 角色ID",
+      "isAreaAdmin": "Boolean(可选) 区域管理员视角，区域角色页会传 true"
+    },
+    "envelope": "{ status, object|list, errmsg }",
+    "errorConvention": "前端统一以 res.status == 1 走异常分支（Popup.notice(res.errmsg) 并中断后续流程）；非 1 走成功路径",
+    "payloadRoot": "res.result.list[]",
+    "listItemShape": {
+      "adminStateType": "{ id:Long, stateTypeName:String }  一级分组",
+      "checkAll": "Boolean 该分组是否全选",
+      "adminStateList": "[StateNode] 二级节点"
+    },
+    "stateNodeShape": {
+      "corpAdminHome": "{ homeId:Long, stateName:String, state:String }  权限点本体（对应 corp_admin_home 菜单/主页表）",
+      "roleHaveState": "Boolean 该角色是否拥有此权限",
+      "children": "[StateNode] 子节点（叶子节点为空数组）"
+    },
+    "maxDepth": 4,
+    "depthNote": "前端硬编码 i/j/k/m 四层循环；L1=adminStateType，L2/L3/L4=StateNode。超过 4 层的权限点无法表达"
+  },
+
+  "globalStateTreeContract": {
+    "endpoint": "/admin/getSuperStateList.json",
+    "method": "POST",
+    "params": {},
+    "purpose": "新增角色时载入全量权限树（所有节点 roleHaveState 均未勾选）"
+  },
+
+  "adminUnionStateContract": {
+    "endpoint": "/admin/getUnionAdminStateList.json",
+    "method": "POST",
+    "params": { "adminId": "Long(必填)" },
+    "purpose": "查看某个管理员的【全部角色权限并集】，用于管理员列表的「查看权限」",
+    "semantics": "Union —— 管理员可绑定多个角色，实际生效权限为各角色权限的并集"
+  },
+
+  "saveContract": {
+    "strategy": "两段式串行提交，非单一事务",
+    "step1": {
+      "endpoint": "/admin/updateRoleStateList.json",
+      "method": "POST",
+      "params": {
+        "adminRoleId": "Long",
+        "fromCorpAdminHomeIdArray": "Long[]"
+      },
+      "collectionRule": "只收集【无 children 且 selected 为真】的叶子节点 homeId；分组节点与中间层节点一律不提交",
+      "semantics": "全量覆盖（PUT 语义），非增量 diff"
+    },
+    "step2": {
+      "endpoint": "/admin/updateAdminRoleInfo.json",
+      "method": "POST",
+      "params": "{ adminRoleId, roleName, status }"
+    },
+    "orderGuarantee": "step1 成功（status != 1）后才发起 step2；step1 失败则中断",
+    "createRole": { "endpoint": "/admin/createAdminRole.json", "method": "POST" }
+  },
+
+  "statusEnum": {
+    "0": "正常",
+    "1": "停用",
+    "source": "modifyRoleCtrl $scope.status = [{id:0,name:'正常'},{id:1,name:'停用'}]",
+    "renderFilter": "supplierStatus"
+  },
+
+  "superTypeEnum": {
+    "1": "超级管理员（内置不可改；adminList 中状态/APP 列降级为只读 span；移转超管时禁止选超管）",
+    "10": "学校类角色（管理员表单额外渲染学校多选，addSchool=true）",
+    "known": [1, 10],
+    "note": "前端仅对 ==10 与 ==1 做条件分支，其余取值未在本轮取证中出现。完整枚举待后端契约确认（G-04）",
+    "evidence": ["controller.js:440,549,862 (==10)", "adminList.html:102,108,120,212 (==1)"]
+  },
+
+  "adminScopeModel": {
+    "note": "生产存在【两套】彼此独立的管理员/权限体系，不能混为一谈",
+    "orgSide": {
+      "name": "机构侧管理员（医院 / 门店）",
+      "roles": [3559, 3560, 3561, 3562, 3563, 3564, 3565, 3566, 3568, 3597],
+      "adminFields": ["username", "nickname", "mobile", "adminRoleId", "companyId"],
+      "companyFields": ["company", "companyList", "schoolList", "machineCenter"],
+      "unionEndpoint": "/admin/getUnionAdminStateList.json",
+      "unionLabel": "【含角色权限和动态授权】（adminList.html 官方 tooltip 文案）"
+    },
+    "areaSide": {
+      "name": "行政机构侧管理员（政府区域体系）",
+      "roles": "独立于机构侧，另有一套 adminRole",
+      "adminFields": ["admin.username", "admin.nickname", "admin.status", "adminAreaLevel.governmentName", "adminAreaLevel.areaLevelId", "adminAreaLevel.province/city/district"],
+      "roleName": "固定为「行政机构管理员」，不显示 roleName",
+      "levelFilter": "areaLevel | areaLevel（过滤器）",
+      "restriction": "「不能添加区县级之下的行政机构账号」",
+      "roleDetailAvailability": "areaRoleAdmin.html 的【查看】按钮被注释掉 → 区域角色权限无法从 UI 查看，只能静态分析（G-05）",
+      "regionRoleForm": "modifyAreaRole.html 只有【角色名称 + 权限列表】，无【状态】字段 → 与机构侧角色是两套表单"
+    }
+  },
+
+  "builtInReadOnly": {
+    "message": "角色固有权限不能修改，如需添加请使用动态授权",
+    "trigger": "$scope.showMsg()",
+    "implementation": "roleDetail.html 在权限树左侧覆盖 200px 透明遮罩 div(ng-click=\"showMsg()\")，使整棵树只读",
+    "implication": "内置角色的权限在 UI 上不可编辑；追加权限必须走「动态权限」角色"
+  },
+
+  "roles": [
+    { "roleId": 3559, "roleName": "超级管理员", "status": 0, "modifiable": false, "note": "内置超级管理员，列表无「修改」按钮" },
+    { "roleId": 3560, "roleName": "后台管理员", "status": 0, "modifiable": true },
+    { "roleId": 3561, "roleName": "医生", "status": 0, "modifiable": true },
+    { "roleId": 3562, "roleName": "库管", "status": 0, "modifiable": true },
+    { "roleId": 3563, "roleName": "收费员", "status": 0, "modifiable": true },
+    { "roleId": 3564, "roleName": "市场营销", "status": 0, "modifiable": true },
+    { "roleId": 3565, "roleName": "筛查员", "status": 0, "modifiable": true },
+    { "roleId": 3566, "roleName": "学校管理员", "status": 0, "modifiable": true },
+    { "roleId": 3567, "roleName": "(缺号)", "status": null, "modifiable": false, "note": "ID 序列跳号，证明 roleId 为自增且存在历史删除" },
+    { "roleId": 3568, "roleName": "院长", "status": 0, "modifiable": true },
+    { "roleId": 3597, "roleName": "动态权限", "status": 0, "modifiable": true, "note": "实测权限树全空 —— 动态授权叠加壳" }
+  ],
+
+  "rolePermissionMatrix": {
+    "captureMethod": "逐角色打开 roleDetail 只读页 + 全页截图视觉取证（生产写操作 0）",
+    "capturedRoles": 10,
+    "total": 10,
+    "coverage": "100% —— 全部 10 个内置角色的权限矩阵已取齐",
+    "roles": [
+      {
+        "roleId": 3559, "roleName": "超级管理员",
+        "leafGranted": 108, "leafTotalInTree": 108,
+        "granted": "全部 8 个分组 / 108 个叶子",
+        "profile": "全量无限制"
+      },
+      {
+        "roleId": 3560, "roleName": "后台管理员",
+        "leafGranted": 99, "leafTotalInTree": 107,
+        "denied": [
+          "患者维护 / 随访管理",
+          "物资管理 / 物资 / 审核成本价",
+          "物资管理 / 物资 / 查看成本价",
+          "物资管理 / 物资 / 管理全部仓库",
+          "诊所管理 / 标签打印机",
+          "诊所管理 / 管理员",
+          "诊所管理 / 操作证书",
+          "诊所管理 / 系统设置"
+        ],
+        "profile": "近乎全量；刻意排除【成本价可见性】与【系统级/硬件级/管理员维护】——职责分离",
+        "anomaly": "该角色树中未出现「筛查机构 / 视力表」节点，而超管树中存在（11 个 vs 10 个）。已登记为待查项 A-01"
+      },
+      {
+        "roleId": 3561, "roleName": "医生",
+        "leafGranted": 7, "leafTotalInTree": 108,
+        "granted": [
+          "就诊流程 / 主页 / 登记",
+          "就诊流程 / 主页 / 我的会员",
+          "就诊流程 / 主页 / 检查报告",
+          "就诊流程 / 主页 / 开单",
+          "就诊流程 / 主页 / 发货",
+          "就诊流程 / 主页 / 店内加工中心",
+          "营销管理 / 预约"
+        ],
+        "profile": "【登记 → 检查报告 → 开单 → 发货】主链路 + 预约；不含收费、不含工作台、不含连锁加工"
+      },
+      {
+        "roleId": 3562, "roleName": "库管",
+        "leafGranted": 7, "leafTotalInTree": 108,
+        "granted": [
+          "物资管理 / 当前库存",
+          "物资管理 / 物资 / 物资调拨",
+          "物资管理 / 物资 / 调拨审核",
+          "物资管理 / 物资 / 物资盘点",
+          "物资管理 / 物资 / 盘点审核",
+          "物资管理 / 物资 / 报损审核",
+          "物资管理 / 物资 / 审核审批"
+        ],
+        "profile": "仅【调拨 / 盘点 / 报损】的操作权 + 审核权 + 库存查询；无入库出库、无采购、无成本价可见权"
+      },
+      {
+        "roleId": 3563, "roleName": "收费员",
+        "leafGranted": 8, "leafTotalInTree": 108,
+        "granted": [
+          "就诊流程 / 主页 / 登记",
+          "就诊流程 / 主页 / 收费",
+          "数据报表 / 数据报表 / 运营统计 / 收银台报表",
+          "数据报表 / 数据报表 / 费用统计 / 收费流水",
+          "数据报表 / 数据报表 / 费用统计 / 退费流水",
+          "数据报表 / 数据报表 / 费用统计 / 收费月报",
+          "数据报表 / 数据报表 / 费用统计 / 充值流水",
+          "数据报表 / 数据报表 / 费用统计 / 充值余额"
+        ],
+        "profile": "登记 + 收费 + 收费/退费/充值类报表；【挂账流水、挂账余额、次卡流水、次卡余额、次卡业绩】未授权"
+      },
+      {
+        "roleId": 3564, "roleName": "市场营销",
+        "leafGranted": 24, "leafTotalInTree": 108,
+        "grantedGroups": [
+          "就诊流程 / 主页（含 L2 分组节点「主页」本身亦被勾选）",
+          "患者维护（客户跟进 / 门店会员 / 会员库）",
+          "营销管理（计次卡 积分 发券宝 客资池 推荐新客 拼团 秒杀 预约）",
+          "筛查机构（筛查计划 / 筛查录入 / 筛查进度）",
+          "诊所管理（门店 / 取镜通知）"
+        ],
+        "deniedWithinGrantedGroups": [
+          "就诊流程 / 主页 / 工作台", "就诊流程 / 主页 / 连锁加工中心",
+          "患者维护 / 随访管理",
+          "营销管理 / 订单", "营销管理 / 短信电话群发"
+        ],
+        "profile": "唯一横跨 5 个分组的业务角色；营销全域 + 部分就诊 + 筛查执行 + 门店/取镜",
+        "anomaly": "L2 中间节点「主页」被勾选，但提交逻辑只收集叶子节点 → 分组节点勾选态的存储语义待查（见 openQuestions.parentNodeSelectedSemantics）"
+      },
+      {
+        "roleId": 3565, "roleName": "筛查员",
+        "leafGranted": 2, "leafTotalInTree": 108,
+        "granted": ["筛查机构 / 筛查计划", "筛查机构 / 筛查进度"],
+        "profile": "极简执行角色"
+      },
+      {
+        "roleId": 3566, "roleName": "学校管理员",
+        "leafGranted": 1, "leafTotalInTree": 108,
+        "granted": ["筛查机构 / 筛查报表"],
+        "profile": "极简只读角色；对应 superType==10 的学校数据范围"
+      },
+      {
+        "roleId": 3568, "roleName": "院长",
+        "leafGranted": 38, "leafTotalInTree": 108,
+        "granted": {
+          "物资管理": ["物资/* 全部 12 个叶子", "供应商结算"],
+          "数据报表": [
+            "运营统计 / 整体报表", "运营统计 / 分店日报", "运营统计 / 收银台报表",
+            "医务统计 / 患者来源统计",
+            "费用统计 / 收费流水", "费用统计 / 退费流水", "费用统计 / 收费月报",
+            "费用统计 / 充值流水", "费用统计 / 充值余额", "费用统计 / 挂账流水",
+            "费用统计 / 挂账余额", "费用统计 / 积分流水", "费用统计 / 积分余额",
+            "物资统计 / 入库流水", "物资统计 / 出库流水", "物资统计 / 进销存统计",
+            "销售统计 / 销售流水", "销售统计 / 退货流水", "销售统计 / 产品销量",
+            "销售统计 / 发货流水", "销售统计 / 加工流水",
+            "客户统计 / 客户转化漏斗", "客户统计 / 客户跟进分析", "客户统计 / 查看全部门店报表",
+            "高级报表"
+          ]
+        },
+        "deniedAll": ["就诊流程（16）", "预约叫号（7）", "患者维护（4）", "营销管理（10）", "筛查机构（11）", "到店筛查（1）", "诊所管理（11）", "物资管理/当前库存", "物资管理/采购申请", "物资管理/采购（5）"],
+        "profile": "典型【监督 + 审批】角色：业务操作权全部为 0，但物资全权（含成本价）+ 报表全权"
+      },
+      {
+        "roleId": 3597, "roleName": "动态权限",
+        "leafGranted": 0, "leafTotalInTree": 108,
+        "granted": [],
+        "profile": "空壳角色 —— 动态授权叠加载体。管理员实际权限 = 各绑定角色权限并集（含本角色）"
+      }
+    ],
+    "observedAnomalies": [
+      {
+        "id": "A-01",
+        "type": "D类待查（疑似异常，非已定性缺陷）",
+        "desc": "后台管理员(3560)的权限树中缺少「筛查机构 / 视力表」节点，而超级管理员(3559)树中存在。同为 getRoleStateListForUpdate.json 返回，节点集不一致。",
+        "hypotheses": [
+          "H1 节点按角色差异化下发（则权限树非全量，需在规格中显式建模）",
+          "H2 「视力表」为较新上线节点，历史角色数据未回填（则属正常存量差异）",
+          "H3 视觉取证误差（两张全页截图缩放一致，行数差异为真实差异，但需二次确认）"
+        ],
+        "impact": "若为 H1，则「108 权限点」应修正为「权限点集合随角色而变」，复刻时权限树不可硬编码",
+        "nextStep": "换用「修改角色」页（default-selected-state=false）二次确认，或由后端契约确认"
+      },
+      {
+        "id": "A-02",
+        "type": "A类代码事实 + 未解释矛盾",
+        "desc": "controller.js 提交端读取 $scope.stuff[i].children[j].homeId，但同一控制器构造 stuff 节点时只赋值 {label, state, selected, children}，从未赋值 homeId；而 adminList.html 对叶子节点使用的是 corpAdminHome.id。",
+        "implicationIfTrue": "updateRoleStateList.json 提交的 fromCorpAdminHomeIdArray 可能为 [undefined,...]，即角色权限保存路径疑似失效",
+        "counterEvidence": "各角色权限呈精细子集（如库管的调拨/盘点/报损勾选而成本价不勾选），说明数据曾被成功写入",
+        "verdict": "不判定为生产缺陷；登记为待查，需后端契约或一次带凭据的只读取证闭合"
+      },
+      {
+        "id": "A-03",
+        "type": "待查",
+        "desc": "L2/L3 中间节点（如市场营销的「主页」）出现勾选态，但提交端只收集无 children 的叶子。分组节点勾选态的存储与判定语义未确认。",
+        "hypotheses": ["H1 checkAll 为分组级独立授权位", "H2 后端按某种聚合规则计算", "H3 历史数据残留"]
+      }
+    ],
+    "statistics": {
+      "grantedDistribution": [
+        { "roleName": "超级管理员", "leafGranted": 108, "ratio": 1.0 },
+        { "roleName": "后台管理员", "leafGranted": 99, "ratio": 0.92 },
+        { "roleName": "院长", "leafGranted": 38, "ratio": 0.35 },
+        { "roleName": "市场营销", "leafGranted": 24, "ratio": 0.22 },
+        { "roleName": "收费员", "leafGranted": 8, "ratio": 0.07 },
+        { "roleName": "医生", "leafGranted": 7, "ratio": 0.06 },
+        { "roleName": "库管", "leafGranted": 7, "ratio": 0.06 },
+        { "roleName": "筛查员", "leafGranted": 2, "ratio": 0.02 },
+        { "roleName": "学校管理员", "leafGranted": 1, "ratio": 0.01 },
+        { "roleName": "动态权限", "leafGranted": 0, "ratio": 0.0 }
+      ],
+      "insight": "权限颗粒度呈三档：全量（超管/后台）→ 专业域（院长/市场营销）→ 单点执行（医生/收费员/库管/筛查员/学校管理员）。「三权分立」特征明显：医生无收费权、收费员无开单权、库管无成本价可见权、院长无业务操作权。"
+    }
+  },
+
+  "tree": [
+    {
+      "stateType": "就诊流程",
+      "children": [
+        {
+          "name": "主页",
+          "children": [
+            { "name": "工作台" }, { "name": "登记" }, { "name": "我的会员" }, { "name": "检查报告" },
+            { "name": "开单" }, { "name": "收费" }, { "name": "发货" }, { "name": "店内加工中心" }, { "name": "连锁加工中心" }
+          ]
+        },
+        {
+          "name": "预约叫号",
+          "children": [
+            { "name": "接诊叫号" }, { "name": "检查叫号" }, { "name": "接诊叫号管理" },
+            { "name": "叫号大屏" }, { "name": "诊室屏" }, { "name": "叫号机" }, { "name": "预约排班" }
+          ]
+        }
+      ]
+    },
+    {
+      "stateType": "患者维护",
+      "children": [
+        { "name": "客户跟进" }, { "name": "门店会员" }, { "name": "会员库" }, { "name": "随访管理" }
+      ]
+    },
+    {
+      "stateType": "营销管理",
+      "children": [
+        { "name": "计次卡" }, { "name": "积分" }, { "name": "发券宝" }, { "name": "客资池" }, { "name": "推荐新客" },
+        { "name": "拼团" }, { "name": "秒杀" }, { "name": "订单" }, { "name": "短信电话群发" }, { "name": "预约" }
+      ]
+    },
+    {
+      "stateType": "筛查机构",
+      "children": [
+        { "name": "学校管理" }, { "name": "筛查计划" }, { "name": "筛查录入" }, { "name": "筛查报表" },
+        { "name": "筛查跟进" }, { "name": "视力表" }, { "name": "筛查定向群发" }, { "name": "筛查进度" },
+        { "name": "打印筛查档案" }, { "name": "质检考核" }, { "name": "筛查配置" }
+      ]
+    },
+    {
+      "stateType": "到店筛查",
+      "children": [{ "name": "体检项目设置" }]
+    },
+    {
+      "stateType": "物资管理",
+      "children": [
+        {
+          "name": "物资",
+          "children": [
+            { "name": "物资入库" }, { "name": "入库审核" }, { "name": "物资出库" }, { "name": "出库审核" },
+            { "name": "物资调拨" }, { "name": "调拨审核" }, { "name": "物资盘点" }, { "name": "盘点审核" },
+            { "name": "报损审核" }, { "name": "审核成本价" }, { "name": "查看成本价" }, { "name": "管理全部仓库" }
+          ]
+        },
+        { "name": "当前库存" },
+        { "name": "采购申请" },
+        {
+          "name": "采购",
+          "children": [
+            { "name": "采购入库" }, { "name": "采购审核" }, { "name": "采购退货" },
+            { "name": "采购退货审核" }, { "name": "处理采购申请" }
+          ]
+        },
+        { "name": "供应商结算" }
+      ]
+    },
+    {
+      "stateType": "数据报表",
+      "children": [
+        {
+          "name": "数据报表",
+          "children": [
+            {
+              "name": "运营统计",
+              "children": [{ "name": "整体报表" }, { "name": "分店日报" }, { "name": "分店报表" }, { "name": "收银台报表" }]
+            },
+            {
+              "name": "医务统计",
+              "children": [{ "name": "成交率" }, { "name": "评价流水" }, { "name": "满意度" }, { "name": "患者来源统计" }]
+            },
+            {
+              "name": "费用统计",
+              "children": [
+                { "name": "收费流水" }, { "name": "退费流水" }, { "name": "收费月报" }, { "name": "充值流水" },
+                { "name": "充值余额" }, { "name": "挂账流水" }, { "name": "挂账余额" }, { "name": "积分流水" },
+                { "name": "积分余额" }, { "name": "次卡流水" }, { "name": "次卡余额" }, { "name": "次卡业绩" }
+              ]
+            },
+            {
+              "name": "物资统计",
+              "children": [{ "name": "入库流水" }, { "name": "出库流水" }, { "name": "进销存统计" }]
+            },
+            {
+              "name": "销售统计",
+              "children": [
+                { "name": "销售流水" }, { "name": "退货流水" }, { "name": "产品销量" },
+                { "name": "发货流水" }, { "name": "加工流水" }, { "name": "限今日数据" }
+              ]
+            },
+            {
+              "name": "客户统计",
+              "children": [
+                { "name": "客户转化漏斗" }, { "name": "客户跟进分析" }, { "name": "RFM模型" },
+                { "name": "客户画像分析" }, { "name": "查看全部门店报表" }
+              ]
+            }
+          ]
+        },
+        { "name": "高级报表" }
+      ]
+    },
+    {
+      "stateType": "诊所管理",
+      "children": [
+        { "name": "门店" }, { "name": "取镜通知" }, { "name": "公众号授权" }, { "name": "我的账户" },
+        { "name": "需求提交平台" }, { "name": "智能解码器" }, { "name": "POS机" }, { "name": "标签打印机" },
+        { "name": "管理员" }, { "name": "操作证书" }, { "name": "系统设置" }
+      ]
+    }
+  ],
+
+  "derivedStats": {
+    "stateTypeCount": 8,
+    "leafPermissionCount": 108,
+    "leafBreakdown": {
+      "就诊流程": 16,
+      "患者维护": 4,
+      "营销管理": 10,
+      "筛查机构": 11,
+      "到店筛查": 1,
+      "物资管理": 20,
+      "数据报表": 35,
+      "诊所管理": 11
+    }
+  }
+}

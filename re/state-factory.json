@@ -1,0 +1,503 @@
+{
+  "source": "production bundle factory.js (constant \"stateFactory\")",
+  "purpose": "权限 state -> 该权限覆盖的界面路径清单（主导航 isOldActive 高亮判定用）",
+  "stateCount": 70,
+  "pathCount": 355,
+  "states": {
+    "home": [
+      "home",
+      "admin",
+      "modifyPassword",
+      "homeAnnouncement",
+      "homeAnnouncementDetails"
+    ],
+    "queueMachine": [
+      "queueMachine",
+      "queueMachineConfig"
+    ],
+    "member": [
+      "member",
+      "chargeList",
+      "patientList",
+      "memberTag",
+      "memberCard",
+      "memberPoint",
+      "myCoupon",
+      "updateMember",
+      "updateMyMember",
+      "adminPatient/medicalRecordList",
+      "adminPatient/updatePatient",
+      "adminPatient/addMedicalRecord",
+      "reviewRecordList"
+    ],
+    "branchMember": [
+      "branchMember"
+    ],
+    "encryptUser": [
+      "encryptUser"
+    ],
+    "orderManage": [
+      "orderManage"
+    ],
+    "materialPurchaseRequest": [
+      "materialPurchaseRequest",
+      "purchaseRequestModify",
+      "purchaseRequestDetail",
+      "addPurchaseRequest"
+    ],
+    "stockInReport": [
+      "stockInReport",
+      "profitReport"
+    ],
+    "addSaleRecord": [
+      "addSaleRecord"
+    ],
+    "visionMesure": [
+      "visionMesure"
+    ],
+    "stockListCustomer": [
+      "stockListCustomer",
+      "receiptDetailCustomer",
+      "materialDeliveryCustomer",
+      "materialReceiptsCustomer",
+      "deliveryModifyCustomer",
+      "deliveryDetailCustomer",
+      "deliveryDelete",
+      "addDeliveryCustomer"
+    ],
+    "schoolPlanList": [
+      "schoolPlanList",
+      "addSchoolPlan",
+      "modifySchoolPlan"
+    ],
+    "areaSchoolPlanList": [
+      "areaSchoolPlanList",
+      "addAreaSchoolPlan",
+      "modifyAreaSchoolPlan"
+    ],
+    "deliveryList": [
+      "deliveryList",
+      "deliveryProcessing",
+      "machineOrderList",
+      "deliveryInput",
+      "deliveryInputRecord"
+    ],
+    "addCheckin": [
+      "addCheckin",
+      "checkinList",
+      "yuYueJiLu",
+      "yuYueJiLuCopy"
+    ],
+    "grouponList": [
+      "grouponList",
+      "addGroupon",
+      "grouponDetail",
+      "grouponOrder"
+    ],
+    "bookManage": [
+      "bookManage",
+      "bookDetail",
+      "bookSettings"
+    ],
+    "getGlassNotifyList": [
+      "getGlassNotifyList"
+    ],
+    "sendPlatform": [
+      "sendPlatform",
+      "groupSend",
+      "groupSendLook"
+    ],
+    "screenConditionBatch": [
+      "screenConditionBatch",
+      "screenConditionBatchGroupSend",
+      "screenConditionBatchGroupSendLook"
+    ],
+    "schoolPlanReport": [
+      "schoolPlanReport",
+      "screenReportInschool",
+      "contrastReportInschool",
+      "classReportInschool",
+      "studentReportInschool"
+    ],
+    "mateCheckReportList": [
+      "mateCheckReportList",
+      "mateCheckReportConfig",
+      "mateSchoolReport",
+      "mateClassReport",
+      "mateRecordReport",
+      "mateContrastReport"
+    ],
+    "physicalReport": [
+      "physicalReport",
+      "physicalContrastReport"
+    ],
+    "schoolList": [
+      "schoolList",
+      "addSchool",
+      "classList",
+      "updateSchool",
+      "townList"
+    ],
+    "screenPromotionList": [
+      "screenPromotionList",
+      "screenPromotionStudent",
+      "multiImportStudent",
+      "addScreenPromotion",
+      "schoolMateCheckList",
+      "modifyScreenPromotion",
+      "screenList",
+      "modifySchoolMateCheck",
+      "modifyHealthScreen",
+      "modifyHealthInternal"
+    ],
+    "schoolMateCheckReports": [
+      "schoolMateCheckReports",
+      "screenSchoolReport",
+      "screenClassReport",
+      "screenStudentReport",
+      "screenContrastReport",
+      "viewSchoolMateCheck",
+      "schoolMateCheckActive",
+      "screenReport",
+      "contrastReport",
+      "dioptersList"
+    ],
+    "hospitalRecharge": [
+      "hospitalRecharge"
+    ],
+    "inspectList": [
+      "inspectList",
+      "addInspect",
+      "modifyInspect"
+    ],
+    "remindList": [
+      "remindList"
+    ],
+    "healthScreenConfig": [
+      "healthScreenConfig"
+    ],
+    "screenPromotionConfig": [
+      "screenPromotionToothConfig",
+      "screenPromotionConfig",
+      "screenBackConfig",
+      "cloudPrinterConfig",
+      "zhiShiBangConfig",
+      "smsSet"
+    ],
+    "screenInStore": [
+      "screenInStore",
+      "reachStoreAppointAllReport",
+      "reachStoreAppointSingleReport",
+      "reachStoreAppointDetails",
+      "transformationRate",
+      "markOriginSet"
+    ],
+    "brandList": [
+      "brandList"
+    ],
+    "allSize": [
+      "allSize"
+    ],
+    "sataServerList": [
+      "sataServerList",
+      "logList"
+    ],
+    "reportOperateAllreportOperate": [
+      "reportOperateAll/reportOperate",
+      "reportOperateAll/hospitalReport",
+      "reportOperateAll/singleHospitalProfit",
+      "reportOperateAll/reportMedicalReviewRate",
+      "reportMedicalRate/successRate",
+      "reportMedicalRate/satisfyRate",
+      "reportMedicalRate/satisfyDetailRate",
+      "reportMedicalRate/customerChannelRate",
+      "reportFee/feeDay",
+      "reportFee/refundFee",
+      "reportFee/feeMonth",
+      "reportFee/feeRecharge",
+      "reportFee/feeBankCard",
+      "reportFee/unPayRecharge",
+      "reportFee/unPayCharge",
+      "reportOperateAll/feeCashier",
+      "reportFee/pointsListReCharge",
+      "reportFee/pointsListCharge",
+      "reportSale/saleRecord",
+      "reportSale/deliveryList",
+      "reportMaterial/receiptRecord",
+      "reportMaterial/deliveryRecordPort",
+      "reportMaterial/jxcRecord",
+      "reportSale/backGoodRecord",
+      "reportSale/machineProcessList",
+      "reportSale/saleList",
+      "report/analysis",
+      "report/analysis/conversionFunnel",
+      "report/analysis/followUpAnalysis",
+      "report/analysis/rfmModel",
+      "report/analysis/profileAnalysis"
+    ],
+    "adminList": [
+      "adminList",
+      "createAdmin",
+      "adminModify",
+      "memberAdmin",
+      "roleAdmin",
+      "addRole",
+      "modifyRole",
+      "roleDetail"
+    ],
+    "adminAreaList": [
+      "adminAreaList",
+      "createAdminArea",
+      "areaRoleAdmin",
+      "areaScreenAdmin",
+      "modifyAreaRole",
+      "modifyAdminArea",
+      "adminAreaPasswordModify"
+    ],
+    "dataChart": [
+      "dataChart"
+    ],
+    "hospitalhospitallist": [
+      "hospital/hospitallist",
+      "hospital/updateHospital",
+      "hospital/updateHospital/updateDepartment",
+      "addHospital",
+      "hospital/updateHospital/employeeList"
+    ],
+    "wechatAuth": [
+      "wechatAuth"
+    ],
+    "optometryList": [
+      "optometryList",
+      "optometryLogList"
+    ],
+    "stockList": [
+      "stockList",
+      "receiptInvalid",
+      "materialReceipts",
+      "addMultiReceipts",
+      "materialImportRecord",
+      "addReceipt",
+      "receiptDetail",
+      "receiptModify",
+      "materialDelivery",
+      "materialOutportRecord",
+      "addMultiDelivery",
+      "addDelivery",
+      "deliveryModify",
+      "deliveryDetail",
+      "materialInventory",
+      "addInventory",
+      "stockChange",
+      "addStockChange",
+      "stockChangeDetail",
+      "modifyStockChange",
+      "inventoryDetail",
+      "inventoryModify"
+    ],
+    "assistCheckList": [
+      "assistCheckList",
+      "assistChecking"
+    ],
+    "selectOrderList": [
+      "selectOrderList"
+    ],
+    "companyInventory": [
+      "companyStockList",
+      "completeStockLoss",
+      "stockLossDetail",
+      "companyMaterialReceipts",
+      "companyInventory",
+      "addCompanyReceipt",
+      "receiptCompanyInvalid",
+      "receiptCompanyModify",
+      "addCompanyMultiReceipts",
+      "companyImportRecord",
+      "receiptCompanyDetail",
+      "deliveryCompanyModify",
+      "deliveryCompanyDetail",
+      "addCompanyDelivery",
+      "materialCompanyInventory",
+      "addCompanyInventory",
+      "inventoryCompanyDetail",
+      "inventoryCompanyModify",
+      "stockCompanyChange",
+      "addStockCompanyChange",
+      "stockCompanyChangeDetail",
+      "stockCompanyChangeCheck",
+      "modifyStockCompanyChange",
+      "materialCompanyDelivery",
+      "addCompanyMultiDelivery",
+      "materialCompanyOutportRecord"
+    ],
+    "chainStockList": [
+      "chainStockList",
+      "completeChainStockLoss",
+      "chainStockLossDetail"
+    ],
+    "machineOrderChainWaitAccess": [
+      "machineOrderChainWaitAccess",
+      "machineOrderChainWaitProcess",
+      "machineOrderChainProcessing",
+      "machineOrderChainBroken",
+      "machineOrderChainTesting",
+      "stockChainLossList",
+      "machineOrderChainCompleted"
+    ],
+    "machineOrderWaitAccess": [
+      "machineOrderWaitAccess",
+      "machineOrderWaitProcess",
+      "machineOrderProcessing",
+      "machineOrderBroken",
+      "machineOrderTesting",
+      "stockLossList",
+      "machineOrderCompleted"
+    ],
+    "optometry": [
+      "optometry",
+      "optometryGlasses"
+    ],
+    "waitChargeList": [
+      "waitChargeList",
+      "waitChargeDetail",
+      "waitPayList",
+      "waitPayDetail",
+      "payedList",
+      "waitPayBack",
+      "partBack",
+      "waitPayBackList",
+      "payBackDetail",
+      "unPayList",
+      "unPayDetail",
+      "payedDetail",
+      "reChargeList",
+      "reChargeListBack"
+    ],
+    "clientsList": [
+      "clientsList",
+      "addClient",
+      "modifyClient"
+    ],
+    "cashClients": [
+      "cashClients",
+      "cashDetail"
+    ],
+    "orderList": [
+      "orderList",
+      "addOrder",
+      "modifyOrder",
+      "dealRecord",
+      "deliveryRecord"
+    ],
+    "pointsList": [
+      "pointsList"
+    ],
+    "printStudentReport": [
+      "printStudentReport",
+      "screenRecordReport",
+      "medicalConfig"
+    ],
+    "secKillPromotionList": [
+      "secKillPromotionList",
+      "modifyPromotion",
+      "secKillProductList",
+      "productOrder",
+      "addSecKillProduct",
+      "modifySecKillProduct",
+      "secKillProductDetail"
+    ],
+    "newsList": [
+      "newsList",
+      "addNew",
+      "modifyNew"
+    ],
+    "recommendPhoneList": [
+      "recommendPhoneList"
+    ],
+    "recommendDetail": [
+      "recommendTable",
+      "recommendDetail"
+    ],
+    "recommendCustomer": [
+      "recommendCustomer",
+      "modifyRecommend",
+      "addRecommend",
+      "firstDoctorList",
+      "addFirstDoctor",
+      "modifyFirstDoctor"
+    ],
+    "couponList": [
+      "couponList",
+      "addCoupon",
+      "modifyCoupon",
+      "couponHistory",
+      "targetCouponList",
+      "addTargetCoupon",
+      "targetCouponDetail"
+    ],
+    "materialPurchase": [
+      "materialPurchaseBackGoods",
+      "materialPurchaseBackOne",
+      "materialPurchaseBackLook",
+      "materialPurchaseReturn",
+      "materialPurchase",
+      "purchaseRequestCheck",
+      "purchaseRequestCheckDetail",
+      "addPurchasement",
+      "purchaseModify",
+      "purchaseDetail",
+      "addSalePurchase",
+      "purchaseReciept",
+      "purchaseRecieptDetail"
+    ],
+    "adminBill": [
+      "adminBill",
+      "adminBillDetial",
+      "adminBillOneDetial"
+    ],
+    "myMember": [
+      "myMember",
+      "addMedicalRecord",
+      "adminSalesRecord/myMemberRecord",
+      "adminMyRecord/myMemberRecord",
+      "adminMyRecord/followList",
+      "adminMyRecord/prescriptsRecord",
+      "adminMyRecord/prescription",
+      "adminMyRecord/drugPrescription",
+      "myMedicalHistory",
+      "myMedicalRecordList",
+      "adminMyRecord/myCheckBill",
+      "adminMyRecord/myMaterialBill",
+      "adminMyRecord/customerProductRecord",
+      "adminSalesRecord/myMaterialBill",
+      "addMaterialBill"
+    ],
+    "fundus": [
+      "fundus",
+      "reportRecord",
+      "reportStatistic",
+      "fundusLog"
+    ],
+    "systemSettingcheckList": [
+      "systemSetting/checkList"
+    ],
+    "viewStockList": [
+      "viewStockList",
+      "viewStockList2",
+      "viewStockList3"
+    ],
+    "myAccount": [
+      "myAccount",
+      "myAccountDetails",
+      "myAccountDetailsForScan",
+      "myAccountHistory",
+      "myAccountCoin",
+      "myAccountCoinDetails",
+      "myAccountOverviews"
+    ],
+    "followUp": [
+      "followUp",
+      "followUpDetails"
+    ]
+  }
+}

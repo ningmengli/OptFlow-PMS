@@ -1,0 +1,43 @@
+{
+  "generatedBy": "re/desensitize.py",
+  "at": "2026-10-01T16:30:57",
+  "envVar": "SGVJ_PROD_HOST",
+  "changes": [
+    {
+      "file": "re/desensitize.py",
+      "replacements": 33
+    },
+    {
+      "file": "re/fetch-pages.py",
+      "replacements": 8
+    },
+    {
+      "file": "re/fetch-re.ps1",
+      "replacements": 8
+    },
+    {
+      "file": "re/frontend-manifest.json",
+      "replacements": 24
+    },
+    {
+      "file": "re/gen-spec.py",
+      "replacements": 2
+    },
+    {
+      "file": "re/permission-tree.json",
+      "replacements": 4
+    },
+    {
+      "file": "re/scan-secrets.py",
+      "replacements": 1
+    },
+    {
+      "file": "re/secret-scan.json",
+      "replacements": 2
+    },
+    {
+      "file": "re/spec/00-总纲.md",
+      "replacements": 2
+    }
+  ]
+}

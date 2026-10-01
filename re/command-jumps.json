@@ -1,0 +1,369 @@
+{
+  "bundleDir": "C:\\Users\\18671\\AppData\\Local\\Temp\\sgzj-re",
+  "files": {
+    "controller.js": 2194811,
+    "directive.js": 731251,
+    "factory.js": 229117,
+    "main.js": 173700,
+    "property.js": 37626,
+    "service.js": 931
+  },
+  "perFileEdgeCount": {
+    "controller.js": 386,
+    "directive.js": 27,
+    "factory.js": 0,
+    "main.js": 2,
+    "property.js": 3,
+    "service.js": 0
+  },
+  "totalEdges": 418,
+  "resolvedEdges": 286,
+  "unresolvedVarEdges": 26,
+  "byLabel": {
+    "$state.go": 291,
+    "$location.path": 3,
+    "$state.go obj": 124
+  },
+  "byKind": {
+    "state": 271,
+    "unresolved": 132,
+    "url": 15
+  },
+  "distinctTargetStates": [
+    "404",
+    "addCheckin",
+    "addMultiDelivery",
+    "addVisit",
+    "adminAreaList",
+    "adminList",
+    "adminMyRecord.myCheckBill",
+    "adminMyRecord.myMaterialBill",
+    "adminMyRecord.myMemberRecord",
+    "adminSalesRecord.myMaterialBill",
+    "areaRoleAdmin",
+    "areaSchoolPlanList",
+    "assistChecking",
+    "bookManage",
+    "chargeList",
+    "checkinList",
+    "couponList",
+    "deliveryList",
+    "encryptUser",
+    "firstDoctorList",
+    "followUpDetails",
+    "fundusLog",
+    "goods.addCompanyMultiDelivery",
+    "goods.addProductBivariateTable",
+    "goods.addProductInventory",
+    "goods.companyMaterialReceipts",
+    "goods.materialCompanyDelivery",
+    "goods.materialCompanyInventory",
+    "goods.stockCompanyChange",
+    "groupSend",
+    "groupSendLook",
+    "grouponList",
+    "home",
+    "homeAnnouncement",
+    "homeAnnouncementDetails",
+    "hospital.updateHospital.adminHospital",
+    "hospital.updateHospital.employeeList",
+    "login",
+    "machineOrderChainProcessing",
+    "machineOrderChainTesting",
+    "machineOrderChainWaitProcess",
+    "machineOrderProcessing",
+    "machineOrderTesting",
+    "machineOrderWaitProcess",
+    "materialDelivery",
+    "materialImport",
+    "materialInventory",
+    "materialPurchaseRequest",
+    "materialReceipts",
+    "member",
+    "memberRecyle",
+    "modifyHealthScreen",
+    "modifyPromotion",
+    "modifyRecommend",
+    "modifySchoolMateCheck",
+    "modifySecKillProduct",
+    "myAccountDetailsForScan",
+    "myAccountOverviews",
+    "myMedicalHistory",
+    "myMedicalRecordList",
+    "myMember",
+    "newsList",
+    "optometryGlasses",
+    "optometryList",
+    "optometryLogList",
+    "partBack",
+    "payedDetail",
+    "payedList",
+    "purchase.materialPurchase",
+    "purchase.materialPurchaseReturn",
+    "purchase.purchaseModify",
+    "purchaseRequestModify",
+    "queueMachineConfig",
+    "reChargeList",
+    "reChargeListBack",
+    "reachStoreAppointDetails",
+    "recommendCustomer",
+    "remindList",
+    "requirement",
+    "requirementStatus",
+    "roleAdmin",
+    "schoolList",
+    "schoolPlanList",
+    "screenConditionBatch",
+    "screenConditionBatchGroupSend",
+    "screenConditionBatchGroupSendLook",
+    "screenList",
+    "screenPromotionList",
+    "screenPromotionStudent",
+    "screenQueue",
+    "secKillProductList",
+    "sendPlatform",
+    "stockChange",
+    "systemSetting.InspectList",
+    "systemSetting.checkList",
+    "systemSetting.checkModify",
+    "systemSetting.customerChargeItem",
+    "systemSetting.materiallist",
+    "systemSetting.medicalFeesList",
+    "systemSetting.memberTypeList",
+    "systemSetting.processCenter",
+    "systemSetting.projectCard",
+    "targetCouponList",
+    "unPayList",
+    "viewSchoolMateCheck",
+    "visitDetails",
+    "waitChargeList",
+    "waitPayBackList",
+    "waitPayDetail",
+    "waitPayList"
+  ],
+  "distinctTargetUrls": [
+    "login",
+    "materialPurchase",
+    "memberTypeList",
+    "purchaseModify",
+    "supplierList"
+  ],
+  "commandStyleStatesOutsidePermissionTree": [
+    "404",
+    "addVisit",
+    "adminMyRecord.myCheckBill",
+    "adminMyRecord.myMaterialBill",
+    "adminMyRecord.myMemberRecord",
+    "adminSalesRecord.myMaterialBill",
+    "goods.addProductBivariateTable",
+    "goods.addProductInventory",
+    "hospital.updateHospital.adminHospital",
+    "hospital.updateHospital.employeeList",
+    "login",
+    "materialImport",
+    "memberRecyle",
+    "requirement",
+    "requirementStatus",
+    "screenQueue",
+    "systemSetting.InspectList",
+    "systemSetting.checkList",
+    "systemSetting.checkModify",
+    "systemSetting.customerChargeItem",
+    "systemSetting.materiallist",
+    "systemSetting.medicalFeesList",
+    "systemSetting.memberTypeList",
+    "systemSetting.processCenter",
+    "systemSetting.projectCard",
+    "visitDetails"
+  ],
+  "commandStyleUrlsOutsidePermissionTree": [
+    "materialPurchase",
+    "memberTypeList",
+    "purchaseModify",
+    "supplierList"
+  ],
+  "unresolvedSamples": [
+    {
+      "file": "controller.js",
+      "line": 3222,
+      "raw": "item",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 15867,
+      "raw": "map",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 37791,
+      "raw": "iten",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41033,
+      "raw": "$scope",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41642,
+      "raw": "stateName",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41648,
+      "raw": "stateName",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41651,
+      "raw": "stateName",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41911,
+      "raw": "stateName",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41917,
+      "raw": "stateName",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 41919,
+      "raw": "stateName",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 52458,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 52898,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 52902,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 52979,
+      "raw": "map",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 53123,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 53396,
+      "raw": "res",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 53514,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 53634,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 56731,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 56735,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 57882,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "controller.js",
+      "line": 57886,
+      "raw": "result",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "directive.js",
+      "line": 1480,
+      "raw": "jumpUrl",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "directive.js",
+      "line": 4224,
+      "raw": "state",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "directive.js",
+      "line": 5926,
+      "raw": "window",
+      "var": true,
+      "source": "$state.go var"
+    },
+    {
+      "file": "directive.js",
+      "line": 13651,
+      "raw": "$scope",
+      "var": true,
+      "source": "$state.go var"
+    }
+  ]
+}
